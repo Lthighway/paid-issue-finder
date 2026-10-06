@@ -44,6 +44,8 @@ def analyze_issue(issue, repo_meta=None, history=None):
     label_lower = labels.lower()
 
     value = detect_bounty(text)
+    if value is None:
+        return None
     suspicious = any(term in lower for term in SUSPICIOUS_TERMS)
     weak_claim = any(term in lower for term in WEAK_CLAIMS)
 
