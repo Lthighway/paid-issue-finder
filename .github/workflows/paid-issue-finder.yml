@@ -10,7 +10,11 @@ on:
       topn:
         description: "Maximum results"
         required: true
-        default: "20"
+        default: "30"
+      language:
+        description: "Optional language filter (e.g. Python, TypeScript)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -25,10 +29,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           QUERY: ${{ inputs.query }}
           TOPN: ${{ inputs.topn }}
+          LANGUAGE: ${{ inputs.language }}
         shell: bash
         run: |
           set -euo pipefail
-          gh search issues "$QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
+          SEARCH_QUERY="$QUERY"
+          if [ -n "$LANGUAGE" ]; then SEARCH_QUERY="$SEARCH_QUERY language:$LANGUAGE"; fi
+          gh search issues "$SEARCH_QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
           python - <<'PY'
           import json, re
           from pathlib import Path
@@ -61,6 +68,7 @@ jobs:
                   if weak_claim: score -= 5
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
+          rows = rows[:50]
 
           report = ["# Paid Issue Finder Report", "", f"Query: `{__import__('os').environ['QUERY']}`", ""]
           report.append(f"Generated: {__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()}")
