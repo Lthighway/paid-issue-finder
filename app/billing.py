@@ -7,8 +7,8 @@ import httpx
 ASAAS_BASE_URL = os.getenv("ASAAS_BASE_URL", "https://api.asaas.com/v3")
 PACKAGES = {
     "starter": {"credits": 100, "price": 5.00, "label": "100 consultas"},
-    "pro": {"credits": 500, "price": 20.00, "label": "500 consultas"},
-    "scale": {"credits": 1000, "price": 35.00, "label": "1.000 consultas"},
+    "pro": {"credits": 500, "price": 25.00, "label": "500 consultas"},
+    "scale": {"credits": 1000, "price": 50.00, "label": "1.000 consultas"},
 }
 DB_PATH = os.getenv("DATABASE_PATH", "paid_issue_finder.db")
 
