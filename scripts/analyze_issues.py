@@ -97,7 +97,7 @@ def analyze_issue(issue, repo_meta=None, history=None):
     risk = 0
     risk_reasons = []
     if suspicious:
-        risk += 50
+        risk += 60
         risk_reasons.append("suspicious wording")
     if weak_claim:
         risk += 15
