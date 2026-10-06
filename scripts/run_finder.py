@@ -34,7 +34,7 @@ def repo_history(repo, issue_number):
                 pass
     return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
 
-SOURCE_URL_RE = re.compile(r"https?://github\\.com/[^/\\s)]+/[^/\\s)]+/issues/\\d+")
+SOURCE_URL_RE = re.compile(r"https?://github\.com/[^/\s)]+/[^/\s)]+/issues/\d+")
 
 def extract_source_url(issue):
     body = issue.get("body") or ""
