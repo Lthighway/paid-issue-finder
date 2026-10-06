@@ -135,13 +135,14 @@ async def search(
         account = get_account(x_api_key)
         if not account or account["credits"] < 1:
             raise HTTPException(402, "Insufficient credits.")
-        if not consume_credit(x_api_key):
-            raise HTTPException(402, "Insufficient credits.")
-        remaining = account["credits"] - 1
     else:
         remaining = None
 
     items = await github_search(q, topn)
+    if require_payment:
+        if not consume_credit(x_api_key):
+            raise HTTPException(402, "Insufficient credits.")
+        remaining = account["credits"] - 1
     results = []
     for issue in items:
         bounty = extract_bounty((issue.get("title") or "") + " " + (issue.get("body") or ""))
