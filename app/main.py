@@ -6,9 +6,10 @@ from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
-app = FastAPI(title="Paid Issue Finder", version="0.1.0")
+app = FastAPI(title="Paid Issue Finder", version="0.2.0")
 GITHUB_API = "https://api.github.com/search/issues"
 PRICE_USD_CENTS = 5
+MAX_REASONABLE_BOUNTY_USD = 100000
 
 class IssueResult(BaseModel):
     title: str
@@ -17,6 +18,8 @@ class IssueResult(BaseModel):
     number: int
     labels: list[str]
     bounty_usd: Optional[float] = None
+    confidence: str
+    suspicious: bool
     score: float
 
 class SearchResponse(BaseModel):
@@ -34,19 +37,39 @@ def extract_bounty(text: str) -> Optional[float]:
     for pattern in patterns:
         for match in re.findall(pattern, text, flags=re.I):
             try:
-                values.append(float(match.replace(",", "")))
+                value = float(match.replace(",", ""))
+                if 0 < value <= MAX_REASONABLE_BOUNTY_USD:
+                    values.append(value)
             except ValueError:
                 pass
     return max(values) if values else None
 
-def score_issue(issue: dict, bounty: Optional[float]) -> float:
+def assess_bounty(issue: dict, bounty: Optional[float]) -> tuple[str, bool]:
+    text = ((issue.get("title") or "") + " " + (issue.get("body") or "")).lower()
+    labels = " ".join(x.get("name", "") for x in issue.get("labels", [])).lower()
+    suspicious_terms = (
+        "pppdud", "take your money back", "follow my", "backflip",
+        "gazillion", "money before", "value: 0.00", "approximately 0 usd"
+    )
+    suspicious = any(term in text for term in suspicious_terms)
+    has_bounty_label = any(k in labels for k in ("bounty", "reward", "paid"))
+    if bounty and has_bounty_label and not suspicious:
+        return "high", False
+    if bounty and not suspicious:
+        return "medium", False
+    if bounty:
+        return "low", True
+    return "none", suspicious
+
+def score_issue(issue: dict, bounty: Optional[float], confidence: str) -> float:
     score = 0.0
     if bounty:
         score += min(bounty / 100.0, 50.0)
-    labels = " ".join(x.get("name", "") for x in issue.get("labels", [])).lower()
-    if any(k in labels for k in ("bounty", "reward", "paid", "help wanted", "good first issue")):
+    if confidence == "high":
         score += 10
-    score += min(issue.get("comments", 0) / 10.0, 5)
+    elif confidence == "medium":
+        score += 5
+    score += min((issue.get("comments") or 0) / 10.0, 5)
     return round(score, 2)
 
 async def github_search(q: str, topn: int) -> list[dict]:
@@ -65,11 +88,11 @@ async def github_search(q: str, topn: int) -> list[dict]:
 async def home():
     return """<!doctype html>
 <html><head><meta charset="utf-8"><title>Paid Issue Finder</title>
-<style>body{font-family:system-ui;max-width:900px;margin:40px auto;padding:0 20px}input{width:70%;padding:12px}button{padding:12px 18px}li{margin:14px 0}</style>
+<style>body{font-family:system-ui;max-width:900px;margin:40px auto;padding:0 20px}input{width:70%;padding:12px}button{padding:12px 18px}</style>
 </head><body><h1>Paid Issue Finder</h1>
-<p>Find GitHub issues with monetary bounties and rank the best opportunities.</p>
+<p>Find GitHub issues with monetary bounties and rank opportunities.</p>
 <form action="/search" method="get"><input name="q" value="bounty language:Python state:open" placeholder="bounty language:Python"><button>Search — $0.05</button></form>
-<p>Price per query: US$0.05. Payment enforcement is a replaceable layer and must be configured before public monetization.</p>
+<p>Price per query: US$0.05. Results include confidence and suspicious-signal detection.</p>
 </body></html>"""
 
 @app.get("/search", response_model=SearchResponse)
@@ -84,9 +107,8 @@ async def search(
     items = await github_search(q, topn)
     results = []
     for issue in items:
-        body = issue.get("body") or ""
-        text = issue.get("title", "") + " " + body
-        bounty = extract_bounty(text)
+        bounty = extract_bounty((issue.get("title") or "") + " " + (issue.get("body") or ""))
+        confidence, suspicious = assess_bounty(issue, bounty)
         repo = issue.get("repository_url", "").split("/repos/")[-1]
         results.append(IssueResult(
             title=issue.get("title", ""),
@@ -95,7 +117,9 @@ async def search(
             number=issue.get("number", 0),
             labels=[x.get("name", "") for x in issue.get("labels", [])],
             bounty_usd=bounty,
-            score=score_issue(issue, bounty),
+            confidence=confidence,
+            suspicious=suspicious,
+            score=score_issue(issue, bounty, confidence),
         ))
-    results.sort(key=lambda x: (x.bounty_usd or 0, x.score), reverse=True)
+    results.sort(key=lambda x: (x.confidence != "none", not x.suspicious, x.score), reverse=True)
     return SearchResponse(query=q, charged_usd=PRICE_USD_CENTS / 100, results=results)
