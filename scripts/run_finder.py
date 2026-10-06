@@ -2,7 +2,7 @@ import json
 import os
 import subprocess
 from pathlib import Path
-from analyze_issues import analyze_issue
+from scripts.analyze_issues import analyze_issue
 
 def gh_json(args):
     return json.loads(subprocess.check_output(["gh", "api", *args], text=True))
