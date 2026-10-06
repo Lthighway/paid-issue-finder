@@ -21,7 +21,7 @@ def test_detect_bounty_formats():
 def test_legitimate_detailed_issue_is_not_avoid():
     result = analyze_issue(
         issue(
-            "Acceptance criteria: fix the authentication bug. "
+            "Reward: $500. Acceptance criteria: fix the authentication bug. "
             "Steps to reproduce: login with an expired token. "
             + "Detailed technical context " * 40,
             ["bounty", "help wanted"],
@@ -46,7 +46,7 @@ def test_fake_currency_is_high_risk():
 
 def test_archived_repository_is_penalized():
     result = analyze_issue(
-        issue("Acceptance criteria: implement the requested fix.", ["bounty"], comments=2),
+        issue("Reward: $300. Acceptance criteria: implement the requested fix.", ["bounty"], comments=2),
         {"stargazers_count": 500, "forks_count": 50, "pushed_at": "2025-01-01T00:00:00Z", "archived": True},
     )
     assert result["risk"] >= 30
