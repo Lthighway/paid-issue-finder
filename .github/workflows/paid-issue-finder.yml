@@ -99,6 +99,23 @@ jobs:
               lower = text.lower()
               suspicious = any(x in lower for x in suspicious_terms)
               weak_claim = any(x in lower for x in ("up to ", "terms and conditions apply", "expiry is", "pay you in btc", "pay in btc", "pay in crypto"))
+              acceptance_signals = ("acceptance criteria", "acceptance criterion", "definition of done", "expected behavior", "requirements", "reproduction steps", "steps to reproduce", "how to reproduce")
+              quality_labels = ("good first issue", "help wanted", "bounty", "reward", "paid")
+              issue_quality = 0
+              quality_reasons = []
+              if any(x in lower for x in acceptance_signals):
+                  issue_quality += 20
+                  quality_reasons.append("clear requirements/acceptance")
+              if any(x in labels.lower() for x in quality_labels):
+                  issue_quality += 10
+                  quality_reasons.append("useful issue label")
+              if len(issue.get("body") or "") >= 500:
+                  issue_quality += 10
+                  quality_reasons.append("detailed issue description")
+              if any(x in lower for x in ("steps to reproduce", "reproduction steps", "how to reproduce")):
+                  issue_quality += 10
+                  quality_reasons.append("reproduction guidance")
+              issue_quality = min(issue_quality, 40)
               confidence = "high" if value and any(k in labels.lower() for k in ("bounty", "reward", "paid")) and not suspicious and not weak_claim else ("medium" if value and not suspicious and not weak_claim else ("low" if value else "none"))
               if value:
                   risk = 0
@@ -119,11 +136,13 @@ jobs:
                       risk += 5
                       risk_reasons.append("no discussion")
                   risk = min(risk, 100)
-                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] - (risk * 0.25)
+                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality - (risk * 0.25)
                   if risk >= 60:
                       score -= 15
                   issue["_risk"] = risk
                   issue["_risk_reasons"] = risk_reasons
+                  issue["_quality"] = issue_quality
+                  issue["_quality_reasons"] = quality_reasons
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
           rows = [r for r in rows if r[0] >= float(__import__("os").environ["MIN_OPPORTUNITY"])]
@@ -141,8 +160,15 @@ jobs:
                   repo = issue["repository"]["nameWithOwner"]
                   flag = " ⚠️ suspicious" if suspicious else ""
                   risk = issue.get("_risk", 0)
+                  quality = issue.get("_quality", 0)
                   reasons = ", ".join(issue.get("_risk_reasons", [])) or "no major risk signal"
-                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
+                  if risk >= 60:
+                      verdict = "AVOID"
+                  elif score >= 50 and risk <= 30:
+                      verdict = "GO"
+                  else:
+                      verdict = "REVIEW"
+                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
@@ -152,7 +178,9 @@ jobs:
                   repo = issue["repository"]["nameWithOwner"]
                   flag = " ⚠️ suspicious" if suspicious else ""
                   risk = issue.get("_risk", 0)
-                  print("- **US$%.2f** · Opportunity %.1f · Risk %d · %s%s — [%s#%s: %s](%s)" % (value, score, risk, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
+                  quality = issue.get("_quality", 0)
+                  verdict = "AVOID" if risk >= 60 else ("GO" if score >= 50 and risk <= 30 else "REVIEW")
+                  print("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · %s · %s%s — [%s#%s: %s](%s)" % (value, score, risk, quality, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
           PY
 
       - name: Publish report
