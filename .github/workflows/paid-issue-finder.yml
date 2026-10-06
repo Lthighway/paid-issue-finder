@@ -79,7 +79,7 @@ jobs:
               for score, value, confidence, suspicious, issue in rows:
                   repo = issue["repository"]["nameWithOwner"]
                   flag = " ⚠️ suspicious" if suspicious else ""
-                  report.append(f"- **US$" + "{value:,.2f}" + f"** · {confidence} · score " + "{score:.2f}" + f"{flag} — [{repo}#" + "{issue['number']}: {issue['title']}]" + "(" + "{issue['url']}" + ")")
+                  report.append("- **US$%.2f** · %s · score %.2f%s — [%s#%s: %s](%s)" % (value, confidence, score, flag, repo, issue["number"], issue["title"], issue["url"]))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
