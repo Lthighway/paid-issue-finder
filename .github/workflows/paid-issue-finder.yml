@@ -120,6 +120,20 @@ jobs:
                   issue_quality += 10
                   quality_reasons.append("reproduction guidance")
               issue_quality = min(issue_quality, 40)
+              maintainer_score = 0
+              maintainer_reasons = []
+              author = (issue.get("author") or {}).get("login")
+              if author:
+                  maintainer_score += 5
+                  maintainer_reasons.append("identified issue author")
+              if issue.get("comments", 0) >= 2:
+                  maintainer_score += 5
+                  maintainer_reasons.append("active discussion")
+              if issue.get("updatedAt"):
+                  maintainer_score += 5
+                  maintainer_reasons.append("recently updated")
+              issue["_maintainer_score"] = min(maintainer_score, 15)
+              issue["_maintainer_reasons"] = maintainer_reasons
               try:
                   prs = json.loads(__import__("subprocess").check_output(["gh", "api", "--paginate", f"repos/{repo}/pulls?state=closed&per_page=30"], text=True))
                   linked_prs = json.loads(__import__("subprocess").check_output(["gh", "api", f"repos/{repo}/issues/{issue['number']}/timeline"], text=True))
@@ -157,20 +171,6 @@ jobs:
                   if issue.get("comments", 0) == 0:
                       risk += 5
                       risk_reasons.append("no discussion")
-              maintainer_score = 0
-              maintainer_reasons = []
-              author = (issue.get("author") or {}).get("login")
-              if author:
-                  maintainer_score += 5
-                  maintainer_reasons.append("identified issue author")
-              if issue.get("comments", 0) >= 2:
-                  maintainer_score += 5
-                  maintainer_reasons.append("active discussion")
-              if issue.get("updatedAt"):
-                  maintainer_score += 5
-                  maintainer_reasons.append("recently updated")
-              issue["_maintainer_score"] = min(maintainer_score, 15)
-              issue["_maintainer_reasons"] = maintainer_reasons
                   risk = min(risk, 100)
                   score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality + history_score + issue["_maintainer_score"] - (risk * 0.25)
                   if risk >= 60:
