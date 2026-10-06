@@ -1,0 +1,61 @@
+from scripts.analyze_issues import analyze_issue, detect_bounty
+
+
+def issue(body, labels=None, comments=0, author="maintainer", updated=True):
+    return {
+        "title": "Bounty: fix authentication bug",
+        "body": body,
+        "labels": [{"name": x} for x in (labels or [])],
+        "comments": comments,
+        "author": author,
+        "updatedAt": "2026-10-06T00:00:00Z" if updated else None,
+    }
+
+
+def test_detect_bounty_formats():
+    assert detect_bounty("Reward: $500") == 500
+    assert detect_bounty("Reward: US$1,250") == 1250
+    assert detect_bounty("Reward: 750 USD") == 750
+
+
+def test_legitimate_detailed_issue_is_not_avoid():
+    result = analyze_issue(
+        issue(
+            "Acceptance criteria: fix the authentication bug. "
+            "Steps to reproduce: login with an expired token. "
+            + "Detailed technical context " * 40,
+            ["bounty", "help wanted"],
+            comments=8,
+        ),
+        {"stargazers_count": 2000, "forks_count": 200, "pushed_at": "2026-10-05T00:00:00Z", "archived": False},
+        {"prs": True, "merged": 10, "linked_merged": 1, "linked_closed": 1},
+    )
+    assert result["value"] == 500
+    assert result["risk"] < 60
+    assert result["verdict"] in ("GO", "REVIEW")
+
+
+def test_fake_currency_is_high_risk():
+    result = analyze_issue(
+        issue("Bounty: $999. Currency: TBD. PPPDUD dollars. Follow my account and take your money back."),
+        {"stargazers_count": 2, "forks_count": 0, "pushed_at": None, "archived": False},
+    )
+    assert result["risk"] >= 60
+    assert result["verdict"] == "AVOID"
+
+
+def test_archived_repository_is_penalized():
+    result = analyze_issue(
+        issue("Acceptance criteria: implement the requested fix.", ["bounty"], comments=2),
+        {"stargazers_count": 500, "forks_count": 50, "pushed_at": "2025-01-01T00:00:00Z", "archived": True},
+    )
+    assert result["risk"] >= 30
+
+
+def test_weak_claim_is_not_high_confidence():
+    result = analyze_issue(
+        issue("Bounty up to $1000. Terms and conditions apply.", ["bounty"], comments=2),
+        {"stargazers_count": 100, "forks_count": 10, "pushed_at": "2026-10-01T00:00:00Z", "archived": False},
+    )
+    assert result["confidence"] != "high"
+    assert result["risk"] >= 15
