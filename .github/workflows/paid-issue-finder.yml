@@ -122,9 +122,15 @@ jobs:
               issue_quality = min(issue_quality, 40)
               try:
                   prs = json.loads(__import__("subprocess").check_output(["gh", "api", "--paginate", f"repos/{repo}/pulls?state=closed&per_page=30"], text=True))
+                  linked_prs = json.loads(__import__("subprocess").check_output(["gh", "api", f"repos/{repo}/issues/{issue['number']}/timeline"], text=True))
               except Exception:
                   prs = []
+                  linked_prs = []
               merged = sum(1 for pr in prs if pr.get("merged_at"))
+              issue["_linked_merged"] = sum(1 for event in linked_prs if event.get("event") == "cross-referenced" and event.get("source", {}).get("issue", {}).get("pull_request") and event.get("source", {}).get("issue", {}).get("state") == "closed")
+              if issue["_linked_merged"]:
+                  history_score += min(issue["_linked_merged"] * 5, 15)
+                  history_reasons.append("linked closed PR activity")
               if merged:
                   history_score += min(merged * 2, 10)
                   history_reasons.append(f"{merged} recently merged PRs")
