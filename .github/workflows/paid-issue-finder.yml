@@ -13,7 +13,7 @@ on:
         default: "20"
 
 permissions:
-  contents: read
+  contents: write
   issues: read
 
 jobs:
@@ -57,6 +57,18 @@ jobs:
                   score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5)
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
+
+          report = ["# Paid Issue Finder Report", "", f"Query: `{__import__('os').environ['QUERY']}`", ""]
+          report.append(f"Generated: {__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()}")
+          report.append("")
+          if not rows:
+              report.append("No monetary bounty detected.")
+          else:
+              for score, value, confidence, suspicious, issue in rows:
+                  repo = issue["repository"]["nameWithOwner"]
+                  flag = " ⚠️ suspicious" if suspicious else ""
+                  report.append(f"- **US$\{value:,.2f}** · {confidence} · score \{score:.2f}\{flag} — [{repo}#\{issue['number']}: \{issue['title']}](\{issue['url']})")
+          Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
               print("No monetary bounty detected in the selected issues.")
@@ -66,3 +78,9 @@ jobs:
                   flag = " ⚠️ suspicious" if suspicious else ""
                   print(f"- **US${value:,.2f}** · {confidence} · score {score:.2f}{flag} — [{repo}#{issue['number']}: {issue['title']}]({issue['url']})")
           PY
+
+      - name: Publish report
+        uses: actions/upload-artifact@v4
+        with:
+          name: paid-issue-finder-report
+          path: REPORT.md
