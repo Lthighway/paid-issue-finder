@@ -1,0 +1,68 @@
+name: Paid Issue Finder
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "GitHub issue search query"
+        required: true
+        default: "bounty state:open"
+      topn:
+        description: "Maximum results"
+        required: true
+        default: "20"
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  find-bounties:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Search GitHub issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+          QUERY: ${{ inputs.query }}
+          TOPN: ${{ inputs.topn }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh issue list --search "$QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          data = json.loads(Path("issues.json").read_text())
+          suspicious_terms = ("pppdud", "take your money back", "follow my", "backflip", "gazillion", "value: 0.00", "approximately 0 usd")
+          def bounty(text):
+              patterns = [
+                  r"\$\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
+                  r"(?:USD|US\$)\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
+                  r"([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)\s*(?:USD|dollars?)",
+              ]
+              values = []
+              for p in patterns:
+                  for x in re.findall(p, text, re.I):
+                      v = float(x.replace(",", ""))
+                      if 0 < v <= 100000: values.append(v)
+              return max(values) if values else None
+          rows = []
+          for issue in data:
+              text = (issue.get("title") or "") + " " + (issue.get("body") or "")
+              value = bounty(text)
+              labels = " ".join(x["name"] for x in issue.get("labels", []))
+              suspicious = any(x in text.lower() for x in suspicious_terms)
+              confidence = "high" if value and any(k in labels.lower() for k in ("bounty", "reward", "paid")) and not suspicious else ("medium" if value and not suspicious else ("low" if value else "none"))
+              if value:
+                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5)
+                  rows.append((score, value, confidence, suspicious, issue))
+          rows.sort(reverse=True, key=lambda x: x[0])
+          print("\n## Paid Issue Finder results\n")
+          if not rows:
+              print("No monetary bounty detected in the selected issues.")
+          else:
+              for score, value, confidence, suspicious, issue in rows:
+                  repo = issue["repository"]["nameWithOwner"]
+                  flag = " ⚠️ suspicious" if suspicious else ""
+                  print(f"- **US$\{value:,.2f}** · {confidence} · score \{score:.2f}\{flag} — [{repo}#\{issue['number']}: \{issue['title']}](" + issue["url"] + ")")
+          PY
