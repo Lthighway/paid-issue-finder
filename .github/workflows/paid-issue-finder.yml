@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          gh issue list --search "$QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
+          gh search issues "$QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
           python - <<'PY'
           import json, re
           from pathlib import Path
