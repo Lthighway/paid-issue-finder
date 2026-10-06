@@ -1,5 +1,9 @@
 name: Paid Issue Finder
 
+concurrency:
+  group: paid-issue-finder
+  cancel-in-progress: true
+
 on:
   schedule:
     - cron: "0 12 * * *"
@@ -70,6 +74,7 @@ jobs:
           git add REPORT.md
           git diff --cached --quiet && exit 0
           git commit -m "Update live bounty report"
+          git pull --rebase origin main
           git push
 
       - name: Publish report
