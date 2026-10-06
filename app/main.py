@@ -80,12 +80,16 @@ async def github_search(q: str, topn: int) -> list[dict]:
         raise HTTPException(response.status_code, "GitHub search failed: " + response.text[:300])
     return response.json().get("items", [])
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 @app.get("/", response_class=HTMLResponse)
 async def home():
     return """<!doctype html><html><head><meta charset="utf-8"><title>Paid Issue Finder</title></head>
 <body style="font-family:system-ui;max-width:900px;margin:40px auto;padding:20px">
 <h1>Paid Issue Finder</h1><p>Find and rank GitHub issues with monetary bounties.</p>
-<h2>Credits</h2><ul><li>100 queries — US$5</li><li>500 queries — US$20</li><li>1,000 queries — US$35</li></ul>
+<h2>Credits</h2><ul><li>100 queries — US$5</li><li>500 queries — US$25</li><li>1,000 queries — US$50</li></ul>
 <form action="/search" method="get"><input name="q" style="width:70%;padding:12px" value="bounty language:Python state:open"><button>Search</button></form>
 </body></html>"""
 
