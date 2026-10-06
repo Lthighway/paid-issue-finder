@@ -15,6 +15,18 @@ on:
         description: "Optional language filter (e.g. Python, TypeScript)"
         required: false
         default: ""
+      min_bounty:
+        description: "Minimum bounty in USD"
+        required: false
+        default: "0"
+      max_bounty:
+        description: "Maximum bounty in USD"
+        required: false
+        default: "100000"
+      min_opportunity:
+        description: "Minimum opportunity score"
+        required: false
+        default: "0"
 
 permissions:
   contents: write
@@ -30,6 +42,9 @@ jobs:
           QUERY: ${{ inputs.query }}
           TOPN: ${{ inputs.topn }}
           LANGUAGE: ${{ inputs.language }}
+          MIN_BOUNTY: ${{ inputs.min_bounty }}
+          MAX_BOUNTY: ${{ inputs.max_bounty }}
+          MIN_OPPORTUNITY: ${{ inputs.min_opportunity }}
         shell: bash
         run: |
           set -euo pipefail
@@ -78,6 +93,8 @@ jobs:
               issue["_repo_archived"] = archived
               text = (issue.get("title") or "") + " " + (issue.get("body") or "")
               value = bounty(text)
+              if value is None or value < float(__import__("os").environ["MIN_BOUNTY"]) or value > float(__import__("os").environ["MAX_BOUNTY"]):
+                  continue
               labels = " ".join(x["name"] for x in issue.get("labels", []))
               lower = text.lower()
               suspicious = any(x in lower for x in suspicious_terms)
@@ -109,10 +126,13 @@ jobs:
                   issue["_risk_reasons"] = risk_reasons
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
+          rows = [r for r in rows if r[0] >= float(__import__("os").environ["MIN_OPPORTUNITY"])]
           rows = rows[:50]
 
           report = ["# Paid Issue Finder Report", "", f"Query: `{__import__('os').environ['QUERY']}`", ""]
           report.append(f"Generated: {__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()}")
+          report.append("")
+          report.append("Filters: bounty US$%s–US$%s, opportunity >= %s" % (__import__("os").environ["MIN_BOUNTY"], __import__("os").environ["MAX_BOUNTY"], __import__("os").environ["MIN_OPPORTUNITY"]))
           report.append("")
           if not rows:
               report.append("No monetary bounty detected.")
