@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: paid-issue-finder
+    runtime: docker
+    plan: 0.5c-512mb
+    healthCheckPath: /
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: ASAAS_API_KEY
+        sync: false
+      - key: ASAAS_WEBHOOK_TOKEN
+        sync: false
+      - key: ASAAS_BASE_URL
+        value: https://api.asaas.com/v3
+      - key: DATABASE_PATH
+        value: /var/data/paid_issue_finder.db
+      - key: REQUIRE_PAYMENT
+        value: "true"
+    disk:
+      name: paid-issue-finder-data
+      mountPath: /var/data
+      sizeGB: 1
