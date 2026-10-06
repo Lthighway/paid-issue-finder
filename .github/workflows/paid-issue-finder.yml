@@ -51,12 +51,12 @@ jobs:
       - name: Search GitHub issues
         env:
           GH_TOKEN: ${{ github.token }}
-          QUERY: ${{ inputs.query }}
-          TOPN: ${{ inputs.topn }}
-          LANGUAGE: ${{ inputs.language }}
-          MIN_BOUNTY: ${{ inputs.min_bounty }}
-          MAX_BOUNTY: ${{ inputs.max_bounty }}
-          MIN_OPPORTUNITY: ${{ inputs.min_opportunity }}
+          QUERY: ${{ inputs.query || '"bounty" OR "reward" state:open' }}
+          TOPN: ${{ inputs.topn || '30' }}
+          LANGUAGE: ${{ inputs.language || '' }}
+          MIN_BOUNTY: ${{ inputs.min_bounty || '0' }}
+          MAX_BOUNTY: ${{ inputs.max_bounty || '100000' }}
+          MIN_OPPORTUNITY: ${{ inputs.min_opportunity || '0' }}
         shell: bash
         run: |
           set -euo pipefail
