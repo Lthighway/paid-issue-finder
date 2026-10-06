@@ -79,6 +79,7 @@ jobs:
               stars = repo_meta.get("stargazers_count", 0)
               forks = repo_meta.get("forks_count", 0)
               open_issues = repo_meta.get("open_issues_count", 0)
+              default_branch = repo_meta.get("default_branch", "main")
               pushed_at = repo_meta.get("pushed_at") or ""
               archived = repo_meta.get("archived", False)
               repo_score = min(stars / 100, 10) + min(forks / 20, 5)
@@ -91,6 +92,7 @@ jobs:
               issue["_repo_forks"] = forks
               issue["_repo_score"] = repo_score
               issue["_repo_archived"] = archived
+              issue["_default_branch"] = default_branch
               text = (issue.get("title") or "") + " " + (issue.get("body") or "")
               value = bounty(text)
               if value is None or value < float(__import__("os").environ["MIN_BOUNTY"]) or value > float(__import__("os").environ["MAX_BOUNTY"]):
@@ -102,6 +104,8 @@ jobs:
               acceptance_signals = ("acceptance criteria", "acceptance criterion", "definition of done", "expected behavior", "requirements", "reproduction steps", "steps to reproduce", "how to reproduce")
               quality_labels = ("good first issue", "help wanted", "bounty", "reward", "paid")
               issue_quality = 0
+              history_score = 0
+              history_reasons = []
               quality_reasons = []
               if any(x in lower for x in acceptance_signals):
                   issue_quality += 20
@@ -116,6 +120,18 @@ jobs:
                   issue_quality += 10
                   quality_reasons.append("reproduction guidance")
               issue_quality = min(issue_quality, 40)
+              try:
+                  prs = json.loads(__import__("subprocess").check_output(["gh", "api", "--paginate", f"repos/{repo}/pulls?state=closed&per_page=30"], text=True))
+              except Exception:
+                  prs = []
+              merged = sum(1 for pr in prs if pr.get("merged_at"))
+              if merged:
+                  history_score += min(merged * 2, 10)
+                  history_reasons.append(f"{merged} recently merged PRs")
+              if prs:
+                  history_score += 5
+                  history_reasons.append("repository accepts pull requests")
+              history_score = min(history_score, 15)
               confidence = "high" if value and any(k in labels.lower() for k in ("bounty", "reward", "paid")) and not suspicious and not weak_claim else ("medium" if value and not suspicious and not weak_claim else ("low" if value else "none"))
               if value:
                   risk = 0
@@ -136,13 +152,15 @@ jobs:
                       risk += 5
                       risk_reasons.append("no discussion")
                   risk = min(risk, 100)
-                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality - (risk * 0.25)
+                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality + history_score - (risk * 0.25)
                   if risk >= 60:
                       score -= 15
                   issue["_risk"] = risk
                   issue["_risk_reasons"] = risk_reasons
                   issue["_quality"] = issue_quality
                   issue["_quality_reasons"] = quality_reasons
+                  issue["_history_score"] = history_score
+                  issue["_history_reasons"] = history_reasons
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
           rows = [r for r in rows if r[0] >= float(__import__("os").environ["MIN_OPPORTUNITY"])]
@@ -161,6 +179,7 @@ jobs:
                   flag = " ⚠️ suspicious" if suspicious else ""
                   risk = issue.get("_risk", 0)
                   quality = issue.get("_quality", 0)
+                  history = issue.get("_history_score", 0)
                   reasons = ", ".join(issue.get("_risk_reasons", [])) or "no major risk signal"
                   if risk >= 60:
                       verdict = "AVOID"
@@ -168,7 +187,7 @@ jobs:
                       verdict = "GO"
                   else:
                       verdict = "REVIEW"
-                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
+                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, history, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
@@ -179,8 +198,9 @@ jobs:
                   flag = " ⚠️ suspicious" if suspicious else ""
                   risk = issue.get("_risk", 0)
                   quality = issue.get("_quality", 0)
+                  history = issue.get("_history_score", 0)
                   verdict = "AVOID" if risk >= 60 else ("GO" if score >= 50 and risk <= 30 else "REVIEW")
-                  print("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · %s · %s%s — [%s#%s: %s](%s)" % (value, score, risk, quality, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
+                  print("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · %s · %s%s — [%s#%s: %s](%s)" % (value, score, risk, quality, history, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
           PY
 
       - name: Publish report
