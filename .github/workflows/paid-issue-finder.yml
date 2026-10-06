@@ -216,6 +216,10 @@ jobs:
           if not rows:
               report.append("No monetary bounty detected.")
           else:
+              report.append("## Ranked opportunities")
+              report.append("")
+              report.append("| Rank | Bounty | Opportunity | Risk | Quality | History | Maintainer | Verdict |")
+              report.append("|---:|---:|---:|---:|---:|---:|---:|:---|")
               for score, value, confidence, suspicious, issue in rows:
                   repo = issue["repository"]["nameWithOwner"]
                   flag = " ⚠️ suspicious" if suspicious else ""
@@ -241,6 +245,8 @@ jobs:
                       verdict = "GO"
                   else:
                       verdict = "REVIEW"
+                  rank = rows.index((score, value, confidence, suspicious, issue)) + 1
+                  report.append("| %d | US$%.2f | %.1f | %d | %d | %d | %d | **%s** |" % (rank, value, score, risk, quality, history, maintainer, verdict))
                   report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · Maintainer %d · **%s** · %s%s — [%s#%s: %s](%s)" % (value, score, risk, quality, history, maintainer, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
                   report.append("  - " + " | ".join(evidence))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
