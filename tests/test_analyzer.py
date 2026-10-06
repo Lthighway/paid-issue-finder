@@ -1,4 +1,5 @@
 from scripts.analyze_issues import analyze_issue, detect_bounty
+from scripts.run_finder import extract_source_url, source_key
 
 
 def issue(body, labels=None, comments=0, author="maintainer", updated=True):
@@ -81,3 +82,14 @@ def test_crypto_only_payment_is_weak():
     result = analyze_issue(issue("Reward: $250. We pay in BTC after acceptance.", ["bounty"], comments=4), {"stargazers_count": 100, "forks_count": 10, "pushed_at": "2026-10-01T00:00:00Z", "archived": False})
     assert result["confidence"] == "low"
     assert result["risk"] >= 15
+
+
+def test_extract_original_source_url():
+    item = {"body": "### Original Source URL\\nhttps://github.com/example/project/issues/42"}
+    assert extract_source_url(item) == "https://github.com/example/project/issues/42"
+    assert source_key(item) == "/example/project/issues/42"
+
+
+def test_non_mirror_issue_uses_own_identity_for_deduplication():
+    item = {"repository": {"nameWithOwner": "example/project"}, "number": 7, "body": "No source mirror."}
+    assert source_key(item) == "example/project#7"
