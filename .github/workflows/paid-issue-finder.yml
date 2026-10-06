@@ -122,7 +122,8 @@ jobs:
               issue_quality = min(issue_quality, 40)
               maintainer_score = 0
               maintainer_reasons = []
-              author = (issue.get("author") or {}).get("login")
+              author_data = issue.get("author")
+              author = author_data.get("login") if isinstance(author_data, dict) else author_data
               if author:
                   maintainer_score += 5
                   maintainer_reasons.append("identified issue author")
