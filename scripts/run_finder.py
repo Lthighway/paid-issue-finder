@@ -41,6 +41,16 @@ def extract_source_url(issue):
     match = SOURCE_URL_RE.search(body)
     return match.group(0).rstrip(".,") if match else None
 
+def source_ref(issue):
+    url = extract_source_url(issue)
+    if not url:
+        return None
+    parsed = urlparse(url)
+    parts = parsed.path.strip("/").split("/")
+    if len(parts) >= 4 and parts[2] == "issues" and parts[3].isdigit():
+        return "%s/%s" % (parts[0] + "/" + parts[1], parts[3])
+    return None
+
 def source_key(issue):
     url = extract_source_url(issue)
     if url:
@@ -69,15 +79,21 @@ def main():
     rows = []
     for issue in data:
         repo = issue["repository"]["nameWithOwner"]
+        source = source_ref(issue)
+        scoring_repo = repo
+        scoring_number = issue["number"]
+        if source:
+            scoring_repo, scoring_number = source.rsplit("/", 1)
         try:
-            repo_meta = gh_json(["repos/%s" % repo])
+            repo_meta = gh_json(["repos/%s" % scoring_repo])
         except Exception:
             continue
-        result = analyze_issue(issue, repo_meta, repo_history(repo, issue["number"]))
+        result = analyze_issue(issue, repo_meta, repo_history(scoring_repo, scoring_number))
         if not result or not min_bounty <= result["value"] <= max_bounty:
             continue
         if result["opportunity"] < min_opportunity:
             continue
+        issue["_scoring_repo"] = scoring_repo
         issue["_repo_stars"] = repo_meta.get("stargazers_count", 0)
         issue["_repo_forks"] = repo_meta.get("forks_count", 0)
         rows.append((result["opportunity"], result["value"], result, issue))
