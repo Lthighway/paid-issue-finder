@@ -224,13 +224,25 @@ jobs:
                   history = issue.get("_history_score", 0)
                   maintainer = issue.get("_maintainer_score", 0)
                   reasons = ", ".join(issue.get("_risk_reasons", [])) or "no major risk signal"
+                  quality_reasons = ", ".join(issue.get("_quality_reasons", [])) or "no explicit quality signal"
+                  history_reasons = ", ".join(issue.get("_history_reasons", [])) or "no contribution history signal"
+                  maintainer_reasons = ", ".join(issue.get("_maintainer_reasons", [])) or "no maintainer activity signal"
+                  evidence = [
+                      "Reward: explicit monetary value detected",
+                      "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
+                      "Quality: " + quality_reasons,
+                      "Contribution: " + history_reasons,
+                      "Maintainer: " + maintainer_reasons,
+                      "Risk: " + reasons,
+                  ]
                   if risk >= 60:
                       verdict = "AVOID"
                   elif score >= 50 and risk <= 30:
                       verdict = "GO"
                   else:
                       verdict = "REVIEW"
-                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · Maintainer %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, history, maintainer, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
+                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · Maintainer %d · **%s** · %s%s — [%s#%s: %s](%s)" % (value, score, risk, quality, history, maintainer, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
+                  report.append("  - " + " | ".join(evidence))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
