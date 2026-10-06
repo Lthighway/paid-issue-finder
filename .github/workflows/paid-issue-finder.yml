@@ -157,8 +157,22 @@ jobs:
                   if issue.get("comments", 0) == 0:
                       risk += 5
                       risk_reasons.append("no discussion")
+              maintainer_score = 0
+              maintainer_reasons = []
+              author = (issue.get("author") or {}).get("login")
+              if author:
+                  maintainer_score += 5
+                  maintainer_reasons.append("identified issue author")
+              if issue.get("comments", 0) >= 2:
+                  maintainer_score += 5
+                  maintainer_reasons.append("active discussion")
+              if issue.get("updatedAt"):
+                  maintainer_score += 5
+                  maintainer_reasons.append("recently updated")
+              issue["_maintainer_score"] = min(maintainer_score, 15)
+              issue["_maintainer_reasons"] = maintainer_reasons
                   risk = min(risk, 100)
-                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality + history_score - (risk * 0.25)
+                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"] + issue_quality + history_score + issue["_maintainer_score"] - (risk * 0.25)
                   if risk >= 60:
                       score -= 15
                   issue["_risk"] = risk
@@ -167,6 +181,7 @@ jobs:
                   issue["_quality_reasons"] = quality_reasons
                   issue["_history_score"] = history_score
                   issue["_history_reasons"] = history_reasons
+                  issue["_maintainer_score"] = maintainer_score
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
           rows = [r for r in rows if r[0] >= float(__import__("os").environ["MIN_OPPORTUNITY"])]
@@ -186,6 +201,7 @@ jobs:
                   risk = issue.get("_risk", 0)
                   quality = issue.get("_quality", 0)
                   history = issue.get("_history_score", 0)
+                  maintainer = issue.get("_maintainer_score", 0)
                   reasons = ", ".join(issue.get("_risk_reasons", [])) or "no major risk signal"
                   if risk >= 60:
                       verdict = "AVOID"
@@ -193,7 +209,7 @@ jobs:
                       verdict = "GO"
                   else:
                       verdict = "REVIEW"
-                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, history, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
+                  report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · Quality %d · History %d · Maintainer %d · **%s** · %s%s — [%s#%s: %s](%s) — %s" % (value, score, risk, quality, history, maintainer, verdict, confidence, flag, repo, issue["number"], issue["title"], issue["url"], reasons))
           Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
           print("\n## Paid Issue Finder results\n")
           if not rows:
