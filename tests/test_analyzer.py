@@ -59,3 +59,25 @@ def test_weak_claim_is_not_high_confidence():
     )
     assert result["confidence"] != "high"
     assert result["risk"] >= 15
+
+
+def test_detect_bounty_ignores_absurd_amounts():
+    assert detect_bounty("Reward: $999999999") is None
+
+
+def test_negative_bounty_is_high_risk():
+    result = analyze_issue(issue("Bounty: $100. The bounty is negative and paid in PPPDUD dollars."), {"stargazers_count": 20, "forks_count": 2, "pushed_at": "2026-10-01T00:00:00Z", "archived": False})
+    assert result["risk"] >= 60
+    assert result["verdict"] == "AVOID"
+
+
+def test_backflip_and_follow_request_is_high_risk():
+    result = analyze_issue(issue("Reward: $100. Follow my GitHub account and do a backflip to claim it."), {"stargazers_count": 20, "forks_count": 2, "pushed_at": "2026-10-01T00:00:00Z", "archived": False})
+    assert result["risk"] >= 60
+    assert result["verdict"] == "AVOID"
+
+
+def test_crypto_only_payment_is_weak():
+    result = analyze_issue(issue("Reward: $250. We pay in BTC after acceptance.", ["bounty"], comments=4), {"stargazers_count": 100, "forks_count": 10, "pushed_at": "2026-10-01T00:00:00Z", "archived": False})
+    assert result["confidence"] == "low"
+    assert result["risk"] >= 15
