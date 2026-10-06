@@ -1,7 +1,9 @@
 import json
 import os
 import subprocess
+import re
 from pathlib import Path
+from urllib.parse import urlparse
 from scripts.analyze_issues import analyze_issue
 
 def gh_json(args):
@@ -32,8 +34,33 @@ def repo_history(repo, issue_number):
                 pass
     return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
 
+SOURCE_URL_RE = re.compile(r"https?://github\\.com/[^/\\s)]+/[^/\\s)]+/issues/\\d+")
+
+def extract_source_url(issue):
+    body = issue.get("body") or ""
+    match = SOURCE_URL_RE.search(body)
+    return match.group(0).rstrip(".,") if match else None
+
+def source_key(issue):
+    url = extract_source_url(issue)
+    if url:
+        parsed = urlparse(url)
+        return parsed.path.rstrip("/").lower()
+    repo = issue.get("repository", {}).get("nameWithOwner", "").lower()
+    return "%s#%s" % (repo, issue.get("number"))
+
 def main():
     data = json.loads(Path("issues.json").read_text())
+    deduped = []
+    seen_sources = set()
+    for issue in data:
+        key = source_key(issue)
+        if key in seen_sources:
+            continue
+        seen_sources.add(key)
+        issue["_source_url"] = extract_source_url(issue)
+        deduped.append(issue)
+    data = deduped
     min_bounty = float(os.environ.get("MIN_BOUNTY", "0"))
     max_bounty = float(os.environ.get("MAX_BOUNTY", "100000"))
     min_opportunity = float(os.environ.get("MIN_OPPORTUNITY", "0"))
@@ -69,8 +96,10 @@ def main():
                         "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
                         "Quality: " + (", ".join(result["quality_reasons"]) or "no explicit quality signal"),
                         "Risk: " + (", ".join(result["risk_reasons"]) or "no major risk signal")]
-            report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · **%s** · %s — [%s#%s: %s](%s)" %
-                          (value, score, result["risk"], result["verdict"], result["confidence"], repo, issue["number"], issue["title"], issue["url"]))
+            source = issue.get("_source_url")
+            source_note = " · Original source: %s" % source if source else ""
+            report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · **%s** · %s — [%s#%s: %s](%s)%s" %
+                          (value, score, result["risk"], result["verdict"], result["confidence"], repo, issue["number"], issue["title"], issue["url"], source_note))
             report.append("  - " + " | ".join(evidence))
     Path("REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print("\n".join(report))
