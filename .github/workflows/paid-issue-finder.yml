@@ -62,7 +62,7 @@ jobs:
           set -euo pipefail
           SEARCH_QUERY="$QUERY"
           if [ -n "$LANGUAGE" ]; then SEARCH_QUERY="$SEARCH_QUERY language:$LANGUAGE"; fi
-          gh search issues "$SEARCH_QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments,createdAt,updatedAt,author > issues.json
+          gh search issues "$SEARCH_QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,commentsCount,createdAt,updatedAt,author > issues.json
           python scripts/run_finder.py
 
       - name: Commit report
