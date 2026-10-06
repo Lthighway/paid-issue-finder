@@ -1,14 +1,14 @@
 import os
-import re
 from typing import Optional
-import httpx
-from fastapi import FastAPI, Header, HTTPException, Query
+from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
+from .billing import PACKAGES, create_payment, get_account, consume_credit, process_webhook
+import httpx
+import re
 
-app = FastAPI(title="Paid Issue Finder", version="0.2.0")
+app = FastAPI(title="Paid Issue Finder", version="0.3.0")
 GITHUB_API = "https://api.github.com/search/issues"
-PRICE_USD_CENTS = 5
 MAX_REASONABLE_BOUNTY_USD = 100000
 
 class IssueResult(BaseModel):
@@ -25,7 +25,12 @@ class IssueResult(BaseModel):
 class SearchResponse(BaseModel):
     query: str
     charged_usd: float
+    remaining_credits: Optional[int]
     results: list[IssueResult]
+
+class CheckoutRequest(BaseModel):
+    email: str
+    package_id: str
 
 def extract_bounty(text: str) -> Optional[float]:
     patterns = [
@@ -47,10 +52,7 @@ def extract_bounty(text: str) -> Optional[float]:
 def assess_bounty(issue: dict, bounty: Optional[float]) -> tuple[str, bool]:
     text = ((issue.get("title") or "") + " " + (issue.get("body") or "")).lower()
     labels = " ".join(x.get("name", "") for x in issue.get("labels", [])).lower()
-    suspicious_terms = (
-        "pppdud", "take your money back", "follow my", "backflip",
-        "gazillion", "money before", "value: 0.00", "approximately 0 usd"
-    )
+    suspicious_terms = ("pppdud", "take your money back", "follow my", "backflip", "gazillion", "value: 0.00", "approximately 0 usd")
     suspicious = any(term in text for term in suspicious_terms)
     has_bounty_label = any(k in labels for k in ("bounty", "reward", "paid"))
     if bounty and has_bounty_label and not suspicious:
@@ -62,13 +64,8 @@ def assess_bounty(issue: dict, bounty: Optional[float]) -> tuple[str, bool]:
     return "none", suspicious
 
 def score_issue(issue: dict, bounty: Optional[float], confidence: str) -> float:
-    score = 0.0
-    if bounty:
-        score += min(bounty / 100.0, 50.0)
-    if confidence == "high":
-        score += 10
-    elif confidence == "medium":
-        score += 5
+    score = min(bounty / 100.0, 50.0) if bounty else 0.0
+    score += {"high": 10, "medium": 5}.get(confidence, 0)
     score += min((issue.get("comments") or 0) / 10.0, 5)
     return round(score, 2)
 
@@ -77,23 +74,53 @@ async def github_search(q: str, topn: int) -> list[dict]:
     headers = {"Accept": "application/vnd.github+json"}
     if token:
         headers["Authorization"] = "Bearer " + token
-    params = {"q": q, "per_page": min(topn, 100)}
     async with httpx.AsyncClient(timeout=15) as client:
-        response = await client.get(GITHUB_API, params=params, headers=headers)
+        response = await client.get(GITHUB_API, params={"q": q, "per_page": min(topn, 100)}, headers=headers)
     if response.status_code != 200:
         raise HTTPException(response.status_code, "GitHub search failed: " + response.text[:300])
     return response.json().get("items", [])
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
-    return """<!doctype html>
-<html><head><meta charset="utf-8"><title>Paid Issue Finder</title>
-<style>body{font-family:system-ui;max-width:900px;margin:40px auto;padding:0 20px}input{width:70%;padding:12px}button{padding:12px 18px}</style>
-</head><body><h1>Paid Issue Finder</h1>
-<p>Find GitHub issues with monetary bounties and rank opportunities.</p>
-<form action="/search" method="get"><input name="q" value="bounty language:Python state:open" placeholder="bounty language:Python"><button>Search — $0.05</button></form>
-<p>Price per query: US$0.05. Results include confidence and suspicious-signal detection.</p>
+    return """<!doctype html><html><head><meta charset="utf-8"><title>Paid Issue Finder</title></head>
+<body style="font-family:system-ui;max-width:900px;margin:40px auto;padding:20px">
+<h1>Paid Issue Finder</h1><p>Find and rank GitHub issues with monetary bounties.</p>
+<h2>Credits</h2><ul><li>100 queries — US$5</li><li>500 queries — US$20</li><li>1,000 queries — US$35</li></ul>
+<form action="/search" method="get"><input name="q" style="width:70%;padding:12px" value="bounty language:Python state:open"><button>Search</button></form>
 </body></html>"""
+
+@app.post("/billing/checkout")
+async def billing_checkout(data: CheckoutRequest):
+    if data.package_id not in PACKAGES:
+        raise HTTPException(400, "Unknown package")
+    try:
+        payment = await create_payment(data.email, data.package_id)
+    except RuntimeError as exc:
+        raise HTTPException(503, str(exc))
+    return {
+        "package": PACKAGES[data.package_id],
+        "payment_id": payment.get("id"),
+        "invoice_url": payment.get("invoiceUrl"),
+        "status": payment.get("status"),
+    }
+
+@app.get("/billing/balance")
+async def billing_balance(x_api_key: Optional[str] = Header(default=None)):
+    if not x_api_key:
+        raise HTTPException(401, "X-API-Key required")
+    account = get_account(x_api_key)
+    if not account:
+        raise HTTPException(401, "Invalid API key")
+    return {"credits": account["credits"], "price_per_query_usd": 0.05}
+
+@app.post("/webhooks/asaas")
+async def asaas_webhook(request: Request):
+    token = request.headers.get("asaas-access-token")
+    try:
+        processed = process_webhook(await request.json(), token)
+    except PermissionError as exc:
+        raise HTTPException(401, str(exc))
+    return {"received": True, "processed": processed}
 
 @app.get("/search", response_model=SearchResponse)
 async def search(
@@ -101,9 +128,19 @@ async def search(
     topn: int = Query(20, ge=1, le=100),
     x_api_key: Optional[str] = Header(default=None),
 ):
-    require_payment = os.getenv("REQUIRE_PAYMENT", "false").lower() == "true"
-    if require_payment and not x_api_key:
-        raise HTTPException(402, "Payment required. Supply a valid API key/credit.")
+    require_payment = os.getenv("REQUIRE_PAYMENT", "true").lower() == "true"
+    if require_payment:
+        if not x_api_key:
+            raise HTTPException(402, "Payment required. Buy credits and provide X-API-Key.")
+        account = get_account(x_api_key)
+        if not account or account["credits"] < 1:
+            raise HTTPException(402, "Insufficient credits.")
+        if not consume_credit(x_api_key):
+            raise HTTPException(402, "Insufficient credits.")
+        remaining = account["credits"] - 1
+    else:
+        remaining = None
+
     items = await github_search(q, topn)
     results = []
     for issue in items:
@@ -111,15 +148,11 @@ async def search(
         confidence, suspicious = assess_bounty(issue, bounty)
         repo = issue.get("repository_url", "").split("/repos/")[-1]
         results.append(IssueResult(
-            title=issue.get("title", ""),
-            url=issue.get("html_url", ""),
-            repository=repo,
-            number=issue.get("number", 0),
+            title=issue.get("title", ""), url=issue.get("html_url", ""),
+            repository=repo, number=issue.get("number", 0),
             labels=[x.get("name", "") for x in issue.get("labels", [])],
-            bounty_usd=bounty,
-            confidence=confidence,
-            suspicious=suspicious,
+            bounty_usd=bounty, confidence=confidence, suspicious=suspicious,
             score=score_issue(issue, bounty, confidence),
         ))
     results.sort(key=lambda x: (x.confidence != "none", not x.suspicious, x.score), reverse=True)
-    return SearchResponse(query=q, charged_usd=PRICE_USD_CENTS / 100, results=results)
+    return SearchResponse(query=q, charged_usd=0.05, remaining_credits=remaining, results=results)
