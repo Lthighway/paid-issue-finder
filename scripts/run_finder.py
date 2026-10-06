@@ -54,6 +54,8 @@ def main():
     deduped = []
     seen_sources = set()
     for issue in data:
+        if "comments" not in issue:
+            issue["comments"] = issue.get("commentsCount", 0)
         key = source_key(issue)
         if key in seen_sources:
             continue
