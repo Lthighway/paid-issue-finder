@@ -131,6 +131,7 @@ jobs:
               for score, value, confidence, suspicious, issue in rows:
                   repo = issue["repository"]["nameWithOwner"]
                   flag = " ⚠️ suspicious" if suspicious else ""
+                  risk = issue.get("_risk", 0)
                   print("- **US$%.2f** · Opportunity %.1f · Risk %d · %s%s — [%s#%s: %s](%s)" % (value, score, risk, confidence, flag, repo, issue["number"], issue["title"], issue["url"]))
           PY
 
