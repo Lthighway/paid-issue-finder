@@ -35,7 +35,7 @@ jobs:
           set -euo pipefail
           SEARCH_QUERY="$QUERY"
           if [ -n "$LANGUAGE" ]; then SEARCH_QUERY="$SEARCH_QUERY language:$LANGUAGE"; fi
-          gh search issues "$SEARCH_QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments > issues.json
+          gh search issues "$SEARCH_QUERY" --limit "$TOPN" --json number,title,url,repository,labels,body,comments,createdAt,updatedAt,author > issues.json
           python - <<'PY'
           import json, re
           from pathlib import Path
@@ -55,6 +55,27 @@ jobs:
               return max(values) if values else None
           rows = []
           for issue in data:
+              repo = issue["repository"]["nameWithOwner"]
+              repo_json = __import__("subprocess").check_output(
+                  ["gh", "api", f"repos/{repo}"],
+                  text=True
+              )
+              repo_meta = json.loads(repo_json)
+              stars = repo_meta.get("stargazers_count", 0)
+              forks = repo_meta.get("forks_count", 0)
+              open_issues = repo_meta.get("open_issues_count", 0)
+              pushed_at = repo_meta.get("pushed_at") or ""
+              archived = repo_meta.get("archived", False)
+              repo_score = min(stars / 100, 10) + min(forks / 20, 5)
+              if pushed_at:
+                  repo_score += 5
+              if not archived:
+                  repo_score += 5
+              repo_score = min(repo_score, 25)
+              issue["_repo_stars"] = stars
+              issue["_repo_forks"] = forks
+              issue["_repo_score"] = repo_score
+              issue["_repo_archived"] = archived
               text = (issue.get("title") or "") + " " + (issue.get("body") or "")
               value = bounty(text)
               labels = " ".join(x["name"] for x in issue.get("labels", []))
@@ -63,9 +84,10 @@ jobs:
               weak_claim = any(x in lower for x in ("up to ", "terms and conditions apply", "expiry is", "pay you in btc", "pay in btc", "pay in crypto"))
               confidence = "high" if value and any(k in labels.lower() for k in ("bounty", "reward", "paid")) and not suspicious and not weak_claim else ("medium" if value and not suspicious and not weak_claim else ("low" if value else "none"))
               if value:
-                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5)
+                  score = min(value / 100, 50) + {"high": 10, "medium": 5, "low": 0, "none": 0}[confidence] + min(issue.get("comments", 0) / 10, 5) + issue["_repo_score"]
                   if suspicious: score -= 20
                   if weak_claim: score -= 5
+                  if issue["_repo_archived"]: score -= 15
                   rows.append((score, value, confidence, suspicious, issue))
           rows.sort(reverse=True, key=lambda x: x[0])
           rows = rows[:50]
