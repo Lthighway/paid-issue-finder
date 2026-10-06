@@ -136,7 +136,7 @@ jobs:
               issue["_maintainer_score"] = min(maintainer_score, 15)
               issue["_maintainer_reasons"] = maintainer_reasons
               try:
-                  prs = json.loads(__import__("subprocess").check_output(["gh", "api", "--paginate", f"repos/{repo}/pulls?state=closed&per_page=30"], text=True))
+                  prs = json.loads(__import__("subprocess").check_output(["gh", "api", f"repos/{repo}/pulls?state=closed&per_page=30"], text=True))
                   linked_prs = json.loads(__import__("subprocess").check_output(["gh", "api", f"repos/{repo}/issues/{issue['number']}/timeline"], text=True))
               except Exception:
                   prs = []
