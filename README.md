@@ -1,72 +1,88 @@
 # Paid Issue Finder
 
-A small API/web service that discovers GitHub issues that appear to contain monetary bounties and ranks them as opportunities.
+Find GitHub issues that appear to contain monetary bounties and rank opportunities.
 
-## Product model
+## Pricing
 
-- Search price: US$0.05 per query
-- Data source: GitHub Issues Search API
-- Ranking: detected bounty amount, bounty/reward labels and discussion activity
-- API-first design so a payment provider can be swapped without rewriting the search engine
+- 100 queries — US$5
+- 500 queries — US$20
+- 1,000 queries — US$35
+- Search consumption: 1 credit per query
+- Target unit price: US$0.05/query
 
-## Current MVP
+## Payment flow
 
-- FastAPI service
-- Browser search page
-- GitHub issue search integration
-- USD bounty extraction from issue title/body
-- Opportunity scoring
-- Docker deployment
-- Payment enforcement boundary
+Customer -> /billing/checkout -> Asaas PIX charge -> payment -> Asaas webhook -> credit ledger -> search.
 
-## Run locally
+The application uses Asaas for the first payment integration. Asaas supports Pix and cards and provides Webhooks for payment status updates.
 
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    uvicorn app.main:app --reload
+## Environment
 
-Windows PowerShell:
+GITHUB_TOKEN is optional but recommended for GitHub API rate limits.
 
-    python -m venv .venv
-    .\\.venv\\Scripts\\Activate.ps1
-    pip install -r requirements.txt
-    uvicorn app.main:app --reload
+ASAAS_API_KEY and ASAAS_WEBHOOK_TOKEN are secrets and must never be committed.
 
-Open http://127.0.0.1:8000.
+Use the Asaas sandbox URL during development:
+https://api-sandbox.asaas.com/v3
 
 ## API
 
+Create a package payment:
+
+POST /billing/checkout
+
+JSON:
+{"email":"you@example.com","package_id":"starter"}
+
+The response contains the Asaas invoice URL.
+
+After payment is confirmed by the webhook, the account receives its credits.
+
+Check balance:
+
+GET /billing/balance
+
+Header:
+X-API-Key: pif_...
+
+Search:
+
 GET /search?q=bounty%20language:Python%20state:open
 
-The response includes the detected bounty, issue URL, labels and opportunity score.
+Header:
+X-API-Key: pif_...
 
-## Monetization
+When payment is enabled, one credit is consumed per successful search.
 
-The intended unit price is US$0.05/query.
+Webhook:
 
-Setting a price in application code does not itself collect money. Before public monetization, connect a payment/credit provider and make the provider authorize or debit one query before calling /search. The REQUIRE_PAYMENT switch intentionally prevents pretending payment has already been implemented.
+POST /webhooks/asaas
 
-Recommended production flow:
+The endpoint validates the asaas-access-token header and stores payment IDs to prevent duplicate credit allocation.
 
-1. User buys credits.
-2. Payment provider confirms payment.
-3. API issues credits/API key.
-4. Each successful search consumes 1 credit.
-5. API returns remaining balance.
-6. Add rate limits and abuse protection.
+## Run
 
-## Roadmap
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 
-- Payment provider integration
-- User accounts/API keys
-- Credit ledger
-- Better bounty detection for major bounty platforms and custom formats
-- Filters for minimum bounty, language, repository stars and activity
-- Opportunity history and alerts
-- Public landing page
-- Analytics
+Windows PowerShell:
 
-## License
+python -m venv .venv
+.\\.venv\\Scripts\\Activate.ps1
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 
-MIT
+## Production checklist
+
+1. Create/verify an Asaas production account.
+2. Create production API credentials.
+3. Deploy this container behind HTTPS.
+4. Set ASAAS_API_KEY and ASAAS_WEBHOOK_TOKEN as server secrets.
+5. Configure an Asaas webhook for payment events pointing to /webhooks/asaas.
+6. Test the complete credit flow in sandbox.
+7. Add rate limiting, abuse protection and terms/privacy pages.
+8. Only then advertise the service publicly.
+
+License: MIT
