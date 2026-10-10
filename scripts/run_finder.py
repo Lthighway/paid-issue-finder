@@ -142,35 +142,80 @@ def is_unverified_candidate(issue):
     )
 
 
-def canonicalize_issue(issue):
-    """Use the original open, actionable issue as the source of truth.
+def canonicalize_issue(issue, max_source_hops=5):
+    """Follow mirror chains to the deepest verifiable open source issue.
 
-    Skip known archived/unverifiable offers and mirrors whose source is closed
-    or cannot be fetched.
+    Reject closed, pull-request, archived/unverifiable, cyclic, or excessively
+    deep source chains instead of scoring an intermediate mirror as original.
     """
     if is_unverified_candidate(issue):
         return None
-    source = source_ref(issue)
-    if not source:
-        return issue
 
-    repo, number = source.rsplit("/", 1)
-    try:
-        original = gh_json(["repos/%s/issues/%s" % (repo, number)])
-    except Exception:
-        return None
+    discovered_url = issue.get("url") or issue.get("html_url")
+    current = issue
+    visited = set()
 
-    if original.get("state") != "open" or original.get("pull_request") or is_unverified_candidate(original):
-        return None
+    for _ in range(max_source_hops):
+        if is_unverified_candidate(current):
+            return None
 
-    original["repository"] = {"nameWithOwner": repo}
-    original["url"] = original.get("html_url") or "https://github.com/%s/issues/%s" % (repo, number)
-    original["comments"] = original.get("comments", 0)
-    original["updatedAt"] = original.get("updated_at")
-    original["author"] = original.get("user") or original.get("author")
-    original["_source_url"] = original["url"]
-    original["_discovered_url"] = issue.get("url") or issue.get("html_url")
-    return original
+        source = source_ref(current)
+        if not source:
+            break
+
+        repo, number = source.rsplit("/", 1)
+        target = "%s#%s" % (repo.lower(), number)
+        current_key = "%s#%s" % (issue_repo(current), current.get("number"))
+        if target == current_key:
+            # A self-reference does not establish a separate source.
+            break
+        if target in visited:
+            return None
+        visited.add(target)
+
+        try:
+            original = gh_json(["repos/%s/issues/%s" % (repo, number)])
+        except Exception:
+            return None
+
+        if (
+            original.get("state") != "open"
+            or original.get("pull_request")
+            or is_unverified_candidate(original)
+        ):
+            return None
+
+        original["repository"] = {"nameWithOwner": repo}
+        original["url"] = original.get("html_url") or "https://github.com/%s/issues/%s" % (repo, number)
+        original["html_url"] = original["url"]
+        original["comments"] = original.get("comments", 0)
+        original["updatedAt"] = original.get("updated_at")
+        original["author"] = original.get("user") or original.get("author")
+        original["_source_url"] = original["url"]
+        original["_discovered_url"] = discovered_url
+        current = original
+    else:
+        # If the last fetched issue still points elsewhere, don't mislabel it
+        # as canonical merely because the hop limit was reached.
+        if source_ref(current):
+            return None
+
+    current.setdefault("repository", {"nameWithOwner": issue_repo(current)})
+    current.setdefault("url", current.get("html_url") or discovered_url)
+    current.setdefault("html_url", current["url"])
+    current["_discovered_url"] = discovered_url
+    if current.get("url") != discovered_url:
+        current["_source_url"] = current["url"]
+    return current
+
+
+def canonical_issue_key(issue):
+    """Deduplicate by the final issue identity, not an intermediate mirror URL."""
+    repo = issue_repo(issue)
+    number = issue.get("number")
+    if repo and number is not None:
+        return "%s#%s" % (repo, number)
+    return source_key(issue)
 
 
 def main():
@@ -188,11 +233,6 @@ def main():
     deduped = []
     seen_sources = set()
     for candidate in data:
-        key = source_key(candidate)
-        if key in seen_sources:
-            stats["duplicates_removed"] += 1
-            continue
-        seen_sources.add(key)
         issue = canonicalize_issue(candidate)
         if issue is None:
             stats["rejected_candidates"] += 1
@@ -200,6 +240,11 @@ def main():
         if "comments" not in issue:
             issue["comments"] = issue.get("commentsCount", 0)
         issue.setdefault("_discovered_url", issue.get("url") or issue.get("html_url"))
+        key = canonical_issue_key(issue)
+        if key in seen_sources:
+            stats["duplicates_removed"] += 1
+            continue
+        seen_sources.add(key)
         deduped.append(issue)
     stats["canonicalized_candidates"] = len(deduped)
 
