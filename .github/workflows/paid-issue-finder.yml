@@ -18,7 +18,7 @@ on:
       topn:
         description: "Maximum results"
         required: true
-        default: "30"
+        default: "100"
       language:
         description: "Optional language filter (e.g. Python, TypeScript)"
         required: false
@@ -57,7 +57,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           QUERY: ${{ inputs.query || '"bounty" OR "reward" state:open' }}
-          TOPN: ${{ inputs.topn || '30' }}
+          TOPN: ${{ inputs.topn || '100' }}
           LANGUAGE: ${{ inputs.language || '' }}
           MIN_BOUNTY: ${{ inputs.min_bounty || '0' }}
           MAX_BOUNTY: ${{ inputs.max_bounty || '100000' }}
