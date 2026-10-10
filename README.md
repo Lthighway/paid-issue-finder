@@ -48,6 +48,14 @@ Keep the public report free to attract users. Interview active bounty hunters an
 
 Potential subscription prices should be tested with users before being treated as final. Do not claim that the service guarantees earnings or verified payment.
 
+### Give product feedback
+
+Are you looking for paid GitHub issues? Tell us how you search today, which features would save you time, and whether personalized alerts or filters would be valuable.
+
+- [Share product feedback](https://github.com/Lthighway/paid-issue-finder/issues/new?template=product_feedback.yml)
+
+We are validating demand before investing in paid hosting or launching subscriptions. Feedback helps prioritize the product; it does not imply that paid features or a launch date are committed.
+
 ## 💜 Support the project
 
 If Paid Issue Finder saves you time, consider supporting its development through **GitHub Sponsors**:
