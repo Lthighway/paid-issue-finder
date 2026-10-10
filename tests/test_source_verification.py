@@ -169,3 +169,102 @@ def test_unknown_competition_status_requires_manual_review():
     )
     assert result["competition"] == "UNKNOWN"
     assert result["verdict"] == "REVIEW"
+
+
+def test_canonicalize_follows_nested_mirror_to_deepest_source(monkeypatch):
+    from scripts.run_finder import canonical_issue_key
+
+    candidate = {
+        "number": 1601,
+        "title": "Mirror of an external bounty",
+        "body": "Source URL: https://github.com/Vikingr2023/awesome-agent-bounties/issues/76",
+        "url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1601",
+        "html_url": "https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1601",
+        "repository": {"nameWithOwner": "zhangjiayang6835-cyber/bounty-plaza"},
+    }
+    intermediate = {
+        "number": 76,
+        "title": "Mirror of another bounty",
+        "body": (
+            "Original URL: https://github.com/Vikingr2023/awesome-agent-bounties/issues/52\\n"
+            "## Embedded task\\n"
+            "Original URL: https://github.com/aLexzzz430/Cognitive-OS/issues/5"
+        ),
+        "state": "open",
+        "html_url": "https://github.com/Vikingr2023/awesome-agent-bounties/issues/76",
+        "comments": 2,
+        "labels": [],
+        "user": {"login": "mirror-maintainer"},
+    }
+    root = {
+        "number": 5,
+        "title": "Collect AGI architecture proposals",
+        "body": "Reward: $3,000 USD. Submit a research packet.",
+        "state": "open",
+        "html_url": "https://github.com/aLexzzz430/Cognitive-OS/issues/5",
+        "comments": 49,
+        "labels": [{"name": "bounty"}],
+        "user": {"login": "aLexzzz430"},
+    }
+    calls = []
+
+    def fake_gh_json(args):
+        calls.append(args)
+        if args == ["repos/Vikingr2023/awesome-agent-bounties/issues/76"]:
+            return intermediate
+        if args == ["repos/aLexzzz430/Cognitive-OS/issues/5"]:
+            return root
+        raise AssertionError("Unexpected source lookup: %r" % args)
+
+    monkeypatch.setattr("scripts.run_finder.gh_json", fake_gh_json)
+    result = canonicalize_issue(candidate)
+
+    assert calls == [
+        ["repos/Vikingr2023/awesome-agent-bounties/issues/76"],
+        ["repos/aLexzzz430/Cognitive-OS/issues/5"],
+    ]
+    assert result["repository"]["nameWithOwner"] == "aLexzzz430/Cognitive-OS"
+    assert result["number"] == 5
+    assert result["url"] == "https://github.com/aLexzzz430/Cognitive-OS/issues/5"
+    assert result["_discovered_url"] == candidate["url"]
+    assert canonical_issue_key(result) == "alexzzz430/cognitive-os#5"
+
+
+def test_canonicalize_rejects_cyclic_mirror_chain(monkeypatch):
+    candidate = {
+        "number": 7,
+        "title": "Mirror A",
+        "body": "Source: https://github.com/example/b/issues/8",
+        "url": "https://github.com/example/a/issues/7",
+        "repository": {"nameWithOwner": "example/a"},
+    }
+    source_b = {
+        "number": 8,
+        "title": "Mirror B",
+        "body": "Source: https://github.com/example/a/issues/7",
+        "state": "open",
+        "html_url": "https://github.com/example/b/issues/8",
+        "comments": 1,
+        "labels": [],
+        "user": {"login": "maintainer"},
+    }
+    source_a = {
+        "number": 7,
+        "title": "Mirror A",
+        "body": "Source: https://github.com/example/b/issues/8",
+        "state": "open",
+        "html_url": "https://github.com/example/a/issues/7",
+        "comments": 1,
+        "labels": [],
+        "user": {"login": "maintainer"},
+    }
+
+    def fake_gh_json(args):
+        if args == ["repos/example/b/issues/8"]:
+            return source_b
+        if args == ["repos/example/a/issues/7"]:
+            return source_a
+        raise AssertionError("Unexpected source lookup: %r" % args)
+
+    monkeypatch.setattr("scripts.run_finder.gh_json", fake_gh_json)
+    assert canonicalize_issue(candidate) is None
