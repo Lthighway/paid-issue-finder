@@ -19,6 +19,15 @@ def test_detect_bounty_formats():
     assert detect_bounty("Reward: 750 USD") == 750
 
 
+def test_bounty_submission_is_not_mistaken_for_an_offer():
+    text = (
+        "[BOUNTY-SUBMISSION] DAXDA Recursive Bounty System\n"
+        "Submission ID: DAXDA-META-2026-09-18-001\n"
+        "Submission Package\nTotal Value: $37,000"
+    )
+    assert detect_bounty(text) is None
+
+
 def test_legitimate_detailed_issue_is_not_avoid():
     result = analyze_issue(
         issue(
@@ -82,6 +91,23 @@ def test_crypto_only_payment_is_weak():
     result = analyze_issue(issue("Reward: $250. We pay in BTC after acceptance.", ["bounty"], comments=4), {"stargazers_count": 100, "forks_count": 10, "pushed_at": "2026-10-01T00:00:00Z", "archived": False})
     assert result["confidence"] == "low"
     assert result["risk"] >= 15
+
+
+def test_assigned_issue_requires_manual_review():
+    item = issue(
+        "Reward: $3000. Acceptance criteria: fix the sampling bug. " + "Detailed requirements. " * 30,
+        ["bounty"],
+        comments=4,
+    )
+    item["assignees"] = [{"login": "another-contributor"}]
+    result = analyze_issue(
+        item,
+        {"stargazers_count": 1000, "forks_count": 100, "pushed_at": "2026-10-08T00:00:00Z", "archived": False},
+        {"competition": "LOW", "competition_reasons": []},
+    )
+    assert result["competition"] == "HIGH"
+    assert result["verdict"] == "REVIEW"
+    assert "1 contributor(s) already assigned" in result["competition_reasons"]
 
 
 def test_extract_original_source_url():
