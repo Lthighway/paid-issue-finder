@@ -38,7 +38,7 @@ def repo_history(repo, issue_number):
     return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
 
 
-SOURCE_URL_RE = re.compile(r"https?://github\\.com/[^/\\s)]+/[^/\\s)]+/issues/\\d+")
+SOURCE_URL_RE = re.compile(r"https?://github\.com/[^/\s)]+/[^/\s)]+/issues/\d+")
 
 
 def extract_source_url(issue):
@@ -83,7 +83,6 @@ def canonicalize_issue(issue):
     except Exception:
         return None
 
-    # A mirror is only useful for finding work that is still open.
     if original.get("state") != "open" or original.get("pull_request"):
         return None
 
@@ -172,8 +171,8 @@ def main():
                 report.append("  - Discovery mirror: %s" % discovered)
             report.append("  - " + " | ".join(evidence))
 
-    Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
-    print("\\n".join(report))
+    Path("REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    print("\n".join(report))
 
 
 if __name__ == "__main__":
