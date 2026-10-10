@@ -6,6 +6,14 @@ SUSPICIOUS_TERMS = (
     "currency: tbd", "currency not decided", "bounty is negative",
 )
 
+# These indicate a report claiming to have completed/submitted bounty work,
+# not an offer inviting a new contributor to do the work.
+NON_OFFER_MARKERS = (
+    "bounty-submission",
+    "submission id:",
+    "submission package",
+)
+
 WEAK_CLAIMS = (
     "up to ", "terms and conditions apply", "expiry is",
     "pay you in btc", "pay in btc", "pay in crypto",
@@ -21,6 +29,9 @@ QUALITY_LABELS = ("good first issue", "help wanted", "bounty", "reward", "paid")
 
 
 def detect_bounty(text):
+    # Do not treat a submitter's claimed aggregate value as a new bounty offer.
+    if any(marker in text.lower() for marker in NON_OFFER_MARKERS):
+        return None
     patterns = (
         r"\$\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
         r"(?:USD|US\$)\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
@@ -113,9 +124,6 @@ def analyze_issue(issue, repo_meta=None, history=None):
         risk_reasons.append("no discussion")
     risk = min(risk, 100)
 
-    if value is None:
-        return None
-
     confidence = (
         "high" if any(k in label_lower for k in ("bounty", "reward", "paid")) and not suspicious and not weak_claim
         else "medium" if not suspicious and not weak_claim
@@ -132,7 +140,15 @@ def analyze_issue(issue, repo_meta=None, history=None):
         score -= 15
 
     competition = history.get("competition", "UNKNOWN")
-    competition_reasons = history.get("competition_reasons", [])
+    competition_reasons = list(history.get("competition_reasons", []))
+    # Assigned issues are already claimed by someone; never label them GO.
+    assignees = issue.get("assignees") or []
+    if assignees:
+        if competition != "HIGH":
+            competition = "HIGH"
+        competition_reasons.append(
+            "%d contributor(s) already assigned" % len(assignees)
+        )
     if competition == "HIGH":
         score -= 12
     elif competition in ("MEDIUM", "UNKNOWN"):
