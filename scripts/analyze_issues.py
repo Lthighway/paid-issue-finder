@@ -46,6 +46,33 @@ def detect_bounty(text):
     return max(values) if values else None
 
 
+
+def detect_reward_checks(text):
+    """Detect wording worth checking manually; never verify payment itself."""
+    lower = (text or "").lower()
+    payment_terms = (
+        "payment terms", "payout terms", "paid via", "payment method",
+        "will be paid", "bounty program terms", "upon acceptance",
+        "after acceptance", "reward will be", "payout address",
+    )
+    eligibility_terms = (
+        "eligibility", "eligible", "eligibility requirements",
+        "must be at least", "only contributors", "residents of",
+        "open to contributors", "participating countries",
+    )
+    deadline_terms = (
+        "deadline", "due date", "expires on", "submission closes",
+        "submit by", "before the end of",
+    )
+    return {
+        "payment_terms_language": any(term in lower for term in payment_terms),
+        "eligibility_language": any(term in lower for term in eligibility_terms),
+        "deadline_language": any(term in lower for term in deadline_terms),
+        # No issue text alone can prove that money was actually paid.
+        "payment_confirmed": False,
+    }
+
+
 def analyze_issue(issue, repo_meta=None, history=None):
     repo_meta = repo_meta or {}
     history = history or {}
@@ -161,6 +188,8 @@ def analyze_issue(issue, repo_meta=None, history=None):
         else "REVIEW"
     )
 
+    reward_checks = detect_reward_checks(text)
+
     return {
         "value": value, "confidence": confidence, "risk": risk,
         "risk_reasons": risk_reasons, "quality": quality,
@@ -168,4 +197,5 @@ def analyze_issue(issue, repo_meta=None, history=None):
         "maintainer": maintainer, "opportunity": score, "verdict": verdict,
         "competition": competition, "competition_reasons": competition_reasons,
         "competition_evidence": history.get("competition_evidence", []),
+        "reward_checks": reward_checks,
     }

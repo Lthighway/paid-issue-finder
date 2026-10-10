@@ -138,3 +138,27 @@ def test_analyzer_preserves_competition_evidence_for_report():
         {"competition": "HIGH", "competition_reasons": ["linked open pull request(s)"], "competition_evidence": evidence},
     )
     assert result["competition_evidence"] == evidence
+
+
+
+def test_reward_terms_checklist_detects_language_but_never_confirms_payment():
+    from scripts.analyze_issues import detect_reward_checks
+
+    checks = detect_reward_checks(
+        "Reward: $500. Payment terms: paid via bank transfer upon acceptance. "
+        "Eligibility requirements apply. Submit by the deadline."
+    )
+    assert checks["payment_terms_language"] is True
+    assert checks["eligibility_language"] is True
+    assert checks["deadline_language"] is True
+    assert checks["payment_confirmed"] is False
+
+
+def test_reward_terms_checklist_marks_missing_signals_without_claiming_failure():
+    from scripts.analyze_issues import detect_reward_checks
+
+    checks = detect_reward_checks("Reward: $100. Fix the bug and add tests.")
+    assert checks["payment_terms_language"] is False
+    assert checks["eligibility_language"] is False
+    assert checks["deadline_language"] is False
+    assert checks["payment_confirmed"] is False
