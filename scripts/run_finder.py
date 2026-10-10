@@ -249,6 +249,18 @@ def canonical_issue_key(issue):
     return source_key(issue)
 
 
+def summarize_actionability(rows):
+    """Count verdicts and identify whether any candidate is currently GO."""
+    counts = {"GO": 0, "REVIEW": 0, "AVOID": 0}
+    high_competition = 0
+    for _, _, result, _ in rows:
+        verdict = result.get("verdict", "REVIEW")
+        counts[verdict] = counts.get(verdict, 0) + 1
+        if result.get("competition") in ("HIGH", "UNKNOWN"):
+            high_competition += 1
+    return {"verdicts": counts, "high_or_unknown_competition": high_competition}
+
+
 def main():
     data = json.loads(Path("issues.json").read_text())
     stats = {
@@ -308,6 +320,7 @@ def main():
     rows.sort(key=lambda x: x[0], reverse=True)
     stats["ranked_before_cap"] = len(rows)
     rows = rows[:50]
+    actionability = summarize_actionability(rows)
     report = [
         "# Paid Issue Finder Report", "",
         "Query: %s" % os.environ.get("QUERY", ""), "",
@@ -325,6 +338,16 @@ def main():
         "| Candidates outside bounty range | %d |" % stats["outside_bounty_range"],
         "| Candidates below minimum score | %d |" % stats["below_minimum_score"],
         "| Candidates ranked before report cap | %d |" % stats["ranked_before_cap"], "",
+        "## Actionability snapshot", "",
+        "| Verdict | Candidates |",
+        "|:---|---:|",
+        "| GO (no high/unknown competition detected) | %d |" % actionability["verdicts"]["GO"],
+        "| REVIEW (manual checks needed) | %d |" % actionability["verdicts"]["REVIEW"],
+        "| AVOID (high risk signals) | %d |" % actionability["verdicts"]["AVOID"],
+        "| High/unknown competition flags | %d |" % actionability["high_or_unknown_competition"], "",
+        ("No candidate currently meets the GO threshold. Treat the ranked list as leads for manual review, not ready-to-start paid work."
+         if actionability["verdicts"]["GO"] == 0 else
+         "GO is a screening result only; confirm the original issue, competition, eligibility, and payout terms before starting."), "",
         "## How to interpret this report", "",
         "- **Opportunity** is a ranking score, not a probability of success or payment.",
         "- **GO** means no high/unknown competition flag was detected and the score/risk thresholds were met; it is not a guarantee that the bounty is valid or unpaid.",
