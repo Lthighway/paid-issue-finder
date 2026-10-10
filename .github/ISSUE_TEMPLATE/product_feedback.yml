@@ -1,0 +1,74 @@
+name: Product feedback
+description: Tell us whether Paid Issue Finder solves a real problem for you.
+title: "[Feedback] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We are validating the product before investing in paid hosting or subscriptions. Please do not share private information, API keys, or credentials.
+  - type: dropdown
+    id: experience
+    attributes:
+      label: How do you currently look for paid GitHub issues?
+      options:
+        - I search GitHub manually
+        - I use bounty platforms or aggregators
+        - I use scripts or other automation
+        - I do not currently search for paid issues
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often would you use a tool like this?
+      options:
+        - Daily
+        - Several times a week
+        - Weekly
+        - Occasionally
+        - Not sure yet
+    validations:
+      required: true
+  - type: checkboxes
+    id: features
+    attributes:
+      label: Which features would be most useful?
+      description: Select all that apply.
+      options:
+        - label: Alerts for newly discovered opportunities
+        - label: Filters by programming language or technology
+        - label: Minimum bounty and risk filters
+        - label: Evidence about competition and existing solutions
+        - label: Daily or weekly email/Discord digest
+        - label: Saved searches
+        - label: Export to CSV or other formats
+        - label: I mainly need the free public report
+  - type: dropdown
+    id: payment
+    attributes:
+      label: If the tool reliably saved you time, which option best describes your willingness to pay?
+      options:
+        - I would only use a free version
+        - I might pay for alerts or personalized filters
+        - I would consider a subscription if the value were clear
+        - I would prefer a one-time purchase
+        - I cannot say yet
+    validations:
+      required: true
+  - type: textarea
+    id: pain
+    attributes:
+      label: What is the biggest problem in your current workflow?
+      description: A concrete example is more useful than a general suggestion.
+      placeholder: "I spend about ... searching for ... and struggle with ..."
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+      description: Optional suggestions or feedback.
+    validations:
+      required: false
