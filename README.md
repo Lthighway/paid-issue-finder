@@ -2,19 +2,11 @@
 
 Open-source tool for finding GitHub issues that appear to contain monetary bounties and ranking the opportunities.
 
-## 💜 Support the project
-
-If Paid Issue Finder saves you time, consider supporting its development through **GitHub Sponsors**.
-
-- [Sponsor Leonardo / Paid Issue Finder](https://github.com/sponsors/Lthighway)
-
-GitHub Sponsors supports one-time and monthly sponsorships. For personal accounts, GitHub currently states that it charges no sponsorship fee, so 100% of personal-account sponsorships go to the sponsored developer.
+**Status: experimental MVP.** The finder can produce ranked reports, but it does not guarantee that a reward is real or that a contributor will be paid. Verify the original issue and the maintainer's reward terms before spending time on a task.
 
 ## Free GitHub-native MVP
 
 This repository can run the finder directly through **GitHub Actions**, without Render, Asaas, or a paid server.
-
-Public repositories can use GitHub's standard hosted runners for free and without a usage limit for those standard runners.
 
 ### Run a search
 
@@ -22,35 +14,47 @@ Public repositories can use GitHub's standard hosted runners for free and withou
 2. Select **Paid Issue Finder**.
 3. Click **Run workflow**.
 4. Enter a GitHub search query, for example:
-   `bounty state:open`
+   \`bounty state:open\`
    or
-   `bounty language:Python state:open`
+   \`bounty language:Python state:open\`
 5. Choose the number of results.
 6. Run the workflow.
-7. Open the workflow run and read the results in the job log.
+7. Open the workflow run and read the results in the job log or the generated \`REPORT.md\`.
 
-The workflow uses the repository's GitHub token and does not require a personal access token for the basic public-repository search.
+The workflow uses the repository's GitHub token and does not require a personal access token for basic public-issue search.
 
-## Detection
+## Detection and verification
 
-The finder looks for monetary amounts such as `$500`, `US$500`, `500 USD`, and `500 dollars`.
+The finder detects monetary amounts such as \`$500\`, \`US$500\`, \`500 USD\`, and \`500 dollars\`, then evaluates labels, issue detail, repository activity, history, and suspicious wording.
 
-It then considers bounty/reward labels, comments and suspicious text patterns to rank results.
+When a candidate is a mirrored bounty post, the workflow fetches the original GitHub issue and uses the original issue as the source of truth. A mirror is skipped if its original cannot be fetched or is no longer open.
 
-**Important:** detected amounts are signals, not proof that a bounty will actually be paid. Always inspect the original issue and repository before doing work.
+**A detected amount is not proof of payment.** The score is a prioritization aid, not a guarantee. Confirm eligibility, acceptance criteria, reward terms, deadlines, and the maintainer's legitimacy before doing work.
 
-## Local API version
+## Commercialization status
 
-The FastAPI implementation in `app/` remains available for future deployment. It contains the earlier credit/payment prototype, but the GitHub-native workflow is the recommended zero-cost MVP.
+The payment API in \`app/\` is a prototype, not a launched paid service. Before accepting customers, deploy it to a stable HTTPS host, configure production Asaas credentials and a strong webhook authentication token, test payment and refund/chargeback handling, and publish clear terms and support details.
 
-## Roadmap
+The Asaas integration charges in **Brazilian reais (BRL)**. Never put API keys or webhook tokens in source control.
 
-- Better bounty verification
-- Repository reputation signals
-- Duplicate/scam detection
-- Saved searches
-- Optional web interface
-- Optional commercial API when the project has enough users to justify hosting costs
+### Revenue hypothesis to validate
+
+Keep the public report free to attract users. Interview active bounty hunters and validate demand before investing in hosting or marketing. Potential paid features include:
+
+- Personalized filters by language, stack, bounty size, and risk.
+- Email/Discord alerts for newly verified open issues.
+- Saved searches and a daily or weekly digest.
+- Exportable opportunity lists and transparent evidence for each score.
+
+Potential subscription prices should be tested with users before being treated as final. Do not claim that the service guarantees earnings or verified payment.
+
+## 💜 Support the project
+
+If Paid Issue Finder saves you time, consider supporting its development through **GitHub Sponsors**:
+
+- [Sponsor Leonardo / Paid Issue Finder](https://github.com/sponsors/Lthighway)
+
+A sponsorship is voluntary support for development; it is not a purchase of the paid API.
 
 ## License
 
