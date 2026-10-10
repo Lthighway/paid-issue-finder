@@ -87,10 +87,10 @@ async def create_payment(email: str, package_id: str):
 
 
 def process_webhook(event: dict, webhook_token: str | None):
-    # Never accept payment events unless the shared webhook secret is configured.
+    # Asaas requires a strong shared token; never grant credits if it is absent or weak.
     expected = os.getenv("ASAAS_WEBHOOK_TOKEN")
-    if not expected or not webhook_token or webhook_token != expected:
-        raise PermissionError("Invalid or missing Asaas webhook token")
+    if not expected or len(expected) < 32 or not webhook_token or webhook_token != expected:
+        raise PermissionError("Invalid, missing, or weak Asaas webhook token")
 
     event_name = event.get("event")
     payment = event.get("payment") or {}
