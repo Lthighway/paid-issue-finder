@@ -167,4 +167,5 @@ def analyze_issue(issue, repo_meta=None, history=None):
         "quality_reasons": quality_reasons, "history": history_score,
         "maintainer": maintainer, "opportunity": score, "verdict": verdict,
         "competition": competition, "competition_reasons": competition_reasons,
+        "competition_evidence": history.get("competition_evidence", []),
     }
