@@ -175,20 +175,33 @@ def canonicalize_issue(issue):
 
 def main():
     data = json.loads(Path("issues.json").read_text())
+    stats = {
+        "search_results": len(data),
+        "duplicates_removed": 0,
+        "rejected_candidates": 0,
+        "canonicalized_candidates": 0,
+        "repository_metadata_failures": 0,
+        "no_monetary_amount": 0,
+        "outside_bounty_range": 0,
+        "below_minimum_score": 0,
+    }
     deduped = []
     seen_sources = set()
     for candidate in data:
         key = source_key(candidate)
         if key in seen_sources:
+            stats["duplicates_removed"] += 1
             continue
         seen_sources.add(key)
         issue = canonicalize_issue(candidate)
         if issue is None:
+            stats["rejected_candidates"] += 1
             continue
         if "comments" not in issue:
             issue["comments"] = issue.get("commentsCount", 0)
         issue.setdefault("_discovered_url", issue.get("url") or issue.get("html_url"))
         deduped.append(issue)
+    stats["canonicalized_candidates"] = len(deduped)
 
     min_bounty = float(os.environ.get("MIN_BOUNTY", "0"))
     max_bounty = float(os.environ.get("MAX_BOUNTY", "100000"))
@@ -200,23 +213,42 @@ def main():
         try:
             repo_meta = gh_json(["repos/%s" % repo])
         except Exception:
+            stats["repository_metadata_failures"] += 1
             continue
         result = analyze_issue(issue, repo_meta, repo_history(repo, issue_number))
-        if not result or not min_bounty <= result["value"] <= max_bounty:
+        if not result:
+            stats["no_monetary_amount"] += 1
+            continue
+        if not min_bounty <= result["value"] <= max_bounty:
+            stats["outside_bounty_range"] += 1
             continue
         if result["opportunity"] < min_opportunity:
+            stats["below_minimum_score"] += 1
             continue
         issue["_repo_stars"] = repo_meta.get("stargazers_count", 0)
         issue["_repo_forks"] = repo_meta.get("forks_count", 0)
         rows.append((result["opportunity"], result["value"], result, issue))
 
     rows.sort(key=lambda x: x[0], reverse=True)
+    stats["ranked_before_cap"] = len(rows)
     rows = rows[:50]
     report = [
         "# Paid Issue Finder Report", "",
         "Query: %s" % os.environ.get("QUERY", ""), "",
         "Filters: bounty US$%g–US$%g, opportunity >= %g" % (min_bounty, max_bounty, min_opportunity), "",
         "**Important:** detected amounts are not proof of payment. Verify reward terms with the maintainer before investing time.", "",
+        "## Search diagnostics", "",
+        "| Metric | Count |",
+        "|:---|---:|",
+        "| GitHub search results received | %d |" % stats["search_results"],
+        "| Duplicate results removed | %d |" % stats["duplicates_removed"],
+        "| Candidates rejected during source verification | %d |" % stats["rejected_candidates"],
+        "| Canonicalized candidates analyzed | %d |" % stats["canonicalized_candidates"],
+        "| Repository metadata lookup failures | %d |" % stats["repository_metadata_failures"],
+        "| Candidates without detected monetary amount | %d |" % stats["no_monetary_amount"],
+        "| Candidates outside bounty range | %d |" % stats["outside_bounty_range"],
+        "| Candidates below minimum score | %d |" % stats["below_minimum_score"],
+        "| Candidates ranked before report cap | %d |" % stats["ranked_before_cap"], "",
     ]
     if not rows:
         report.append("No verifiable open issue with a monetary bounty was detected.")
