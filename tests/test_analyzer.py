@@ -1,5 +1,5 @@
 from scripts.analyze_issues import analyze_issue, detect_bounty
-from scripts.run_finder import extract_source_url, source_key, summarize_actionability
+from scripts.run_finder import extract_source_url, report_footer, source_key, summarize_actionability
 
 
 def issue(body, labels=None, comments=0, author="maintainer", updated=True):
@@ -181,3 +181,12 @@ def test_actionability_summary_handles_empty_results():
     summary = summarize_actionability([])
     assert summary["verdicts"] == {"GO": 0, "REVIEW": 0, "AVOID": 0}
     assert summary["high_or_unknown_competition"] == 0
+
+
+
+def test_report_footer_shows_freshness_and_feedback_link():
+    footer = "\\n".join(report_footer("2026-10-10 02:00 UTC"))
+    assert "Report generated: 2026-10-10 02:00 UTC" in footer
+    assert "share product feedback" in footer
+    assert "issues/new?template=product_feedback.yml" in footer
+    assert "not payment guarantees" in footer
