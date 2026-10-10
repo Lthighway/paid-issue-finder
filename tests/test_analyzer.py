@@ -119,3 +119,22 @@ def test_extract_original_source_url():
 def test_non_mirror_issue_uses_own_identity_for_deduplication():
     item = {"repository": {"nameWithOwner": "example/project"}, "number": 7, "body": "No source mirror."}
     assert source_key(item) == "example/project#7"
+
+
+def test_analyzer_preserves_competition_evidence_for_report():
+    evidence = [
+        {
+            "kind": "linked open pull request",
+            "url": "https://github.com/example/project/pull/99",
+        },
+        {
+            "kind": "solution/payout comment signal",
+            "url": "https://github.com/example/project/issues/42#issuecomment-1",
+        },
+    ]
+    result = analyze_issue(
+        issue("Reward: $100. Acceptance criteria: fix a regression.", ["bounty"], comments=2),
+        {"stargazers_count": 100, "forks_count": 10, "pushed_at": "2026-10-09T00:00:00Z", "archived": False},
+        {"competition": "HIGH", "competition_reasons": ["linked open pull request(s)"], "competition_evidence": evidence},
+    )
+    assert result["competition_evidence"] == evidence
