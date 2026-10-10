@@ -1,5 +1,7 @@
 import os
+import asyncio
 from typing import Optional
+from urllib.parse import urlparse
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
@@ -7,9 +9,10 @@ from .billing import PACKAGES, create_payment, get_account, consume_credit, proc
 import httpx
 import re
 
-app = FastAPI(title="Paid Issue Finder", version="0.4.0")
+app = FastAPI(title="Paid Issue Finder", version="0.5.0")
 GITHUB_API = "https://api.github.com/search/issues"
 MAX_REASONABLE_BOUNTY_USD = 100000
+SOURCE_URL_RE = re.compile(r"https?://github\.com/([^/\s)]+)/([^/\s)]+)/issues/(\d+)")
 
 
 class IssueResult(BaseModel):
@@ -74,6 +77,67 @@ def score_issue(issue: dict, bounty: Optional[float], confidence: str) -> float:
     score += {"high": 10, "medium": 5}.get(confidence, 0)
     score += min((issue.get("comments") or 0) / 10.0, 5)
     return round(score, 2)
+
+
+def source_issue_ref(issue: dict):
+    body = issue.get("body") or ""
+    match = SOURCE_URL_RE.search(body)
+    if not match:
+        return None
+    owner, repo, number = match.groups()
+    return owner, repo, number, match.group(0).rstrip("., ")
+
+
+async def canonicalize_candidate(issue: dict, client, headers: dict):
+    """Return the original open issue for a mirror; skip closed/unverifiable candidates."""
+    source = source_issue_ref(issue)
+    if not source:
+        return issue if issue.get("state", "open") == "open" else None
+
+    owner, repo, number, source_url = source
+    response = await client.get(
+        f"https://api.github.com/repos/{owner}/{repo}/issues/{number}",
+        headers=headers,
+    )
+    if response.status_code != 200:
+        return None
+    original = response.json()
+    if original.get("state") != "open" or original.get("pull_request"):
+        return None
+
+    original["repository_url"] = f"https://api.github.com/repos/{owner}/{repo}"
+    original["_discovered_url"] = issue.get("html_url") or issue.get("url")
+    original["_source_url"] = original.get("html_url") or source_url
+    return original
+
+
+async def verify_candidates(items: list[dict]) -> list[dict]:
+    token = os.getenv("GITHUB_TOKEN")
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = "Bearer " + token
+
+    semaphore = asyncio.Semaphore(5)
+    async with httpx.AsyncClient(timeout=15) as client:
+        async def verify_one(item):
+            async with semaphore:
+                try:
+                    return await canonicalize_candidate(item, client, headers)
+                except (httpx.HTTPError, ValueError):
+                    return None
+
+        checked = await asyncio.gather(*(verify_one(item) for item in items))
+    unique = []
+    seen = set()
+    for issue in checked:
+        if not issue:
+            continue
+        key = (issue.get("repository_url", ""), issue.get("number"))
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(issue)
+    return unique
 
 
 async def github_search(q: str, topn: int) -> list[dict]:
@@ -157,6 +221,7 @@ async def search(
             raise HTTPException(402, "Insufficient credits.")
 
     items = await github_search(q, topn)
+    items = await verify_candidates(items)
     remaining = None
     if require_payment:
         if not consume_credit(x_api_key):
