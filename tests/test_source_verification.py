@@ -129,3 +129,23 @@ def test_competition_is_unknown_when_comments_cannot_be_verified():
     result = detect_competition([], comments_verified=False)
     assert result["status"] == "UNKNOWN"
     assert result["verified"] is False
+
+
+def test_competition_signal_prevents_go_verdict():
+    from scripts.analyze_issues import analyze_issue
+
+    issue = {
+        "title": "[Bounty: $100] Fix a regression",
+        "body": "Acceptance criteria: implement the fix and add tests. " + ("Detailed requirements. " * 30),
+        "labels": [{"name": "bounty"}],
+        "author": {"login": "maintainer"},
+        "comments": 4,
+        "updatedAt": "2026-10-09T00:00:00Z",
+    }
+    result = analyze_issue(
+        issue,
+        {"stargazers_count": 100, "forks_count": 20, "archived": False, "pushed_at": "2026-10-09T00:00:00Z"},
+        {"competition": "HIGH", "competition_reasons": ["linked open pull request(s)"]},
+    )
+    assert result["competition"] == "HIGH"
+    assert result["verdict"] == "REVIEW"
