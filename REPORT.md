@@ -12,22 +12,22 @@ Filters: bounty US$0–US$100000, opportunity >= 0
 |:---|---:|
 | GitHub search results received | 100 |
 | Duplicate results removed | 1 |
-| Candidates rejected during source verification | 87 |
-| Canonicalized candidates analyzed | 12 |
+| Candidates rejected during source verification | 89 |
+| Canonicalized candidates analyzed | 10 |
 | Repository metadata lookup failures | 0 |
 | Candidates without detected monetary amount | 5 |
 | Candidates outside bounty range | 0 |
 | Candidates below minimum score | 0 |
-| Candidates ranked before report cap | 7 |
+| Candidates ranked before report cap | 5 |
 
 ## Actionability snapshot
 
 | Verdict | Candidates |
 |:---|---:|
 | GO (no high/unknown competition detected) | 0 |
-| REVIEW (manual checks needed) | 7 |
+| REVIEW (manual checks needed) | 5 |
 | AVOID (high risk signals) | 0 |
-| High/unknown competition flags | 7 |
+| High/unknown competition flags | 5 |
 
 No candidate currently meets the GO threshold. Treat the ranked list as leads for manual review, not ready-to-start paid work.
 
@@ -46,7 +46,7 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
 | 1 | US$3000.00 | 123.4 | 0 | 40 | 15 | HIGH | 15 | **REVIEW** |
 - **US$3000.00** · Opportunity 123.4 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#59732: [Bounty $3,000] Fix ttnn.sampling distribution bias from low-precision random threshold](https://github.com/tenstorrent/tt-metal/issues/59732)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1836
-  - Reward: monetary value detected in original issue | Repository: 1697 stars, 752 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 2 comment(s) contain a solution/payout signal; 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 1697 stars, 753 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 2 comment(s) contain a solution/payout signal; 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline mentioned; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/59781); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/59841); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/59888); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/59917); [solution/payout comment signal](https://github.com/tenstorrent/tt-metal/issues/59732#issuecomment-6063072894)
 | 2 | US$3000.00 | 109.0 | 10 | 40 | 11 | HIGH | 15 | **REVIEW** |
@@ -67,17 +67,7 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
   - Reward: monetary value detected in original issue | Repository: 0 stars, 15 forks | Quality: clear requirements/acceptance, useful issue label | Risk: very low repository activity | Competition: HIGH (2 linked open pull request(s); 3 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/Senthemodder/aquarium-of-gullibles/pull/11); [linked open pull request](https://github.com/Senthemodder/aquarium-of-gullibles/pull/15); [solution/payout comment signal](https://github.com/Senthemodder/aquarium-of-gullibles/issues/4#issuecomment-5613005573); [solution/payout comment signal](https://github.com/Senthemodder/aquarium-of-gullibles/issues/4#issuecomment-5613651327); [solution/payout comment signal](https://github.com/Senthemodder/aquarium-of-gullibles/issues/4#issuecomment-6083801058)
-| 5 | US$55.00 | 46.4 | 10 | 30 | 0 | HIGH | 15 | **REVIEW** |
-- **US$55.00** · Opportunity 46.4 · Risk 10 · **REVIEW** · medium — [Augora-Labs/augora-contracts#43: [Bounty: $55] Test that unpause restores leaderboard accrual](https://github.com/Augora-Labs/augora-contracts/issues/43)
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 3 forks | Quality: clear requirements/acceptance, detailed issue description | Risk: very low repository activity | Competition: HIGH (2 comment(s) contain a solution/payout signal)
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [solution/payout comment signal](https://github.com/Augora-Labs/augora-contracts/issues/43#issuecomment-6088412962); [solution/payout comment signal](https://github.com/Augora-Labs/augora-contracts/issues/43#issuecomment-6092092571)
-| 6 | US$60.00 | 41.4 | 10 | 30 | 0 | HIGH | 10 | **REVIEW** |
-- **US$60.00** · Opportunity 41.4 · Risk 10 · **REVIEW** · medium — [Augora-Labs/augora-contracts#42: [Bounty: $60] Test the leaderboard queue_reward and queue_bonus_reward paths](https://github.com/Augora-Labs/augora-contracts/issues/42)
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 3 forks | Quality: clear requirements/acceptance, detailed issue description | Risk: very low repository activity | Competition: HIGH (1 comment(s) contain a solution/payout signal)
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [solution/payout comment signal](https://github.com/Augora-Labs/augora-contracts/issues/42#issuecomment-6088408962)
-| 7 | US$99.00 | 11.6 | 10 | 0 | 0 | HIGH | 10 | **REVIEW** |
+| 5 | US$99.00 | 11.6 | 10 | 0 | 0 | HIGH | 10 | **REVIEW** |
 - **US$99.00** · Opportunity 11.6 · Risk 10 · **REVIEW** · medium — [NEXAITECHAU/gh-disc-968-zhangjiayang6835-cyber-bounty-plaza#1: [NEX Agent] [Bounty] [Bounty] Repair claim next-action mapper](https://github.com/NEXAITECHAU/gh-disc-968-zhangjiayang6835-cyber-bounty-plaza/issues/1)
   - Reward: monetary value detected in original issue | Repository: 0 stars, 0 forks | Quality: no explicit quality signal | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
@@ -85,7 +75,7 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
 
 ---
 
-**Report generated:** 2026-10-10 02:44 UTC
+**Report generated:** 2026-10-10 17:16 UTC
 
 ### Help shape Paid Issue Finder
 
