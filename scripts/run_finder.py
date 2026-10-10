@@ -366,6 +366,15 @@ def main():
             if discovered and discovered != url:
                 report.append("  - Discovery mirror: %s" % discovered)
             report.append("  - " + " | ".join(evidence))
+            checks = result.get("reward_checks", {})
+            report.append(
+                "  - Terms checklist (text signals only): payment/selection terms %s; eligibility %s; deadline %s; payment actually confirmed: NO"
+                % (
+                    "mentioned" if checks.get("payment_terms_language") else "not detected",
+                    "mentioned" if checks.get("eligibility_language") else "not detected",
+                    "mentioned" if checks.get("deadline_language") else "not detected",
+                )
+            )
             competition_evidence = result.get("competition_evidence", [])
             if competition_evidence:
                 links = [
