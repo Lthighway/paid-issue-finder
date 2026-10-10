@@ -20,6 +20,17 @@ Filters: bounty US$0–US$100000, opportunity >= 0
 | Candidates below minimum score | 0 |
 | Candidates ranked before report cap | 7 |
 
+## Actionability snapshot
+
+| Verdict | Candidates |
+|:---|---:|
+| GO (no high/unknown competition detected) | 0 |
+| REVIEW (manual checks needed) | 7 |
+| AVOID (high risk signals) | 0 |
+| High/unknown competition flags | 7 |
+
+No candidate currently meets the GO threshold. Treat the ranked list as leads for manual review, not ready-to-start paid work.
+
 ## How to interpret this report
 
 - **Opportunity** is a ranking score, not a probability of success or payment.
