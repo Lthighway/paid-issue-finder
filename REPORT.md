@@ -82,3 +82,13 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
   - Reward: monetary value detected in original issue | Repository: 0 stars, 0 forks | Quality: no explicit quality signal | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/NEXAITECHAU/gh-disc-968-zhangjiayang6835-cyber-bounty-plaza/pull/2)
+
+---
+
+**Report generated:** 2026-10-10 02:44 UTC
+
+### Help shape Paid Issue Finder
+
+Did this report save you time? Tell us what was useful, what was wrong, and which filters or alerts would be worth using: [share product feedback](https://github.com/Lthighway/paid-issue-finder/issues/new?template=product_feedback.yml).
+
+Free experimental MVP; detected rewards are not payment guarantees.
