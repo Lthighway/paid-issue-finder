@@ -26,6 +26,13 @@ def test_webhook_requires_configured_secret(tmp_path, monkeypatch):
         billing.process_webhook({"event": "PAYMENT_RECEIVED", "payment": {"id": "p"}}, None)
 
 
+def test_webhook_rejects_weak_secret(tmp_path, monkeypatch):
+    make_account(tmp_path, monkeypatch)
+    monkeypatch.setenv("ASAAS_WEBHOOK_TOKEN", "short")
+    with pytest.raises(PermissionError):
+        billing.process_webhook({"event": "PAYMENT_RECEIVED", "payment": {"id": "p"}}, "short")
+
+
 def test_valid_payment_adds_credits_once(tmp_path, monkeypatch):
     account = make_account(tmp_path, monkeypatch)
     monkeypatch.setenv("ASAAS_WEBHOOK_TOKEN", "a" * 40)
