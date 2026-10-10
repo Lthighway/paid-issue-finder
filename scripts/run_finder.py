@@ -4,10 +4,13 @@ import subprocess
 import re
 from pathlib import Path
 from urllib.parse import urlparse
+
 from scripts.analyze_issues import analyze_issue
+
 
 def gh_json(args):
     return json.loads(subprocess.check_output(["gh", "api", *args], text=True))
+
 
 def repo_history(repo, issue_number):
     try:
@@ -34,22 +37,15 @@ def repo_history(repo, issue_number):
                 pass
     return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
 
-SOURCE_URL_RE = re.compile(r"https?://github\.com/[^/\s)]+/[^/\s)]+/issues/\d+")
+
+SOURCE_URL_RE = re.compile(r"https?://github\\.com/[^/\\s)]+/[^/\\s)]+/issues/\\d+")
+
 
 def extract_source_url(issue):
     body = issue.get("body") or ""
     match = SOURCE_URL_RE.search(body)
     return match.group(0).rstrip(".,") if match else None
 
-def source_ref(issue):
-    url = extract_source_url(issue)
-    if not url:
-        return None
-    parsed = urlparse(url)
-    parts = parsed.path.strip("/").split("/")
-    if len(parts) >= 4 and parts[2] == "issues" and parts[3].isdigit():
-        return "%s/%s" % (parts[0] + "/" + parts[1], parts[3])
-    return None
 
 def source_ref(issue):
     url = extract_source_url(issue)
@@ -60,6 +56,7 @@ def source_ref(issue):
     if len(parts) >= 4 and parts[2] == "issues" and parts[3].isdigit():
         return "%s/%s" % (parts[0] + "/" + parts[1], parts[3])
     return None
+
 
 def source_key(issue):
     url = extract_source_url(issue)
@@ -69,69 +66,115 @@ def source_key(issue):
     repo = issue.get("repository", {}).get("nameWithOwner", "").lower()
     return "%s#%s" % (repo, issue.get("number"))
 
+
+def canonicalize_issue(issue):
+    """Use the original open issue as the source of truth for mirrored bounty posts.
+
+    If the original cannot be fetched or is no longer open, skip the mirror rather
+    than scoring unverified text from the aggregator.
+    """
+    source = source_ref(issue)
+    if not source:
+        return issue
+
+    repo, number = source.rsplit("/", 1)
+    try:
+        original = gh_json(["repos/%s/issues/%s" % (repo, number)])
+    except Exception:
+        return None
+
+    # A mirror is only useful for finding work that is still open.
+    if original.get("state") != "open" or original.get("pull_request"):
+        return None
+
+    original["repository"] = {"nameWithOwner": repo}
+    original["url"] = original.get("html_url") or "https://github.com/%s/issues/%s" % (repo, number)
+    original["comments"] = original.get("comments", 0)
+    original["updatedAt"] = original.get("updated_at")
+    original["author"] = original.get("user") or original.get("author")
+    original["_source_url"] = original["url"]
+    original["_discovered_url"] = issue.get("url") or issue.get("html_url")
+    return original
+
+
 def main():
     data = json.loads(Path("issues.json").read_text())
     deduped = []
     seen_sources = set()
-    for issue in data:
-        if "comments" not in issue:
-            issue["comments"] = issue.get("commentsCount", 0)
-        key = source_key(issue)
+    for candidate in data:
+        key = source_key(candidate)
         if key in seen_sources:
             continue
         seen_sources.add(key)
-        issue["_source_url"] = extract_source_url(issue)
+        issue = canonicalize_issue(candidate)
+        if issue is None:
+            continue
+        if "comments" not in issue:
+            issue["comments"] = issue.get("commentsCount", 0)
+        issue.setdefault("_discovered_url", issue.get("url") or issue.get("html_url"))
         deduped.append(issue)
-    data = deduped
+
     min_bounty = float(os.environ.get("MIN_BOUNTY", "0"))
     max_bounty = float(os.environ.get("MAX_BOUNTY", "100000"))
     min_opportunity = float(os.environ.get("MIN_OPPORTUNITY", "0"))
     rows = []
-    for issue in data:
+    for issue in deduped:
         repo = issue["repository"]["nameWithOwner"]
-        source = source_ref(issue)
-        scoring_repo = repo
-        scoring_number = issue["number"]
-        if source:
-            scoring_repo, scoring_number = source.rsplit("/", 1)
+        issue_number = issue["number"]
         try:
-            repo_meta = gh_json(["repos/%s" % scoring_repo])
+            repo_meta = gh_json(["repos/%s" % repo])
         except Exception:
             continue
-        result = analyze_issue(issue, repo_meta, repo_history(scoring_repo, scoring_number))
+        result = analyze_issue(issue, repo_meta, repo_history(repo, issue_number))
         if not result or not min_bounty <= result["value"] <= max_bounty:
             continue
         if result["opportunity"] < min_opportunity:
             continue
-        issue["_scoring_repo"] = scoring_repo
-        issue["_scoring_repo"] = scoring_repo
         issue["_repo_stars"] = repo_meta.get("stargazers_count", 0)
         issue["_repo_forks"] = repo_meta.get("forks_count", 0)
         rows.append((result["opportunity"], result["value"], result, issue))
+
     rows.sort(key=lambda x: x[0], reverse=True)
     rows = rows[:50]
-    report = ["# Paid Issue Finder Report", "", "Query: %s" % os.environ.get("QUERY", ""), "",
-              "Filters: bounty US$%g–US$%g, opportunity >= %g" % (min_bounty, max_bounty, min_opportunity), ""]
+    report = [
+        "# Paid Issue Finder Report", "",
+        "Query: %s" % os.environ.get("QUERY", ""), "",
+        "Filters: bounty US$%g–US$%g, opportunity >= %g" % (min_bounty, max_bounty, min_opportunity), "",
+        "**Important:** detected amounts are not proof of payment. Verify reward terms with the maintainer before investing time.", "",
+    ]
     if not rows:
-        report.append("No monetary bounty detected.")
+        report.append("No verifiable open issue with a monetary bounty was detected.")
     else:
-        report += ["## Ranked opportunities", "", "| Rank | Bounty | Opportunity | Risk | Quality | History | Maintainer | Verdict |",
-                   "|---:|---:|---:|---:|---:|---:|---:|:---|"]
+        report += [
+            "## Ranked opportunities", "",
+            "| Rank | Bounty | Opportunity | Risk | Quality | History | Maintainer | Verdict |",
+            "|---:|---:|---:|---:|---:|---:|---:|:---|",
+        ]
         for rank, (score, value, result, issue) in enumerate(rows, 1):
             repo = issue["repository"]["nameWithOwner"]
-            report.append("| %d | US$%.2f | %.1f | %d | %d | %d | %d | **%s** |" %
-                          (rank, value, score, result["risk"], result["quality"], result["history"], result["maintainer"], result["verdict"]))
-            evidence = ["Reward: explicit monetary value detected",
-                        "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
-                        "Quality: " + (", ".join(result["quality_reasons"]) or "no explicit quality signal"),
-                        "Risk: " + (", ".join(result["risk_reasons"]) or "no major risk signal")]
-            source = issue.get("_source_url")
-            source_note = " · Original source: %s" % source if source else ""
-            report.append("- **US$%.2f** · Opportunity %.1f · Risk %d · **%s** · %s — [%s#%s: %s](%s)%s" %
-                          (value, score, result["risk"], result["verdict"], result["confidence"], repo, issue["number"], issue["title"], issue["url"], source_note))
+            report.append(
+                "| %d | US$%.2f | %.1f | %d | %d | %d | %d | **%s** |" %
+                (rank, value, score, result["risk"], result["quality"], result["history"], result["maintainer"], result["verdict"])
+            )
+            evidence = [
+                "Reward: monetary value detected in original issue",
+                "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
+                "Quality: " + (", ".join(result["quality_reasons"]) or "no explicit quality signal"),
+                "Risk: " + (", ".join(result["risk_reasons"]) or "no major risk signal"),
+            ]
+            url = issue.get("url") or issue.get("html_url") or ""
+            report.append(
+                "- **US$%.2f** · Opportunity %.1f · Risk %d · **%s** · %s — [%s#%s: %s](%s)" %
+                (value, score, result["risk"], result["verdict"], result["confidence"], repo, issue["number"], issue["title"], url)
+            )
+            discovered = issue.get("_discovered_url")
+            if discovered and discovered != url:
+                report.append("  - Discovery mirror: %s" % discovered)
             report.append("  - " + " | ".join(evidence))
-    Path("REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
-    print("\n".join(report))
+
+    Path("REPORT.md").write_text("\\n".join(report) + "\\n", encoding="utf-8")
+    print("\\n".join(report))
+
 
 if __name__ == "__main__":
     main()
