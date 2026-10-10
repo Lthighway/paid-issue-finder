@@ -268,3 +268,53 @@ def test_canonicalize_rejects_cyclic_mirror_chain(monkeypatch):
 
     monkeypatch.setattr("scripts.run_finder.gh_json", fake_gh_json)
     assert canonicalize_issue(candidate) is None
+
+
+def test_competition_evidence_links_open_prs_and_solution_comments():
+    from scripts.run_finder import collect_competition_evidence
+
+    comments = [
+        {
+            "body": "Here is the fix and payout address.",
+            "html_url": "https://github.com/example/project/issues/42#issuecomment-1",
+        },
+        {
+            "body": "Thanks for the clarification.",
+            "html_url": "https://github.com/example/project/issues/42#issuecomment-2",
+        },
+    ]
+    timeline = [
+        {
+            "event": "cross-referenced",
+            "source": {
+                "issue": {
+                    "state": "open",
+                    "html_url": "https://github.com/example/project/pull/99",
+                    "pull_request": {"html_url": "https://github.com/example/project/pull/99"},
+                }
+            },
+        },
+        {
+            "event": "cross-referenced",
+            "source": {
+                "issue": {
+                    "state": "closed",
+                    "html_url": "https://github.com/example/project/pull/88",
+                    "pull_request": {"html_url": "https://github.com/example/project/pull/88"},
+                }
+            },
+        },
+    ]
+
+    evidence = collect_competition_evidence(comments, timeline)
+
+    assert evidence == [
+        {
+            "kind": "linked open pull request",
+            "url": "https://github.com/example/project/pull/99",
+        },
+        {
+            "kind": "solution/payout comment signal",
+            "url": "https://github.com/example/project/issues/42#issuecomment-1",
+        },
+    ]
