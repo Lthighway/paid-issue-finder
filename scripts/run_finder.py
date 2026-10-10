@@ -39,6 +39,35 @@ def detect_competition(comments, linked_open=0, comments_verified=True):
     return {"status": "UNKNOWN", "reasons": ["could not verify issue comments"], "verified": False}
 
 
+def collect_competition_evidence(comments, timeline):
+    """Return direct GitHub links supporting competition warnings, without copying comment text."""
+    evidence = []
+    seen = set()
+
+    for event in timeline or []:
+        source = event.get("source", {}).get("issue", {})
+        pr_ref = source.get("pull_request")
+        if event.get("event") != "cross-referenced" or not pr_ref or source.get("state") != "open":
+            continue
+        url = source.get("html_url") or pr_ref.get("html_url")
+        if url and url not in seen:
+            evidence.append({"kind": "linked open pull request", "url": url})
+            seen.add(url)
+
+    solution_markers = (
+        "## solution", "## proposed solution", "please remit", "payout address",
+        "bounty payout", "here is the fix", "here's the fix", "implementation:",
+    )
+    for comment in comments or []:
+        body = (comment.get("body") or "").lower()
+        url = comment.get("html_url") or comment.get("url")
+        if url and any(marker in body for marker in solution_markers) and url not in seen:
+            evidence.append({"kind": "solution/payout comment signal", "url": url})
+            seen.add(url)
+
+    return evidence[:5]
+
+
 def repo_history(repo, issue_number):
     prs = timeline = comments = None
     try:
@@ -75,12 +104,14 @@ def repo_history(repo, issue_number):
                 pass
 
     competition = detect_competition(comments or [], linked_open=linked_open, comments_verified=(comments is not None and timeline is not None))
+    competition_evidence = collect_competition_evidence(comments or [], timeline or [])
     return {
         "prs": bool(prs), "merged": merged, "linked_merged": linked_merged,
         "linked_closed": linked_closed, "linked_open": linked_open,
         "competition": competition["status"],
         "competition_reasons": competition["reasons"],
         "competition_verified": competition["verified"],
+        "competition_evidence": competition_evidence,
     }
 
 
@@ -335,6 +366,13 @@ def main():
             if discovered and discovered != url:
                 report.append("  - Discovery mirror: %s" % discovered)
             report.append("  - " + " | ".join(evidence))
+            competition_evidence = result.get("competition_evidence", [])
+            if competition_evidence:
+                links = [
+                    "[%s](%s)" % (item["kind"], item["url"])
+                    for item in competition_evidence
+                ]
+                report.append("  - Competition evidence: " + "; ".join(links))
 
     Path("REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print("\n".join(report))
