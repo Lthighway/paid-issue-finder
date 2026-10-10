@@ -149,3 +149,23 @@ def test_competition_signal_prevents_go_verdict():
     )
     assert result["competition"] == "HIGH"
     assert result["verdict"] == "REVIEW"
+
+
+def test_unknown_competition_status_requires_manual_review():
+    from scripts.analyze_issues import analyze_issue
+
+    issue = {
+        "title": "[Bounty: $100] Fix a regression",
+        "body": "Acceptance criteria: implement the fix and add tests. " + ("Detailed requirements. " * 30),
+        "labels": [{"name": "bounty"}],
+        "author": {"login": "maintainer"},
+        "comments": 4,
+        "updatedAt": "2026-10-09T00:00:00Z",
+    }
+    result = analyze_issue(
+        issue,
+        {"stargazers_count": 100, "forks_count": 20, "archived": False, "pushed_at": "2026-10-09T00:00:00Z"},
+        {"competition": "UNKNOWN", "competition_reasons": ["could not verify issue comments"]},
+    )
+    assert result["competition"] == "UNKNOWN"
+    assert result["verdict"] == "REVIEW"
