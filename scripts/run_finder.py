@@ -74,7 +74,7 @@ def repo_history(repo, issue_number):
             except Exception:
                 pass
 
-    competition = detect_competition(comments or [], linked_open=linked_open, comments_verified=comments is not None)
+    competition = detect_competition(comments or [], linked_open=linked_open, comments_verified=(comments is not None and timeline is not None))
     return {
         "prs": bool(prs), "merged": merged, "linked_merged": linked_merged,
         "linked_closed": linked_closed, "linked_open": linked_open,
@@ -237,6 +237,10 @@ def main():
                 "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
                 "Quality: " + (", ".join(result["quality_reasons"]) or "no explicit quality signal"),
                 "Risk: " + (", ".join(result["risk_reasons"]) or "no major risk signal"),
+                "Competition: " + result["competition"] + (
+                    " (" + "; ".join(result["competition_reasons"]) + ")"
+                    if result["competition_reasons"] else ""
+                ),
             ]
             url = issue.get("url") or issue.get("html_url") or ""
             report.append(
