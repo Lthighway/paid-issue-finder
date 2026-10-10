@@ -8,6 +8,8 @@ Open-source tool for finding GitHub issues that appear to contain monetary bount
 
 This repository can run the finder directly through **GitHub Actions**, without Render, Asaas, or a paid server.
 
+**Try it now:** [view the latest public report](https://github.com/Lthighway/paid-issue-finder/blob/main/REPORT.md) · [run your own search in GitHub Actions](https://github.com/Lthighway/paid-issue-finder/actions/workflows/paid-issue-finder.yml)
+
 ### Run a search
 
 1. Open the **Actions** tab.
