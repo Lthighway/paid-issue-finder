@@ -1,5 +1,5 @@
 from scripts.analyze_issues import analyze_issue, detect_bounty
-from scripts.run_finder import extract_source_url, source_key
+from scripts.run_finder import extract_source_url, source_key, summarize_actionability
 
 
 def issue(body, labels=None, comments=0, author="maintainer", updated=True):
@@ -162,3 +162,22 @@ def test_reward_terms_checklist_marks_missing_signals_without_claiming_failure()
     assert checks["eligibility_language"] is False
     assert checks["deadline_language"] is False
     assert checks["payment_confirmed"] is False
+
+
+
+def test_actionability_summary_counts_verdicts_and_competition():
+    rows = [
+        (90, 500, {"verdict": "GO", "competition": "LOW"}, {}),
+        (80, 300, {"verdict": "REVIEW", "competition": "HIGH"}, {}),
+        (70, 100, {"verdict": "REVIEW", "competition": "UNKNOWN"}, {}),
+        (10, 50, {"verdict": "AVOID", "competition": "LOW"}, {}),
+    ]
+    summary = summarize_actionability(rows)
+    assert summary["verdicts"] == {"GO": 1, "REVIEW": 2, "AVOID": 1}
+    assert summary["high_or_unknown_competition"] == 2
+
+
+def test_actionability_summary_handles_empty_results():
+    summary = summarize_actionability([])
+    assert summary["verdicts"] == {"GO": 0, "REVIEW": 0, "AVOID": 0}
+    assert summary["high_or_unknown_competition"] == 0
