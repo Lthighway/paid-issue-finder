@@ -12,6 +12,7 @@ PACKAGES = {
 }
 DB_PATH = os.getenv("DATABASE_PATH", "paid_issue_finder.db")
 
+
 def db():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
@@ -19,6 +20,7 @@ def db():
     conn.execute("CREATE TABLE IF NOT EXISTS payments (payment_id TEXT PRIMARY KEY, api_key TEXT NOT NULL, package_id TEXT NOT NULL, credits INTEGER NOT NULL, amount REAL NOT NULL, status TEXT NOT NULL, processed_at TEXT)")
     conn.commit()
     return conn
+
 
 def get_or_create_account(email: str):
     conn = db()
@@ -33,11 +35,13 @@ def get_or_create_account(email: str):
     conn.close()
     return dict(row)
 
+
 def get_account(api_key: str):
     conn = db()
     row = conn.execute("SELECT * FROM accounts WHERE api_key = ?", (api_key,)).fetchone()
     conn.close()
     return dict(row) if row else None
+
 
 def consume_credit(api_key: str):
     conn = db()
@@ -49,6 +53,7 @@ def consume_credit(api_key: str):
     conn.commit()
     conn.close()
     return True
+
 
 async def create_payment(email: str, package_id: str):
     package = PACKAGES[package_id]
@@ -80,15 +85,19 @@ async def create_payment(email: str, package_id: str):
         response.raise_for_status()
         return response.json()
 
+
 def process_webhook(event: dict, webhook_token: str | None):
+    # Asaas requires a strong shared token; never grant credits if it is absent or weak.
     expected = os.getenv("ASAAS_WEBHOOK_TOKEN")
-    if expected and webhook_token != expected:
-        raise PermissionError("Invalid webhook token")
+    if not expected or len(expected) < 32 or not webhook_token or webhook_token != expected:
+        raise PermissionError("Invalid, missing, or weak Asaas webhook token")
+
     event_name = event.get("event")
     payment = event.get("payment") or {}
     payment_id = payment.get("id")
     if event_name not in {"PAYMENT_RECEIVED", "PAYMENT_CONFIRMED"} or not payment_id:
         return False
+
     external = payment.get("externalReference", "")
     if ":" not in external:
         return False
@@ -96,13 +105,30 @@ def process_webhook(event: dict, webhook_token: str | None):
     package = PACKAGES.get(package_id)
     if not package:
         return False
+
+    # Asaas amounts are charged in BRL. Do not grant credits for a mismatched amount.
+    try:
+        received_value = float(payment.get("value"))
+    except (TypeError, ValueError):
+        return False
+    if abs(received_value - package["price"]) >= 0.01:
+        return False
+
     conn = db()
     existing = conn.execute("SELECT payment_id FROM payments WHERE payment_id = ?", (payment_id,)).fetchone()
     if existing:
         conn.close()
         return True
-    conn.execute("INSERT INTO payments(payment_id,api_key,package_id,credits,amount,status,processed_at) VALUES(?,?,?,?,?,?,?)",
-                 (payment_id, api_key, package_id, package["credits"], package["price"], event_name, datetime.now(timezone.utc).isoformat()))
+
+    account = conn.execute("SELECT api_key FROM accounts WHERE api_key = ?", (api_key,)).fetchone()
+    if not account:
+        conn.close()
+        return False
+
+    conn.execute(
+        "INSERT INTO payments(payment_id,api_key,package_id,credits,amount,status,processed_at) VALUES(?,?,?,?,?,?,?)",
+        (payment_id, api_key, package_id, package["credits"], received_value, event_name, datetime.now(timezone.utc).isoformat()),
+    )
     conn.execute("UPDATE accounts SET credits = credits + ? WHERE api_key = ?", (package["credits"], api_key))
     conn.commit()
     conn.close()
