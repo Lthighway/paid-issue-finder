@@ -1,4 +1,4 @@
-from scripts.run_finder import canonicalize_issue, source_ref, extract_source_url, is_unverified_candidate
+from scripts.run_finder import canonicalize_issue, source_ref, extract_source_url, is_unverified_candidate, detect_competition
 from scripts.analyze_issues import detect_bounty
 
 
@@ -104,3 +104,68 @@ def test_unverified_or_archived_bounty_is_skipped_without_api_call(monkeypatch):
 def test_usdc_amount_is_not_misread_as_usd():
     assert detect_bounty("Solver reward: 0.90 USDC; funding: 1.00 USDC") is None
     assert detect_bounty("Real reward: $200 USD") == 200
+
+
+def test_competition_detects_solution_and_payout_comments():
+    result = detect_competition([
+        {"body": "## Solution\\nHere is the fix.\\nPlease remit the bounty to my payout address."}
+    ])
+    assert result["status"] == "HIGH"
+    assert "1 comment(s) contain a solution/payout signal" in result["reasons"]
+
+
+def test_competition_detects_linked_open_pull_request():
+    result = detect_competition([], linked_open=1)
+    assert result["status"] == "HIGH"
+    assert result["reasons"] == ["1 linked open pull request(s)"]
+
+
+def test_competition_flags_busy_discussion_for_manual_review():
+    result = detect_competition([{"body": "a"}, {"body": "b"}, {"body": "c"}])
+    assert result["status"] == "MEDIUM"
+
+
+def test_competition_is_unknown_when_comments_cannot_be_verified():
+    result = detect_competition([], comments_verified=False)
+    assert result["status"] == "UNKNOWN"
+    assert result["verified"] is False
+
+
+def test_competition_signal_prevents_go_verdict():
+    from scripts.analyze_issues import analyze_issue
+
+    issue = {
+        "title": "[Bounty: $100] Fix a regression",
+        "body": "Acceptance criteria: implement the fix and add tests. " + ("Detailed requirements. " * 30),
+        "labels": [{"name": "bounty"}],
+        "author": {"login": "maintainer"},
+        "comments": 4,
+        "updatedAt": "2026-10-09T00:00:00Z",
+    }
+    result = analyze_issue(
+        issue,
+        {"stargazers_count": 100, "forks_count": 20, "archived": False, "pushed_at": "2026-10-09T00:00:00Z"},
+        {"competition": "HIGH", "competition_reasons": ["linked open pull request(s)"]},
+    )
+    assert result["competition"] == "HIGH"
+    assert result["verdict"] == "REVIEW"
+
+
+def test_unknown_competition_status_requires_manual_review():
+    from scripts.analyze_issues import analyze_issue
+
+    issue = {
+        "title": "[Bounty: $100] Fix a regression",
+        "body": "Acceptance criteria: implement the fix and add tests. " + ("Detailed requirements. " * 30),
+        "labels": [{"name": "bounty"}],
+        "author": {"login": "maintainer"},
+        "comments": 4,
+        "updatedAt": "2026-10-09T00:00:00Z",
+    }
+    result = analyze_issue(
+        issue,
+        {"stargazers_count": 100, "forks_count": 20, "archived": False, "pushed_at": "2026-10-09T00:00:00Z"},
+        {"competition": "UNKNOWN", "competition_reasons": ["could not verify issue comments"]},
+    )
+    assert result["competition"] == "UNKNOWN"
+    assert result["verdict"] == "REVIEW"

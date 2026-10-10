@@ -12,21 +12,59 @@ def gh_json(args):
     return json.loads(subprocess.check_output(["gh", "api", *args], text=True))
 
 
+def detect_competition(comments, linked_open=0, comments_verified=True):
+    """Flag evidence that someone may already be working on or solved the bounty."""
+    reasons = []
+    if linked_open:
+        reasons.append("%d linked open pull request(s)" % linked_open)
+
+    solution_markers = (
+        "## solution", "## proposed solution", "please remit", "payout address",
+        "bounty payout", "here is the fix", "here's the fix", "implementation:",
+    )
+    matching_comments = 0
+    for comment in comments or []:
+        body = (comment.get("body") or "").lower()
+        if any(marker in body for marker in solution_markers):
+            matching_comments += 1
+    if matching_comments:
+        reasons.append("%d comment(s) contain a solution/payout signal" % matching_comments)
+
+    if linked_open or matching_comments:
+        return {"status": "HIGH", "reasons": reasons, "verified": comments_verified}
+    if comments_verified and len(comments or []) >= 3:
+        return {"status": "MEDIUM", "reasons": ["active discussion; inspect comments before starting"], "verified": True}
+    if comments_verified:
+        return {"status": "LOW", "reasons": [], "verified": True}
+    return {"status": "UNKNOWN", "reasons": ["could not verify issue comments"], "verified": False}
+
+
 def repo_history(repo, issue_number):
+    prs = timeline = comments = None
     try:
         prs = gh_json(["repos/%s/pulls?state=closed&per_page=30" % repo])
+    except Exception:
+        pass
+    try:
         timeline = gh_json(["repos/%s/issues/%s/timeline" % (repo, issue_number)])
     except Exception:
-        return {"prs": False, "merged": 0, "linked_merged": 0, "linked_closed": 0}
-    merged = sum(1 for pr in prs if pr.get("merged_at"))
-    linked_merged = linked_closed = 0
-    for event in timeline:
+        pass
+    try:
+        comments = gh_json(["repos/%s/issues/%s/comments?per_page=100" % (repo, issue_number)])
+    except Exception:
+        pass
+
+    merged = sum(1 for pr in (prs or []) if pr.get("merged_at"))
+    linked_merged = linked_closed = linked_open = 0
+    for event in timeline or []:
         source = event.get("source", {}).get("issue", {})
         pr_ref = source.get("pull_request")
         if event.get("event") != "cross-referenced" or not pr_ref:
             continue
         if source.get("state") == "closed":
             linked_closed += 1
+        elif source.get("state") == "open":
+            linked_open += 1
         url = pr_ref.get("html_url")
         if url:
             try:
@@ -35,7 +73,15 @@ def repo_history(repo, issue_number):
                     linked_merged += 1
             except Exception:
                 pass
-    return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
+
+    competition = detect_competition(comments or [], linked_open=linked_open, comments_verified=(comments is not None and timeline is not None))
+    return {
+        "prs": bool(prs), "merged": merged, "linked_merged": linked_merged,
+        "linked_closed": linked_closed, "linked_open": linked_open,
+        "competition": competition["status"],
+        "competition_reasons": competition["reasons"],
+        "competition_verified": competition["verified"],
+    }
 
 
 SOURCE_URL_RE = re.compile(r"https?://github\.com/([^/\s)]+)/([^/\s)]+)/issues/(\d+)", re.I)
@@ -177,20 +223,24 @@ def main():
     else:
         report += [
             "## Ranked opportunities", "",
-            "| Rank | Bounty | Opportunity | Risk | Quality | History | Maintainer | Verdict |",
-            "|---:|---:|---:|---:|---:|---:|---:|:---|",
+            "| Rank | Bounty | Opportunity | Risk | Quality | History | Competition | Maintainer | Verdict |",
+            "|---:|---:|---:|---:|---:|---:|:---:|---:|:---|",
         ]
         for rank, (score, value, result, issue) in enumerate(rows, 1):
             repo = issue["repository"]["nameWithOwner"]
             report.append(
-                "| %d | US$%.2f | %.1f | %d | %d | %d | %d | **%s** |" %
-                (rank, value, score, result["risk"], result["quality"], result["history"], result["maintainer"], result["verdict"])
+                "| %d | US$%.2f | %.1f | %d | %d | %d | %s | %d | **%s** |" %
+                (rank, value, score, result["risk"], result["quality"], result["history"], result["competition"], result["maintainer"], result["verdict"])
             )
             evidence = [
                 "Reward: monetary value detected in original issue",
                 "Repository: %d stars, %d forks" % (issue["_repo_stars"], issue["_repo_forks"]),
                 "Quality: " + (", ".join(result["quality_reasons"]) or "no explicit quality signal"),
                 "Risk: " + (", ".join(result["risk_reasons"]) or "no major risk signal"),
+                "Competition: " + result["competition"] + (
+                    " (" + "; ".join(result["competition_reasons"]) + ")"
+                    if result["competition_reasons"] else ""
+                ),
             ]
             url = issue.get("url") or issue.get("html_url") or ""
             report.append(

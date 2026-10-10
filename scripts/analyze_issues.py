@@ -131,11 +131,24 @@ def analyze_issue(issue, repo_meta=None, history=None):
     if risk >= 60:
         score -= 15
 
-    verdict = "AVOID" if risk >= 60 else "GO" if score >= 50 and risk <= 30 else "REVIEW"
+    competition = history.get("competition", "UNKNOWN")
+    competition_reasons = history.get("competition_reasons", [])
+    if competition == "HIGH":
+        score -= 12
+    elif competition in ("MEDIUM", "UNKNOWN"):
+        score -= 5
+
+    verdict = (
+        "AVOID" if risk >= 60
+        else "REVIEW" if competition in ("HIGH", "UNKNOWN")
+        else "GO" if score >= 50 and risk <= 30
+        else "REVIEW"
+    )
 
     return {
         "value": value, "confidence": confidence, "risk": risk,
         "risk_reasons": risk_reasons, "quality": quality,
         "quality_reasons": quality_reasons, "history": history_score,
         "maintainer": maintainer, "opportunity": score, "verdict": verdict,
+        "competition": competition, "competition_reasons": competition_reasons,
     }
