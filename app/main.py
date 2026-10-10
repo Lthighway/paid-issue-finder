@@ -43,7 +43,7 @@ def extract_bounty(text: str) -> Optional[float]:
     patterns = [
         r"\$\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
         r"(?:USD|US\$)\s?([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)",
-        r"([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)\s*(?:USD|dollars?)",
+        r"([0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?)\s*(?:USD\b|dollars?\b)",
     ]
     values = []
     for pattern in patterns:
@@ -81,15 +81,42 @@ def score_issue(issue: dict, bounty: Optional[float], confidence: str) -> float:
 
 def source_issue_ref(issue: dict):
     body = issue.get("body") or ""
-    match = SOURCE_URL_RE.search(body)
-    if not match:
+    matches = list(SOURCE_URL_RE.finditer(body))
+    if not matches:
         return None
+    current_url = issue.get("html_url") or issue.get("url") or ""
+    current_match = re.match(r"https?://github\.com/([^/]+)/([^/]+)/", current_url, re.I)
+    current_repo = (current_match.group(1) + "/" + current_match.group(2)).lower() if current_match else ""
+    # Aggregators may quote older mirrors first. Prefer the first URL outside
+    # the candidate's own repository, which is more likely to be the source.
+    match = next(
+        (m for m in matches if (m.group(1) + "/" + m.group(2)).lower() != current_repo),
+        matches[0],
+    )
     owner, repo, number = match.groups()
     return owner, repo, number, match.group(0).rstrip("., ")
 
 
+def is_unverified_candidate(issue: dict) -> bool:
+    labels = {
+        str(label.get("name", "")).lower()
+        for label in issue.get("labels", [])
+        if isinstance(label, dict)
+    }
+    text = ((issue.get("title") or "") + " " + (issue.get("body") or "")).lower()
+    return (
+        "verification-unavailable" in labels
+        or "archived duplicate" in text
+        or ("verifier: deterministic_module" in text and "ready: `false`" in text)
+        or "lifecycle: `unavailable`" in text
+        or "current work state: `unavailable`" in text
+    )
+
+
 async def canonicalize_candidate(issue: dict, client, headers: dict):
-    """Return the original open issue for a mirror; skip closed/unverifiable candidates."""
+    """Return an actionable original issue; skip stale or unverifiable offers."""
+    if is_unverified_candidate(issue):
+        return None
     source = source_issue_ref(issue)
     if not source:
         return issue if issue.get("state", "open") == "open" else None
@@ -102,7 +129,7 @@ async def canonicalize_candidate(issue: dict, client, headers: dict):
     if response.status_code != 200:
         return None
     original = response.json()
-    if original.get("state") != "open" or original.get("pull_request"):
+    if original.get("state") != "open" or original.get("pull_request") or is_unverified_candidate(original):
         return None
 
     original["repository_url"] = f"https://api.github.com/repos/{owner}/{repo}"
