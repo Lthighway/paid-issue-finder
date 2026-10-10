@@ -2,6 +2,7 @@ import json
 import os
 import subprocess
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -261,6 +262,25 @@ def summarize_actionability(rows):
     return {"verdicts": counts, "high_or_unknown_competition": high_competition}
 
 
+def report_footer(generated_at=None):
+    """Add report freshness and a low-friction product feedback path."""
+    if generated_at is None:
+        generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return [
+        "",
+        "---",
+        "",
+        "**Report generated:** %s" % generated_at,
+        "",
+        "### Help shape Paid Issue Finder",
+        "",
+        "Did this report save you time? Tell us what was useful, what was wrong, and which filters or alerts would be worth using: "
+        "[share product feedback](https://github.com/Lthighway/paid-issue-finder/issues/new?template=product_feedback.yml).",
+        "",
+        "Free experimental MVP; detected rewards are not payment guarantees.",
+    ]
+
+
 def main():
     data = json.loads(Path("issues.json").read_text())
     stats = {
@@ -406,6 +426,7 @@ def main():
                 ]
                 report.append("  - Competition evidence: " + "; ".join(links))
 
+    report.extend(report_footer())
     Path("REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     print("\n".join(report))
 
