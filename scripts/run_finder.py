@@ -38,13 +38,30 @@ def repo_history(repo, issue_number):
     return {"prs": bool(prs), "merged": merged, "linked_merged": linked_merged, "linked_closed": linked_closed}
 
 
-SOURCE_URL_RE = re.compile(r"https?://github\.com/[^/\s)]+/[^/\s)]+/issues/\d+")
+SOURCE_URL_RE = re.compile(r"https?://github\.com/([^/\s)]+)/([^/\s)]+)/issues/(\d+)", re.I)
+
+
+def issue_repo(issue):
+    repo = (issue.get("repository") or {}).get("nameWithOwner", "")
+    if repo:
+        return repo.lower()
+    url = issue.get("html_url") or issue.get("url") or ""
+    match = re.match(r"https?://github\.com/([^/]+)/([^/]+)/", url, re.I)
+    return (match.group(1) + "/" + match.group(2)).lower() if match else ""
 
 
 def extract_source_url(issue):
     body = issue.get("body") or ""
-    match = SOURCE_URL_RE.search(body)
-    return match.group(0).rstrip(".,") if match else None
+    matches = list(SOURCE_URL_RE.finditer(body))
+    if not matches:
+        return None
+    current_repo = issue_repo(issue)
+    # Mirrors often quote a chain of older mirrors before the real source.
+    # Prefer a source URL outside the current repository to avoid scoring a mirror.
+    for match in matches:
+        if (match.group(1) + "/" + match.group(2)).lower() != current_repo:
+            return match.group(0).rstrip(".,")
+    return matches[0].group(0).rstrip(".,")
 
 
 def source_ref(issue):
@@ -67,12 +84,26 @@ def source_key(issue):
     return "%s#%s" % (repo, issue.get("number"))
 
 
-def canonicalize_issue(issue):
-    """Use the original open issue as the source of truth for mirrored bounty posts.
+def is_unverified_candidate(issue):
+    labels = {str(label.get("name", "")).lower() for label in issue.get("labels", []) if isinstance(label, dict)}
+    text = ((issue.get("title") or "") + " " + (issue.get("body") or "")).lower()
+    return (
+        "verification-unavailable" in labels
+        or "archived duplicate" in text
+        or ("verifier: deterministic_module" in text and "ready: `false`" in text)
+        or "lifecycle: `unavailable`" in text
+        or "current work state: `unavailable`" in text
+    )
 
-    If the original cannot be fetched or is no longer open, skip the mirror rather
-    than scoring unverified text from the aggregator.
+
+def canonicalize_issue(issue):
+    """Use the original open, actionable issue as the source of truth.
+
+    Skip known archived/unverifiable offers and mirrors whose source is closed
+    or cannot be fetched.
     """
+    if is_unverified_candidate(issue):
+        return None
     source = source_ref(issue)
     if not source:
         return issue
@@ -83,7 +114,7 @@ def canonicalize_issue(issue):
     except Exception:
         return None
 
-    if original.get("state") != "open" or original.get("pull_request"):
+    if original.get("state") != "open" or original.get("pull_request") or is_unverified_candidate(original):
         return None
 
     original["repository"] = {"nameWithOwner": repo}

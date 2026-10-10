@@ -69,3 +69,38 @@ def test_api_keeps_direct_open_issue_and_skips_closed_issue():
 
     assert asyncio.run(canonicalize_candidate(direct, client, {})) is direct
     assert asyncio.run(canonicalize_candidate(closed, client, {})) is None
+
+
+
+def test_api_prefers_original_outside_mirror_repository():
+    issue = {
+        "title": "Repeated mirror",
+        "body": (
+            "Copy: https://github.com/aggregator/feed/issues/8\n"
+            "Original source: https://github.com/example/project/issues/42"
+        ),
+        "html_url": "https://github.com/aggregator/feed/issues/9",
+        "state": "open",
+    }
+    assert source_issue_ref(issue) == (
+        "example", "project", "42", "https://github.com/example/project/issues/42"
+    )
+
+
+def test_api_skips_unverified_bounty_before_fetch():
+    issue = {
+        "title": "Archived duplicate",
+        "body": "Lifecycle: `unavailable`",
+        "labels": [{"name": "verification-unavailable"}],
+        "html_url": "https://github.com/aggregator/feed/issues/9",
+        "state": "open",
+    }
+    client = FakeClient(FakeResponse(200, {}))
+    assert asyncio.run(canonicalize_candidate(issue, client, {})) is None
+    assert client.calls == []
+
+
+def test_api_does_not_parse_usdc_as_usd():
+    from app.main import extract_bounty
+    assert extract_bounty("Solver reward: 0.90 USDC; funding: 1.00 USDC") is None
+    assert extract_bounty("Bounty: $200 USD") == 200

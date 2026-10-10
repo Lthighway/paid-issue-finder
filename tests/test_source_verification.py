@@ -1,4 +1,5 @@
-from scripts.run_finder import canonicalize_issue, source_ref
+from scripts.run_finder import canonicalize_issue, source_ref, extract_source_url, is_unverified_candidate
+from scripts.analyze_issues import detect_bounty
 
 
 def mirror_issue():
@@ -66,3 +67,40 @@ def test_non_mirror_issue_is_left_unchanged():
         "number": 7,
     }
     assert canonicalize_issue(issue) is issue
+
+
+
+def test_mirror_chain_prefers_original_repo_over_older_mirrors():
+    issue = {
+        "title": "Mirrored bounty",
+        "body": (
+            "Earlier copy: https://github.com/aggregator/list/issues/7\n"
+            "Original source: https://github.com/example/project/issues/42"
+        ),
+        "url": "https://github.com/aggregator/list/issues/9",
+        "number": 9,
+        "repository": {"nameWithOwner": "aggregator/list"},
+    }
+    assert extract_source_url(issue) == "https://github.com/example/project/issues/42"
+    assert source_ref(issue) == "example/project/42"
+
+
+def test_unverified_or_archived_bounty_is_skipped_without_api_call(monkeypatch):
+    issue = {
+        "title": "Old bounty",
+        "body": "Archived duplicate. Lifecycle: `unavailable`",
+        "labels": [{"name": "verification-unavailable"}],
+        "repository": {"nameWithOwner": "example/project"},
+        "number": 9,
+    }
+    monkeypatch.setattr(
+        "scripts.run_finder.gh_json",
+        lambda args: (_ for _ in ()).throw(AssertionError("must not fetch")),
+    )
+    assert is_unverified_candidate(issue)
+    assert canonicalize_issue(issue) is None
+
+
+def test_usdc_amount_is_not_misread_as_usd():
+    assert detect_bounty("Solver reward: 0.90 USDC; funding: 1.00 USDC") is None
+    assert detect_bounty("Real reward: $200 USD") == 200
