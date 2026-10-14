@@ -43,58 +43,58 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
 
 | Rank | Bounty | Opportunity | Risk | Quality | History | Competition | Maintainer | Verdict |
 |---:|---:|---:|---:|---:|---:|:---:|---:|:---|
-| 1 | US$50.00 | 77.9 | 10 | 40 | 14 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 77.9 · Risk 10 · **REVIEW** · high — [maaltarifi97-maker/aioa-playground#1: [Bounty: $50] slugify() leaves double and trailing hyphens](https://github.com/maaltarifi97-maker/aioa-playground/issues/1)
+| 1 | US$50.00 | 77.8 | 10 | 40 | 14 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 77.8 · Risk 10 · **REVIEW** · high — [maaltarifi97-maker/aioa-playground#1: [Bounty: $50] slugify() leaves double and trailing hyphens](https://github.com/maaltarifi97-maker/aioa-playground/issues/1)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1518
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 26 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description, reproduction guidance | Risk: very low repository activity | Competition: HIGH (4 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 0 stars, 25 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description, reproduction guidance | Risk: very low repository activity | Competition: HIGH (4 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/maaltarifi97-maker/aioa-playground/pull/2); [linked open pull request](https://github.com/maaltarifi97-maker/aioa-playground/pull/3); [linked open pull request](https://github.com/maaltarifi97-maker/aioa-playground/pull/4); [linked open pull request](https://github.com/maaltarifi97-maker/aioa-playground/pull/7); [solution/payout comment signal](https://github.com/maaltarifi97-maker/aioa-playground/issues/1#issuecomment-5647983975)
-| 2 | US$50.00 | 65.1 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 65.1 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#220: Bounty $50: recipe for a 27B model on a 16 GB AMD card](https://github.com/sybil-solutions/local-ai-registry/issues/220)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1880
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 2 comment(s) contain a solution/payout signal)
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/232); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/220#issuecomment-6124954342); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/220#issuecomment-6127871278)
-| 3 | US$50.00 | 65.0 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 65.0 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#217: Bounty $50: recipe for RTX 2080 Ti 11 GB](https://github.com/sybil-solutions/local-ai-registry/issues/217)
+| 2 | US$50.00 | 65.4 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 65.4 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#217: Bounty $50: recipe for RTX 2080 Ti 11 GB](https://github.com/sybil-solutions/local-ai-registry/issues/217)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1883
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/243); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/245); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/217#issuecomment-6128022381)
-| 4 | US$50.00 | 64.8 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.8 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#218: Bounty $50: recipe for GTX 1080 Ti 11 GB](https://github.com/sybil-solutions/local-ai-registry/issues/218)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1882
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+| 3 | US$50.00 | 65.2 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 65.2 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#220: Bounty $50: recipe for a 27B model on a 16 GB AMD card](https://github.com/sybil-solutions/local-ai-registry/issues/220)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1880
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 2 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/244); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/218#issuecomment-6126466618)
-| 5 | US$50.00 | 64.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.7 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#219: Bounty $50: recipe for RX 7900 XTX 24 GB](https://github.com/sybil-solutions/local-ai-registry/issues/219)
+  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/232); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/257); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/220#issuecomment-6124954342); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/220#issuecomment-6127871278)
+| 4 | US$50.00 | 65.1 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 65.1 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#218: Bounty $50: recipe for GTX 1080 Ti 11 GB](https://github.com/sybil-solutions/local-ai-registry/issues/218)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1882
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
+  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/244); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/255); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/218#issuecomment-6126466618)
+| 5 | US$50.00 | 64.9 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 64.9 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#221: Bounty $50: recipe for RTX 4060 Ti 16 GB](https://github.com/sybil-solutions/local-ai-registry/issues/221)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1879
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (3 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
+  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/242); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/246); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/259); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/221#issuecomment-6125867695)
+| 6 | US$50.00 | 64.8 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 64.8 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#219: Bounty $50: recipe for RX 7900 XTX 24 GB](https://github.com/sybil-solutions/local-ai-registry/issues/219)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1881
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/219#issuecomment-6126160776)
-| 6 | US$50.00 | 64.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.7 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#216: Bounty $50: recipe for Intel Arc B580 12 GB](https://github.com/sybil-solutions/local-ai-registry/issues/216)
+| 7 | US$50.00 | 64.8 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 64.8 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#216: Bounty $50: recipe for Intel Arc B580 12 GB](https://github.com/sybil-solutions/local-ai-registry/issues/216)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1884
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/216#issuecomment-6128320201)
-| 7 | US$50.00 | 64.6 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.6 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#222: Bounty $50: recipe for RTX 5060 Ti 16 GB](https://github.com/sybil-solutions/local-ai-registry/issues/222)
+| 8 | US$50.00 | 64.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 64.7 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#222: Bounty $50: recipe for RTX 5060 Ti 16 GB](https://github.com/sybil-solutions/local-ai-registry/issues/222)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1878
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/241); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/222#issuecomment-6125553527)
-| 8 | US$50.00 | 64.5 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.5 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#221: Bounty $50: recipe for RTX 4060 Ti 16 GB](https://github.com/sybil-solutions/local-ai-registry/issues/221)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1879
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/242); [linked open pull request](https://github.com/sybil-solutions/local-ai-registry/pull/246); [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/221#issuecomment-6125867695)
-| 9 | US$50.00 | 64.5 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$50.00** · Opportunity 64.5 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#223: Bounty $50: recipe for Ryzen AI 890M (Radeon 890M iGPU)](https://github.com/sybil-solutions/local-ai-registry/issues/223)
+| 9 | US$50.00 | 64.6 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$50.00** · Opportunity 64.6 · Risk 0 · **REVIEW** · high — [sybil-solutions/local-ai-registry#223: Bounty $50: recipe for Ryzen AI 890M (Radeon 890M iGPU)](https://github.com/sybil-solutions/local-ai-registry/issues/223)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/1877
-  - Reward: monetary value detected in original issue | Repository: 249 stars, 66 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 252 stars, 68 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [solution/payout comment signal](https://github.com/sybil-solutions/local-ai-registry/issues/223#issuecomment-6125265509)
 | 10 | US$500.00 | 63.3 | 10 | 30 | 5 | HIGH | 15 | **REVIEW** |
@@ -107,15 +107,15 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
 - **US$100.00** · Opportunity 46.8 · Risk 0 · **REVIEW** · medium — [Trauma-Station/Trauma-Station#5021: bounty bounty bounty bounty bounty bounty bounty bounty bounty ](https://github.com/Trauma-Station/Trauma-Station/issues/5021)
   - Reward: monetary value detected in original issue | Repository: 54 stars, 331 forks | Quality: no explicit quality signal | Risk: no major risk signal | Competition: MEDIUM (active discussion; inspect comments before starting)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-| 12 | US$50.00 | 39.3 | 15 | 10 | 15 | HIGH | 10 | **REVIEW** |
-- **US$50.00** · Opportunity 39.3 · Risk 15 · **REVIEW** · medium — [MergeFi/frontend#613: Reward filter and sort compare raw amounts across USDC and XLM](https://github.com/MergeFi/frontend/issues/613)
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 91 forks | Quality: detailed issue description | Risk: very low repository activity, no discussion | Competition: HIGH (1 linked open pull request(s))
+| 12 | US$50.00 | 39.5 | 15 | 10 | 15 | HIGH | 10 | **REVIEW** |
+- **US$50.00** · Opportunity 39.5 · Risk 15 · **REVIEW** · medium — [MergeFi/frontend#613: Reward filter and sort compare raw amounts across USDC and XLM](https://github.com/MergeFi/frontend/issues/613)
+  - Reward: monetary value detected in original issue | Repository: 1 stars, 95 forks | Quality: detailed issue description | Risk: very low repository activity, no discussion | Competition: HIGH (1 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/MergeFi/frontend/pull/732)
 
 ---
 
-**Report generated:** 2026-10-13 19:12 UTC
+**Report generated:** 2026-10-14 17:01 UTC
 
 ### Help shape Paid Issue Finder
 
