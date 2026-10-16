@@ -1,0 +1,70 @@
+name: OMNIA Treasure Hunter
+on:
+  push:
+    branches: [main]
+    paths: ['treasure_hunter/**', '.github/workflows/treasure-hunter.yml']
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: omnia-treasure-hunter
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependência criptográfica
+        run: python -m pip install -r treasure_hunter/requirements.txt
+      - name: Testes isolados
+        run: python -m unittest discover -s treasure_hunter/tests -v
+      - name: Restaurar histórico durável
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin treasure-data; then
+            git fetch origin treasure-data
+            git worktree add treasure-state FETCH_HEAD
+          else
+            git worktree add --detach treasure-state
+            (cd treasure-state && git switch --orphan treasure-data && git rm -rf .)
+          fi
+      - name: Auditoria de leitura
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m treasure_hunter scan --state treasure-state
+      - name: Persistir relatório e fila antes de notificar
+        run: bash treasure_hunter/persist.sh
+      - name: Notificar mudanças quando configurado
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        run: python -m treasure_hunter notify --state treasure-state
+      - name: Persistir confirmações de entrega
+        if: success()
+        run: bash treasure_hunter/persist.sh
+      - name: Resumo
+        if: always()
+        run: test ! -f treasure-state/REPORT.md || cat treasure-state/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Publicar painel e relatório para download
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: omnia-treasure-hunter
+          path: |
+            treasure-state/index.html
+            treasure-state/REPORT.md
+            treasure-state/results.json
+            treasure-state/evidence.json
+          retention-days: 30

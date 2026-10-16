@@ -1,0 +1,62 @@
+[
+  {
+    "id": "aave-rescue-1-aave",
+    "name": "Aave Rescue Phase 1 \u2014 AAVE",
+    "wallet_network": "evm",
+    "adapter": "aave_merkle",
+    "symbol": "AAVE",
+    "decimals": 18,
+    "distribution_id": 0,
+    "expected_root": "0x46cf998dfa113fd51bc43bf8931a5b20d45a75471dde5df7b06654e94333a463",
+    "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
+    "data_url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json",
+    "deadline": null,
+    "distributor": "0xa88c6D90eAe942291325f9ae3c66f3563B93FE10",
+    "deployment_source": "https://github.com/bgd-labs/aave-address-book/blob/main/src/MiscEthereum.sol"
+  },
+  {
+    "id": "aave-rescue-1-stkAave",
+    "name": "Aave Rescue Phase 1 \u2014 stkAAVE",
+    "wallet_network": "evm",
+    "adapter": "aave_merkle",
+    "symbol": "stkAAVE",
+    "decimals": 18,
+    "distribution_id": 1,
+    "expected_root": "0x71d2b70cb25ea6bbdc276c4b4b9f209c53131d652f962b4d5f6d89fe5a1c6760",
+    "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
+    "data_url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json",
+    "deadline": null,
+    "distributor": "0xa88c6D90eAe942291325f9ae3c66f3563B93FE10",
+    "deployment_source": "https://github.com/bgd-labs/aave-address-book/blob/main/src/MiscEthereum.sol"
+  },
+  {
+    "id": "aave-rescue-1-usdt",
+    "name": "Aave Rescue Phase 1 \u2014 USDT",
+    "wallet_network": "evm",
+    "adapter": "aave_merkle",
+    "symbol": "USDT",
+    "decimals": 6,
+    "distribution_id": 2,
+    "expected_root": "0xc7ee13da36bc0398f570e2c50daea6d04645f112371489486655d566c141c156",
+    "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
+    "data_url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json",
+    "deadline": null,
+    "distributor": "0xa88c6D90eAe942291325f9ae3c66f3563B93FE10",
+    "deployment_source": "https://github.com/bgd-labs/aave-address-book/blob/main/src/MiscEthereum.sol"
+  },
+  {
+    "id": "aave-rescue-1-uni",
+    "name": "Aave Rescue Phase 1 \u2014 UNI",
+    "wallet_network": "evm",
+    "adapter": "aave_merkle",
+    "symbol": "UNI",
+    "decimals": 18,
+    "distribution_id": 3,
+    "expected_root": "0x0d02ecdaab34b26ed6ffa029ffa15bc377852ba0dc0e2ce18927d554ea3d939e",
+    "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
+    "data_url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json",
+    "deadline": null,
+    "distributor": "0xa88c6D90eAe942291325f9ae3c66f3563B93FE10",
+    "deployment_source": "https://github.com/bgd-labs/aave-address-book/blob/main/src/MiscEthereum.sol"
+  }
+]
