@@ -86,7 +86,7 @@ No candidate currently meets the GO threshold. Treat the ranked list as leads fo
 
 ---
 
-**Report generated:** 2026-10-16 21:34 UTC
+**Report generated:** 2026-10-16 21:36 UTC
 
 ### Help shape Paid Issue Finder
 
