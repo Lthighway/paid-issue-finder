@@ -3,6 +3,7 @@ from scripts.analyze_issues import analyze_issue
 from scripts import run_finder
 from .core import record
 from .chains import fail
+from .zero_cost import submitted_report
 
 def collect(c,limit=12):
     url='https://api.github.com/search/issues?'+urlencode({'q':'is:issue is:open bounty','sort':'updated','per_page':limit})
@@ -18,6 +19,9 @@ def collect(c,limit=12):
                 repo=run_finder.issue_repo(issue);number=issue['number'];key=f'github:{repo}:{number}'
                 if key in seen:continue
                 seen.add(key)
+                if submitted_report(issue):
+                    yield fail(key,'bounty','externa',issue['title'],'Relatório de vulnerabilidade já submetido por terceiro; não demonstra oferta disponível ao proprietário.',source=issue['html_url'])
+                    continue
                 meta=c.get('https://api.github.com/repos/'+repo)
                 if meta.get('archived'):continue
                 issue['author']=issue.get('user');issue['updatedAt']=issue.get('updated_at')
@@ -46,6 +50,9 @@ def refresh_known(c,store,current):
         _,repo,number=parts
         try:
             issue=c.get(f'https://api.github.com/repos/{repo}/issues/{number}')
+            if submitted_report(issue):
+                yield fail(previous['id'],'bounty','externa',previous['title'],'Relatório já submetido por terceiro; recompensa disponível não demonstrada.',source=previous.get('source'))
+                continue
             r=dict(previous);r.pop('evidence',None);r.pop('checked_at',None)
             if issue['state']!='open':r.update(status='NÃO ELEGÍVEL',detail='Issue encerrada na fonte original; não demonstra pagamento ao proprietário.')
             else:

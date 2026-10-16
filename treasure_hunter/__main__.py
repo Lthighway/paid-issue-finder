@@ -6,6 +6,7 @@ from .validation import validate
 from . import chains,rewards,bounties
 from .render import render
 from .notify import deliver
+from . import zero_cost, superteam
 
 ROOT=Path(__file__).parent
 
@@ -42,7 +43,9 @@ def main():
     if not args.no_bounties:
         collect(bounties.collect(client))
         collect(bounties.refresh_known(client,store,items))
-    result={'schema_version':1,'checked_at':now(),'wallets':wallets,'items':items,'notifications':'Configuráveis; verificar etapa notify','received_total':None}
+    collect(superteam.collect())
+    zero_cost.annotate(items)
+    result={'schema_version':1,'checked_at':now(),'wallets':wallets,'items':items,'notifications':'Configuráveis; verificar etapa notify','received_total':None,'spending_limit':'0','automatic_financial_execution':False}
     changes=store.save(result);result['changes']=len(changes);result['history']=store.history();render(result,state)
     (state/'evidence.json').write_text(json.dumps(client.evidence,indent=2))
     print(json.dumps({'event':'complete','items':len(items),'changes':len(changes),'report':str(state/'REPORT.md')}))

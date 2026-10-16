@@ -38,6 +38,7 @@ jobs:
       - name: Auditoria de leitura
         env:
           GH_TOKEN: ${{ github.token }}
+          SUPERTEAM_API_KEY: ${{ secrets.SUPERTEAM_API_KEY }}
         run: python -m treasure_hunter scan --state treasure-state
       - name: Persistir relatório e fila antes de notificar
         run: bash treasure_hunter/persist.sh

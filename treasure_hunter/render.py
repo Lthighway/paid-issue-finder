@@ -9,7 +9,7 @@ def render(result,out):
     lines=['# OMNIA Treasure Hunter','',f"Verificação: {result['checked_at']}",'','Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.','', '## Resultados','', '| Rede | Categoria | Resultado | Status | Quantidade | Ativo | Fonte |','|---|---|---|---|---|---|---|']
     for r in result['items']:
         lines.append('| '+' | '.join(clean(r.get(k)) for k in ('network','category','title','status','amount','asset','source'))+' |')
-    lines+=['','## Evidências e limitações','']
+    lines+=['','## Recebimento sem gastos','', 'Limite de desembolso do proprietário: zero. Execução financeira automática: DESATIVADA. Nenhuma rota de pagamento sem custos foi confirmada. Cadastro de agente Superteam exige SUPERTEAM_API_KEY e vínculo humano para pagamentos.','', '## Evidências e limitações','']
     for r in result['items']:
         if r.get('detail'):lines.append(f"- **{clean(r['title'])} ({r['network']})**: {clean(r['detail'])}")
     lines+=['','## Operação','',f"Mudanças nesta execução: {result.get('changes',0)}",'Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.','Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.']
