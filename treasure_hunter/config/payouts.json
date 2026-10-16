@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "spending_limit": "0",
+  "preferred_routes": [
+    "crypto",
+    "paypal"
+  ],
+  "paypal": {
+    "email": "leonardolimabravo@hotmail.com",
+    "mode": "provider_direct_payout_only"
+  },
+  "crypto": {
+    "bitcoin": "bc1qvtuhezyjkvrwgxcsvhrnc2k7r8vzr3mewus6mk",
+    "evm": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
+    "solana": "9iEUueypJ57nV31GJ12jaXCVFY5QYvdiMSqo8aCqdcj2",
+    "stellar": "GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU"
+  },
+  "automatic_claims": false,
+  "automatic_transfers": false,
+  "private_keys_allowed": false
+}
