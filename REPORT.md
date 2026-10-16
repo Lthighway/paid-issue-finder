@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-16T19:44:00.738083+00:00
+Verificação: 2026-10-16T19:47:19.287774+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -51,26 +51,18 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | stellar | recompensa | Claimable balance | POTENCIAL | 0.0700000 | XRP:GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5 | https://horizon.stellar.org/claimable_balances/000000003a7e7f08fc3dd5322668c25cc0f886e55fde3ff229dad1a5c19cac9141b3a879 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 5.0000000 | XRP:GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5 | https://horizon.stellar.org/claimable_balances/000000001c51b007cf542e80a67f8a833ddb32e95b4cfefa198a8129d5e9e5009b7ab420 |
 | stellar | cobertura | Claimable balances consultados | CONFIRMADO | — | — | https://horizon.stellar.org/claimable_balances?claimant=GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU&limit=200 |
-| 9745 | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 8453 | campanha | Deposit USDe as collateral on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 4663 | campanha | Deposit USDe as collateral on USDe/USDG 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 4663 | campanha | [Robinhood Users Only] Supply to Steakhouse USDG V2 vault on Morpho | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 8453 | campanha | Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 8453 | campanha | Supply USDC on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 143 | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 8453 | campanha | Provide liquidity to Gamma USDC-USDT vault | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 4 | campanha | Supply USDC in Upshift sentUSDC | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 9745 | campanha | Borrow USDT0 on Aave | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 143 | campanha | Lend USDC on Aave | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 1 | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| 5000 | campanha | Lend USDT0 on Aave | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| base | campanha | Deposit USDe as collateral on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| base | campanha | Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| base | campanha | Supply USDC on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| base | campanha | Provide liquidity to Gamma USDC-USDT vault | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
@@ -100,38 +92,30 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 - **Merkl: consulta por endereço (polygon)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
 - **Tokens e histórico indexado (bnb)**: Sem indexador gratuito configurado; RPC não enumera todos os tokens
 - **Merkl: consulta por endereço (bnb)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
-- **USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN (stellar)**: Saldo total; reserva mínima e passivos não descontados.
+- **USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN (stellar)**: Saldo total; reserva mínima e passivos não descontados. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
 - **XLM (stellar)**: Saldo total; reserva mínima e passivos não descontados.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.
-- **Lend USDe on Aave (looping required) (9745)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Deposit USDe as collateral on USDe/USDC 91.5% (8453)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Deposit USDe as collateral on USDe/USDG 91.5% (4663)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **[Robinhood Users Only] Supply to Steakhouse USDG V2 vault on Morpho (4663)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase (8453)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend USDe on Aave (looping required) (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply USDC on USDe/USDC 91.5% (8453)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend USD1 on Dolomite (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend USDe on Aave (looping required) (143)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend RLUSD on Aave Horizon (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Provide liquidity to Gamma USDC-USDT vault (8453)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply USDC in Upshift sentUSDC (4)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Borrow USDT0 on Aave (9745)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend USDC on Aave (143)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Deposit USDe as collateral on USDe/RLUSD 91.5% (1)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
-- **Lend USDT0 on Aave (5000)**: Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
+- **Deposit USDe as collateral on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply USDC on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USD1 on Dolomite (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend RLUSD on Aave Horizon (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Provide liquidity to Gamma USDC-USDT vault (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
@@ -142,6 +126,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 
 ## Operação
 
-Mudanças nesta execução: 71
+Mudanças nesta execução: 23
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
