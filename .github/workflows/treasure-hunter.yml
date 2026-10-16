@@ -33,7 +33,7 @@ jobs:
             git worktree add treasure-state FETCH_HEAD
           else
             git worktree add --detach treasure-state
-            (cd treasure-state && git switch --orphan treasure-data && git rm -rf .)
+            (cd treasure-state && git switch --orphan treasure-data)
           fi
       - name: Auditoria de leitura
         env:
