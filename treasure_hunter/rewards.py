@@ -29,7 +29,11 @@ def campaigns(c):
         data=c.get(url)
         if not isinstance(data,list):raise ValueError('Schema de campanhas inesperado')
         for x in data:
-            yield record('campaign:merkl:'+str(x['id']),'campanha',str(x.get('chainId','multirrede')),x.get('name','Programa Merkl'),'POTENCIAL',source=url,official_url='https://app.merkl.xyz/',deadline=None,detail='Programa público, sem elegibilidade demonstrada para estas carteiras. APR/TVL não são recompensa pessoal.')
+            network=next((n for n,v in NETWORKS.items() if v[0]==x.get('chainId')),None)
+            if network is None:continue
+            end=x.get('latestCampaignEnd')
+            ended=bool(end and int(end)<int(datetime.now(timezone.utc).timestamp()))
+            yield record('campaign:merkl:'+str(x['id']),'campanha',network,x.get('name','Programa Merkl'),'EXPIRADO' if ended else 'POTENCIAL',source=url,official_url='https://app.merkl.xyz/',deadline=None,activity_end=datetime.fromtimestamp(int(end),timezone.utc).isoformat() if end else None,detail='Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.')
         yield record('campaign:coverage','cobertura','multirrede','Catálogo Merkl','CONFIRMADO',source=url,count=len(data),truncated=len(data)==20)
     except Exception as e:yield fail('campaign:coverage','cobertura','multirrede','Catálogo Merkl',e,source=url)
 

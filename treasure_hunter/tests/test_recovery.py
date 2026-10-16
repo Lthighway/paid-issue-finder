@@ -16,3 +16,16 @@ class RecoveryTests(unittest.TestCase):
             def get(self,url):return data
         p={'id':'test','data_url':'https://official.test/data','expected_root':data['merkleRoot'],'name':'Test','official_url':'https://official.test'}
         self.assertEqual(aave_recovery(C(),'0x'+'11'*20,p)['status'],'NÃO ELEGÍVEL')
+
+class OnchainTests(RecoveryTests):
+    def test_onchain_claim_status(self):
+        data=self.d
+        class C:
+            def get(self,url):return data
+            def rpc(self,url,method,params):
+                if method=='eth_chainId':return '0x1'
+                if method=='eth_blockNumber':return '0x123'
+                if len(params[0]['data'])==74:return '0x'+'0'*64+data['merkleRoot'][2:]
+                return '0x'+'0'*64
+        p={'id':'test','data_url':'https://official.test/data','expected_root':data['merkleRoot'],'name':'Test','official_url':'https://official.test','distributor':'0x'+'22'*20,'distribution_id':2,'decimals':6,'symbol':'USDT'}
+        self.assertEqual(aave_recovery(C(),self.a,p)['status'],'CONFIRMADO')

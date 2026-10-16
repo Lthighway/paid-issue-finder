@@ -41,10 +41,10 @@ Cadastre somente endereços públicos próprios. Nenhuma chave é necessária. B
 | Ethereum, Base, Arbitrum, Optimism, Polygon | saldo e nonce por RPC; tokens e transações Blockscout | até 3 páginas por consulta; ETH/POL não convertidos em USD |
 | BNB Chain | saldo e nonce por RPC | enumeração de tokens e histórico indisponíveis sem indexador adicional |
 | Solana | SOL finalizado, últimas 100 assinaturas, contas SPL e Token-2022 | sem NFTs comprimidos e sem todos os saldos em protocolos DeFi |
-| Stellar / Horizon | saldos, últimas 100 transações, até 200 claimable balances | total XLM não desconta reserva/passivos; predicados relativos desconhecidos não são confirmados |
-| Merkl | recompensas por endereço nas seis redes e 20 campanhas | prova retornada pela API não equivale a verificação on-chain; positivo fica POTENCIAL |
+| Stellar / Horizon | saldos, últimas 100 transações, até 200 claimable balances e livros XLM dos ativos encontrados | total XLM não desconta reserva/passivos; predicados relativos desconhecidos não são confirmados |
+| Merkl | recompensas por endereço nas seis redes e 20 campanhas (filtradas às redes monitoradas) | prova retornada pela API não equivale a verificação on-chain; positivo fica POTENCIAL |
 | Aave Rescue Phase 1 | quatro listas oficiais fixadas por commit, prova Merkle, root e isClaimed via eth_call | apenas esse programa de restituição; não cobre incidentes arbitrários |
-| GitHub e Algora via issues | 12 issues, fonte original, metadata, concorrência e sinais de termos | amostra limitada; Algora não tem integração direta autenticada; texto de issue não prova valor/pagamento |
+| GitHub e Algora via issues | 12 issues novas e revisão de até 30 registros anteriores, fonte original, metadata, concorrência e sinais de termos | amostra limitada; Algora não tem integração direta autenticada; texto de issue não prova valor/pagamento |
 
 A ausência na lista oficial Aave só significa NÃO ELEGÍVEL nessa distribuição específica. Nenhum resultado vazio prova ausência universal de ativos ou oportunidades. Novos programas exigem adaptadores oficiais revisados; não há descoberta universal de todos os airdrops existentes.
 
@@ -94,3 +94,5 @@ Não coloque esses valores em arquivos. Alertas para recompensa, recuperação e
 `tests/` cobre checksums, unidades, falha RPC sem saldo zero, diferença entre pending/claimable, schema incompatível, predicados Stellar, spam, prova Merkle real de referência e adulteração, persistência em conexões isoladas, deduplicação e retry por canal, bloqueio de RPC de escrita e escape HTML.
 
 Relatórios reais são produzidos por consultas, sem fixtures no modo scan. Testes simulados de notificações não substituem envio real: nenhum envio a Telegram/SMTP foi testado sem credenciais. Veja `VALIDATION.md` para o estado verificado da entrega inicial.
+
+Livros de ofertas Stellar: https://developers.stellar.org/docs/data/apis/horizon/api-reference/retrieve-an-order-book . Ausência de bids XLM não exclui pools AMM, outras contrapartes ou outras bolsas. Presença de bids não valida lastro nem garante conversão.

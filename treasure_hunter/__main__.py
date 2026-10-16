@@ -36,9 +36,12 @@ def main():
         if network=='evm':
             for n in chains.NETWORKS:collect(chains.evm(client,a,n));collect(rewards.merkl(client,a,n))
         else:collect(getattr(chains,network)(client,a))
+    chains.stellar_liquidity(client,items)
     collect(rewards.campaigns(client))
     collect(rewards.recoveries(client,wallets,json.loads((ROOT/'config/recoveries.json').read_text())))
-    if not args.no_bounties:collect(bounties.collect(client))
+    if not args.no_bounties:
+        collect(bounties.collect(client))
+        collect(bounties.refresh_known(client,store,items))
     result={'schema_version':1,'checked_at':now(),'wallets':wallets,'items':items,'notifications':'Configuráveis; verificar etapa notify','received_total':None}
     changes=store.save(result);result['changes']=len(changes);result['history']=store.history();render(result,state)
     (state/'evidence.json').write_text(json.dumps(client.evidence,indent=2))

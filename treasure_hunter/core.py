@@ -30,7 +30,7 @@ class Store:
         changes=[]
         for r in result['items']:
             # Observation timestamps, raw response hashes and price fluctuations do not create alerts.
-            stable={k:v for k,v in r.items() if k not in ('checked_at','evidence','value_usd','history','last_seen','raw')}
+            stable={k:v for k,v in r.items() if k not in ('checked_at','evidence','value_usd','history','last_seen','raw','market_check')}
             fp=digest(stable)
             old=self.db.execute('SELECT fingerprint FROM observations WHERE id=?',(r['id'],)).fetchone()
             if old is None or old[0]!=fp:

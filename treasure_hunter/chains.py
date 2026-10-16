@@ -119,3 +119,23 @@ def stellar(c,a):
                     r=record(prefix+':claim:'+x['id'],'recompensa','stellar','Claimable balance',status,wallet=a,source=base+'/claimable_balances/'+x['id'],predicate=p,eligibility_verified=eligible,deadline=None,detail='Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada.');r.update(amount=x['amount'],asset='XLM' if native else x['asset']);yield r
                 yield record(prefix+':claims','cobertura','stellar','Claimable balances consultados','CONFIRMADO',wallet=a,source=url,count=len(rows),truncated=len(rows)==200)
         except Exception as e:yield fail(prefix+':'+kind,'cobertura','stellar',kind,e,wallet=a,source=url)
+
+def stellar_liquidity(c,items):
+    """Inspect order books without following issuer URLs or trusting token names."""
+    books={}
+    for r in items:
+        if r['network']!='stellar' or r['category'] not in ('token','recompensa') or not r.get('asset') or r['asset']=='XLM':continue
+        asset=r['asset']
+        if ':' not in asset:continue
+        code,issuer=asset.split(':',1)
+        if asset not in books:
+            url='https://horizon.stellar.org/order_book?'+urlencode({'selling_asset_type':'credit_alphanum4' if len(code)<=4 else 'credit_alphanum12','selling_asset_code':code,'selling_asset_issuer':issuer,'buying_asset_type':'native','limit':20})
+            try:
+                d=c.get(url)
+                books[asset]={'status':'OFERTAS XLM PRESENTES' if d['bids'] else 'SEM OFERTAS DE COMPRA XLM','bid_levels':len(d['bids']),'source':url,'checked_at':datetime.now(timezone.utc).isoformat()}
+            except Exception as e:books[asset]={'status':'INDISPONÍVEL','error':str(e)[:180],'source':url}
+        r['market_check']=books[asset]
+        r['liquidity']=books[asset]['status']
+        r['detail']=r.get('detail','')+' Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.'
+        if code in ('BTC','XRP','XLMWRAPPED','Kaspa','TRUMPSOL'):
+            r['risk_flags']=['Nome remete a ativo de outra rede; lastro e emissor não verificados']

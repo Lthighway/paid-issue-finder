@@ -32,3 +32,27 @@ def collect(c,limit=12):
         yield record('github:coverage','cobertura','externa','Pesquisa GitHub/Algora','CONFIRMADO',source=url,count=len(data['items']),truncated=data.get('total_count',0)>limit,detail='Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.')
     except Exception as e:yield fail('github:coverage','cobertura','externa','Pesquisa de bounties',e,source=url)
     finally:run_finder.gh_json=original
+
+def refresh_known(c,store,current):
+    """Recheck tracked issues missing from the bounded discovery window."""
+    seen={x['id'] for x in current}
+    known=store.db.execute("SELECT payload FROM observations WHERE id LIKE 'github:%' ORDER BY last_seen DESC LIMIT 30").fetchall()
+    import json
+    for payload, in known:
+        previous=json.loads(payload)
+        if previous['category']!='bounty' or previous['id'] in seen:continue
+        parts=previous['id'].split(':')
+        if len(parts)!=3:continue
+        _,repo,number=parts
+        try:
+            issue=c.get(f'https://api.github.com/repos/{repo}/issues/{number}')
+            r=dict(previous);r.pop('evidence',None);r.pop('checked_at',None)
+            if issue['state']!='open':r.update(status='NÃO ELEGÍVEL',detail='Issue encerrada na fonte original; não demonstra pagamento ao proprietário.')
+            else:
+                # A live issue can still have a withdrawn/changed bounty: re-evaluate the text.
+                meta=c.get('https://api.github.com/repos/'+repo)
+                analysis=analyze_issue(issue,meta,{})
+                if not analysis or meta.get('archived'):r.update(status='INDISPONÍVEL',detail='Bounty não reconfirmada no texto atual ou repositório arquivado.')
+                else:r.update(status='SUSPEITO' if analysis['verdict']=='AVOID' else 'POTENCIAL',announced_value=analysis['value'],value_usd=analysis['value'],analysis=analysis,competition='UNKNOWN',detail='Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.')
+            yield r
+        except Exception as e:yield fail(previous['id'],'bounty','externa',previous['title'],e,source=previous.get('source'))
