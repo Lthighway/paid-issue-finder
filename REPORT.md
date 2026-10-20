@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-20T11:43:25.451592+00:00
+Verificação: 2026-10-20T17:12:51.812645+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -67,8 +67,9 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
-| externa | bounty | [$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/102072 |
+| externa | bounty | 🔍 [Agent Task] Add Algora bounty discovery to runtime-opportunity-scout | POTENCIAL | — | — | https://github.com/Nexussyn/ai-growth-platform/issues/4 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
+| externa | bounty | [$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/102072 |
 | externa | bounty | Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/538 |
 | externa | bounty | S1 handoff, 2026-10-18: coordinator state and next steps | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/1899 |
 | externa | bounty | Frantic bounty #143: Write and validate your own MAP description with the mailschema package | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/541 |
@@ -97,7 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [Bounty: $50] Harden assertRpcMatchesNetwork against custom mainnet RPC endpoints | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-web/issues/48 |
 | externa | bounty | [Bounty: $50] Validate member_capacity before multiplying it in the Factory contribution check | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-contracts/issues/35 |
 | externa | bounty | [Bounty: $60] Tie the nonce-reaper timer to the server lifecycle | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-api/issues/52 |
-| externa | bounty | [Bounty: $80] Add a stable ORDER BY to #selectIn before paging | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-indexer/issues/37 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -151,8 +151,9 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **🔍 [Agent Task] Add Algora bounty discovery to runtime-opportunity-scout (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **S1 handoff, 2026-10-18: coordinator state and next steps (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #143: Write and validate your own MAP description with the mailschema package (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -181,11 +182,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[Bounty: $50] Harden assertRpcMatchesNetwork against custom mainnet RPC endpoints (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $50] Validate member_capacity before multiplying it in the Factory contribution check (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $60] Tie the nonce-reaper timer to the server lifecycle (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Bounty: $80] Add a stable ORDER BY to #selectIn before paging (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 20
+Mudanças nesta execução: 23
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
