@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-20T04:55:57.196944+00:00
+Verificação: 2026-10-20T11:43:25.451592+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -67,10 +67,11 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/102072 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/538 |
 | externa | bounty | S1 handoff, 2026-10-18: coordinator state and next steps | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/1899 |
 | externa | bounty | Frantic bounty #143: Write and validate your own MAP description with the mailschema package | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/541 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Application: bounty item 27 — Employee Directory ($150) | POTENCIAL | — | — | https://github.com/bujiproject-art/agentmidasopendevteam/issues/31 |
 | externa | bounty | [RESEARCH] Conxian Protocol Founder Rights & Revenue Routing (2026-07-15) | POTENCIAL | — | — | https://github.com/Conxian/conxius-platform/issues/1168 |
 | externa | bounty | Fiddy: Farcaster client + read node + 3-command tutorial ($2048 bounty) | POTENCIAL | — | — | https://github.com/ivcained/fiddy/issues/1 |
@@ -97,7 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [Bounty: $50] Validate member_capacity before multiplying it in the Factory contribution check | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-contracts/issues/35 |
 | externa | bounty | [Bounty: $60] Tie the nonce-reaper timer to the server lifecycle | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-api/issues/52 |
 | externa | bounty | [Bounty: $80] Add a stable ORDER BY to #selectIn before paging | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-indexer/issues/37 |
-| externa | bounty | [Bounty: $70] Do not spend an invite use when the join code targets a different group | POTENCIAL | — | — | https://github.com/SUSU-LABS/susu-api/issues/49 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -151,10 +151,11 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **S1 handoff, 2026-10-18: coordinator state and next steps (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Frantic bounty #143: Write and validate your own MAP description with the mailschema package (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **S1 handoff, 2026-10-18: coordinator state and next steps (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Frantic bounty #143: Write and validate your own MAP description with the mailschema package (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Application: bounty item 27 — Employee Directory ($150) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[RESEARCH] Conxian Protocol Founder Rights & Revenue Routing (2026-07-15) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Fiddy: Farcaster client + read node + 3-command tutorial ($2048 bounty) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -181,11 +182,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[Bounty: $50] Validate member_capacity before multiplying it in the Factory contribution check (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $60] Tie the nonce-reaper timer to the server lifecycle (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $80] Add a stable ORDER BY to #selectIn before paging (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Bounty: $70] Do not spend an invite use when the join code targets a different group (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 16
+Mudanças nesta execução: 20
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
