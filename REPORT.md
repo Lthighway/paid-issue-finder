@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-21T17:16:44.787570+00:00
+Verificação: 2026-10-21T21:46:38.024041+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -38,7 +38,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | solana | cobertura | tokens | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | solana | cobertura | tokens2022 | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | stellar | token | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | POTENCIAL | 0.0000000 | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
-| stellar | saldo | XLM | CONFIRMADO | 39.9999900 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
+| stellar | saldo | XLM | CONFIRMADO | 39.9999800 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
 | stellar | historico | Transações XLM | CONFIRMADO | — | — | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/0000000029c5f7e2905584c2cc2eebfd20ad15604c2a6d8ddef6bf2fe24e8eb1e2900482 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/000000006b7d0781acf2dfba3b07350df7f81bb178280d523a9a50a6893b16263cf7f628 |
@@ -67,11 +67,11 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [$400] Per-service container images: ship each image only the code and dependencies it runs | POTENCIAL | — | — | https://github.com/oll4com/spaceapp/issues/64 |
 | externa | bounty | [soundness] serde_json.new_array / push_string handle modes, curated hex/json/atomic/fmt in-place mutators, and unproven atomic.value / pointer calls bypass HYB-E3101, HYB-E3103, HYB-E3006, and HYB-E3005 in foreign.rs | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/1115 |
 | externa | bounty | The x86-64 AVX2 CPU card has one recipe and no bounty row — would you open one? | POTENCIAL | — | — | https://github.com/sybil-solutions/local-ai-registry/issues/335 |
 | externa | bounty | [wildcard] Make FFI claims proof-carrying: verify boundary contracts against the linked Rust artifact | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/610 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/540 |
 | externa | bounty | [BOUNTY] Medium: Uncaught transient RPC errors aborting waitForFunding/waitForSwapConfirmation settlement polls, inpage PRIVATE_SWAP stale GET_SWAP_STATUS resolution, fetchV3Leaves intra-slot/payload bounds, and base58Decode/v0 recoverReshieldedNote defects (paraloom-wallet) | INDISPONÍVEL | — | — | https://github.com/paraloom-labs/paraloom-wallet/issues/89 |
 | externa | bounty | Frantic bounty #143: Write and validate your own MAP description with the mailschema package | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/541 |
@@ -97,9 +97,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | Bounty track: hunt accepted-but-unsound programs at the task boundary | NÃO ELEGÍVEL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/5 |
 | externa | bounty | [BOUNTY] Medium: ShieldedPool::credit_commitment deduplicates by Commitment hash instead of on-chain leaf index, and decode_compiled_deposit credits gross amount instead of realized vault received delta for deposit_note_spl | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/976 |
 | externa | bounty | [GoodBounty-Patch] Streaming widget: light-theme parity and UI structure alignment | POTENCIAL | — | — | https://github.com/GoodDollar/GoodWidget/issues/255 |
-| externa | bounty | Rust Testing Framework Integration $350 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/102 |
-| externa | bounty | [Bounty proposal] fix(database): sanitize uid and protect session streams in channel visibility ($50 proposed) | POTENCIAL | — | — | https://github.com/BasedHardware/omi/issues/21901 |
-| externa | bounty | [BOUNTY] Medium: Request-response codec bincode length-prefix OOM, co-sign round correlation bypass, forgotten peer resurrection, and /metrics readiness mismatch | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/968 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -153,11 +150,11 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[$400] Per-service container images: ship each image only the code and dependencies it runs (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[soundness] serde_json.new_array / push_string handle modes, curated hex/json/atomic/fmt in-place mutators, and unproven atomic.value / pointer calls bypass HYB-E3101, HYB-E3103, HYB-E3006, and HYB-E3005 in foreign.rs (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **The x86-64 AVX2 CPU card has one recipe and no bounty row — would you open one? (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[wildcard] Make FFI claims proof-carrying: verify boundary contracts against the linked Rust artifact (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[$400] Per-service container images: ship each image only the code and dependencies it runs (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[soundness] serde_json.new_array / push_string handle modes, curated hex/json/atomic/fmt in-place mutators, and unproven atomic.value / pointer calls bypass HYB-E3101, HYB-E3103, HYB-E3006, and HYB-E3005 in foreign.rs (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **The x86-64 AVX2 CPU card has one recipe and no bounty row — would you open one? (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[wildcard] Make FFI claims proof-carrying: verify boundary contracts against the linked Rust artifact (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Medium: Uncaught transient RPC errors aborting waitForFunding/waitForSwapConfirmation settlement polls, inpage PRIVATE_SWAP stale GET_SWAP_STATUS resolution, fetchV3Leaves intra-slot/payload bounds, and base58Decode/v0 recoverReshieldedNote defects (paraloom-wallet) (externa)**: Relatório já submetido por terceiro; recompensa disponível não demonstrada.
 - **Frantic bounty #143: Write and validate your own MAP description with the mailschema package (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -183,13 +180,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Bounty track: hunt accepted-but-unsound programs at the task boundary (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[BOUNTY] Medium: ShieldedPool::credit_commitment deduplicates by Commitment hash instead of on-chain leaf index, and decode_compiled_deposit credits gross amount instead of realized vault received delta for deposit_note_spl (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[GoodBounty-Patch] Streaming widget: light-theme parity and UI structure alignment (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Rust Testing Framework Integration $350 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Bounty proposal] fix(database): sanitize uid and protect session streams in channel visibility ($50 proposed) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY] Medium: Request-response codec bincode length-prefix OOM, co-sign round correlation bypass, forgotten peer resurrection, and /metrics readiness mismatch (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 24
+Mudanças nesta execução: 15
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
