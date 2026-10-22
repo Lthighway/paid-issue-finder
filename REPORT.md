@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-22T04:53:51.466613+00:00
+Verificação: 2026-10-22T11:58:42.571802+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -62,15 +62,20 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USDG on Aave V4 | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | New in-scope 2026-10-22: 6 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/157 |
+| externa | bounty | LLM Provider Abstraction Layer $600 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/99 |
+| externa | bounty | S1 handoff, 2026-10-18: coordinator state and next steps | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/1899 |
+| externa | bounty | bounty digest 2026-10-22 | POTENCIAL | — | — | https://github.com/airdropia/earn-ops/issues/6 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [BOUNTY] Medium: CPI ordering violation in slash_validator (SVM balance isolation), unguarded zero-lamport mutation, and omitted dual-stake token telemetry | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1189 |
 | externa | bounty | Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/540 |
 | externa | bounty | [BOUNTY $300] SSO — Authentik 统一身份认证 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/9 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [$400] Per-service container images: ship each image only the code and dependencies it runs | POTENCIAL | — | — | https://github.com/oll4com/spaceapp/issues/64 |
 | externa | bounty | [soundness] serde_json.new_array / push_string handle modes, curated hex/json/atomic/fmt in-place mutators, and unproven atomic.value / pointer calls bypass HYB-E3101, HYB-E3103, HYB-E3006, and HYB-E3005 in foreign.rs | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/1115 |
 | externa | bounty | The x86-64 AVX2 CPU card has one recipe and no bounty row — would you open one? | POTENCIAL | — | — | https://github.com/sybil-solutions/local-ai-registry/issues/335 |
@@ -85,7 +90,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [TEST BOUNTY] Fix typo in README | POTENCIAL | — | — | https://github.com/jomaaabbe78-spec/bookningsapp/issues/1 |
 | externa | bounty | 🔍 [Agent Task] Add Algora bounty discovery to runtime-opportunity-scout | POTENCIAL | — | — | https://github.com/Nexussyn/ai-growth-platform/issues/4 |
 | externa | bounty | [$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/102072 |
-| externa | bounty | S1 handoff, 2026-10-18: coordinator state and next steps | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/1899 |
 | externa | bounty | Application: bounty item 27 — Employee Directory ($150) | POTENCIAL | — | — | https://github.com/bujiproject-art/agentmidasopendevteam/issues/31 |
 | externa | bounty | [RESEARCH] Conxian Protocol Founder Rights & Revenue Routing (2026-07-15) | POTENCIAL | — | — | https://github.com/Conxian/conxius-platform/issues/1168 |
 | externa | bounty | Fiddy: Farcaster client + read node + 3-command tutorial ($2048 bounty) | POTENCIAL | — | — | https://github.com/ivcained/fiddy/issues/1 |
@@ -97,8 +101,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [BOUNTY] Medium: Non-atomic cross-CF deposit persistence & unvalidated leaf index gaps in PrivacyStorage, and unseeded vault rent-floor aborts in slash_validator & deposit_note | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1002 |
 | externa | bounty | humanBytes: MB-scale values shown as KB (live $5 test) | POTENCIAL | — | — | https://github.com/DaltonTheDeveloper/squash-live-test/issues/2 |
 | externa | bounty | Bounty track: hunt accepted-but-unsound programs at the task boundary | NÃO ELEGÍVEL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/5 |
-| externa | bounty | [BOUNTY] Medium: ShieldedPool::credit_commitment deduplicates by Commitment hash instead of on-chain leaf index, and decode_compiled_deposit credits gross amount instead of realized vault received delta for deposit_note_spl | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/976 |
-| externa | bounty | [GoodBounty-Patch] Streaming widget: light-theme parity and UI structure alignment | POTENCIAL | — | — | https://github.com/GoodDollar/GoodWidget/issues/255 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -148,14 +150,19 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USDG on Aave V4 (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[BOUNTY] Medium: CPI ordering violation in slash_validator (SVM balance isolation), unguarded zero-lamport mutation, and omitted dual-stake token telemetry (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY $300] SSO — Authentik 统一身份认证 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **New in-scope 2026-10-22: 6 program(s) added targets (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **LLM Provider Abstraction Layer $600 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **S1 handoff, 2026-10-18: coordinator state and next steps (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **bounty digest 2026-10-22 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[BOUNTY] Medium: CPI ordering violation in slash_validator (SVM balance isolation), unguarded zero-lamport mutation, and omitted dual-stake token telemetry (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[BOUNTY $300] SSO — Authentik 统一身份认证 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$400] Per-service container images: ship each image only the code and dependencies it runs (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[soundness] serde_json.new_array / push_string handle modes, curated hex/json/atomic/fmt in-place mutators, and unproven atomic.value / pointer calls bypass HYB-E3101, HYB-E3103, HYB-E3006, and HYB-E3005 in foreign.rs (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **The x86-64 AVX2 CPU card has one recipe and no bounty row — would you open one? (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -170,7 +177,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[TEST BOUNTY] Fix typo in README (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **🔍 [Agent Task] Add Algora bounty discovery to runtime-opportunity-scout (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] mWeb - Sign out on the Account page is covered by the debug indicator banner and cannot be scrolled into view. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **S1 handoff, 2026-10-18: coordinator state and next steps (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Application: bounty item 27 — Employee Directory ($150) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[RESEARCH] Conxian Protocol Founder Rights & Revenue Routing (2026-07-15) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Fiddy: Farcaster client + read node + 3-command tutorial ($2048 bounty) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -182,12 +188,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[BOUNTY] Medium: Non-atomic cross-CF deposit persistence & unvalidated leaf index gaps in PrivacyStorage, and unseeded vault rent-floor aborts in slash_validator & deposit_note (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **humanBytes: MB-scale values shown as KB (live $5 test) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Bounty track: hunt accepted-but-unsound programs at the task boundary (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **[BOUNTY] Medium: ShieldedPool::credit_commitment deduplicates by Commitment hash instead of on-chain leaf index, and decode_compiled_deposit credits gross amount instead of realized vault received delta for deposit_note_spl (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[GoodBounty-Patch] Streaming widget: light-theme parity and UI structure alignment (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 19
+Mudanças nesta execução: 24
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
