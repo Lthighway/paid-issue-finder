@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-25T11:36:32.238324+00:00
+Verificação: 2026-10-25T16:27:46.921350+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -62,21 +62,21 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | campanha | Deposit into Zama Flowdesk High Yield USDT | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Deposit into Zama RockawayX Confidential RWA USDC | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
-| externa | bounty | PAYMENT: USDC on Base/Arbitrum wallet (whyst0ne + kingmakeruix 90 deliveries #13403 - #13598 — $69,890 USD) | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13455 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
+| externa | bounty | PAYMENT: USDC on Base/Arbitrum wallet (whyst0ne + kingmakeruix 90 deliveries #13403 - #13598 — $69,890 USD) | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13455 |
 | externa | bounty | [BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4 |
 | externa | bounty | [BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2 |
 | externa | bounty | [BOUNTY] Medium: Unchecked and Uninitialized Validator Token ATA in paraloom-cli validator register and register_validator causes runtime CPI deserialization failure (AccountNotInitialized) and silent gas burn for new validators | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1215 |
 | externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
 | externa | bounty | Admin redesign · Programs · Programs: every program on its own page, how to run it and how to administer it (Claude Design prompt) | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/2371 |
-| externa | bounty | D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone | POTENCIAL | — | — | https://github.com/AxalNetwork/StudioOS/issues/2794 |
+| externa | bounty | D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone | NÃO ELEGÍVEL | — | — | https://github.com/AxalNetwork/StudioOS/issues/2794 |
 | externa | bounty | BOOTSTRAP-001: paid AI work and resource access, then human earnings | POTENCIAL | — | — | https://github.com/scottonchain/microcredit-agent-testbed/issues/17 |
 | externa | bounty | USDC-quoted pairs not having the correct marketcap displayed in tools | POTENCIAL | — | — | https://github.com/blake-guthrie/GLASS/issues/1 |
 | externa | bounty | Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/540 |
@@ -99,7 +99,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | Frantic bounty #143: Write and validate your own MAP description with the mailschema package | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/541 |
 | externa | bounty | ROOT INTAKE — Superteam Earn setup, GitHub identity reconciliation, and TinyFish Outlook context | POTENCIAL | — | — | https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/53 |
 | externa | bounty | [BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3 |
-| externa | bounty | Frantic bounty #140: Send an email with a 30-line Nitrosend SDK script and report how it went | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/539 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -149,20 +148,20 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Deposit into Zama Flowdesk High Yield USDT (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Deposit into Zama RockawayX Confidential RWA USDC (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **PAYMENT: USDC on Base/Arbitrum wallet (whyst0ne + kingmakeruix 90 deliveries #13403 - #13598 — $69,890 USD) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **PAYMENT: USDC on Base/Arbitrum wallet (whyst0ne + kingmakeruix 90 deliveries #13403 - #13598 — $69,890 USD) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Medium: Unchecked and Uninitialized Validator Token ATA in paraloom-cli validator register and register_validator causes runtime CPI deserialization failure (AccountNotInitialized) and silent gas burn for new validators (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Admin redesign · Programs · Programs: every program on its own page, how to run it and how to administer it (Claude Design prompt) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **BOOTSTRAP-001: paid AI work and resource access, then human earnings (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **USDC-quoted pairs not having the correct marketcap displayed in tools (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -185,11 +184,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Frantic bounty #143: Write and validate your own MAP description with the mailschema package (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **ROOT INTAKE — Superteam Earn setup, GitHub identity reconciliation, and TinyFish Outlook context (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Frantic bounty #140: Send an email with a 30-line Nitrosend SDK script and report how it went (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 23
+Mudanças nesta execução: 17
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
