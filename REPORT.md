@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-28T22:39:37.626986+00:00
+Verificação: 2026-10-29T05:53:30.931573+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -63,18 +63,19 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | campanha | Deposit into Zama Flowdesk High Yield USDT | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend USDG on Aave V4 | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
-| externa | bounty | Syscoin-Ethereum Bridge Bounty Tier 1: The ERC-20 project [up to 35k SYS ( X) approximately $2400 ] | POTENCIAL | — | — | https://github.com/syscoin/syscoin-gitcoin/issues/1 |
 | externa | bounty | Curve Finance Integration and Stablecoin Management $900 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/81 |
 | externa | bounty | Hyperliquid Integration and Perpetual Trading $900 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/82 |
 | externa | bounty | NFT Marketplace Data Aggregation $750 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/87 |
 | externa | bounty | DeFi Analytics Integration $750 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/88 |
+| externa | bounty | Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) | POTENCIAL | — | — | https://github.com/P00NSMASHER/github-value-hunt-ledger/issues/863 |
+| externa | bounty | Bounty proposal: restore food state on survival respawn | POTENCIAL | — | — | https://github.com/zardoy/space-squid/issues/31 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
+| externa | bounty | Syscoin-Ethereum Bridge Bounty Tier 1: The ERC-20 project [up to 35k SYS ( X) approximately $2400 ] | POTENCIAL | — | — | https://github.com/syscoin/syscoin-gitcoin/issues/1 |
 | externa | bounty | New in-scope 2026-10-28: 6 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/187 |
 | externa | bounty | [VULNERABILITY] Medium: Unclamped one-sided re-entry tick range in RevertHookAutoLendActions triggers InvalidTick and drops automation triggers near tick bounds (revert-finance/v4lend) | POTENCIAL | — | — | https://github.com/revert-finance/v4lend/issues/52 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
@@ -99,11 +100,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone | NÃO ELEGÍVEL | — | — | https://github.com/AxalNetwork/StudioOS/issues/2794 |
 | externa | bounty | USDC-quoted pairs not having the correct marketcap displayed in tools | POTENCIAL | — | — | https://github.com/blake-guthrie/GLASS/issues/1 |
 | externa | bounty | New in-scope 2026-10-23: 3 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/161 |
-| externa | bounty | bounty digest 2026-10-23 | POTENCIAL | — | — | https://github.com/airdropia/earn-ops/issues/9 |
-| externa | bounty | [BOUNTY $300] SSO — Authentik 统一身份认证 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/9 |
-| externa | bounty | Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/538 |
-| externa | bounty | increased button functionality + customizable buttons ($500) | POTENCIAL | — | — | https://github.com/BasedHardware/omi/issues/2825 |
-| externa | bounty | [$250] [Exploratory] Vacation Delegate - Error loading after reject 1 split then remove another split | POTENCIAL | — | — | https://github.com/Expensify/App/issues/100120 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -154,17 +150,18 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Deposit into Zama Flowdesk High Yield USDT (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend USDG on Aave V4 (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Supply to Flowdesk Confidential High Yield USDT V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **Syscoin-Ethereum Bridge Bounty Tier 1: The ERC-20 project [up to 35k SYS ( X) approximately $2400 ] (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Curve Finance Integration and Stablecoin Management $900 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Hyperliquid Integration and Perpetual Trading $900 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **NFT Marketplace Data Aggregation $750 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **DeFi Analytics Integration $750 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Bounty proposal: restore food state on survival respawn (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **Syscoin-Ethereum Bridge Bounty Tier 1: The ERC-20 project [up to 35k SYS ( X) approximately $2400 ] (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-10-28: 6 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[VULNERABILITY] Medium: Unclamped one-sided re-entry tick range in RevertHookAutoLendActions triggers InvalidTick and drops automation triggers near tick bounds (revert-finance/v4lend) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -189,15 +186,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **D961 (S24): Programs part 8 — catalogue complete: the three charts, the period control, part 1's tiles and card figures, Credits paid out, the studio filter, Lab applications, phone (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **USDC-quoted pairs not having the correct marketcap displayed in tools (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-10-23: 3 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **bounty digest 2026-10-23 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY $300] SSO — Authentik 统一身份认证 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Frantic bounty #139: Send your first email with the Nitrosend CLI and report how it went (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **increased button functionality + customizable buttons ($500) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[$250] [Exploratory] Vacation Delegate - Error loading after reject 1 split then remove another split (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 25
+Mudanças nesta execução: 12
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
