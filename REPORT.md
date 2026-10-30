@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-30T05:54:32.309507+00:00
+Verificação: 2026-10-30T13:00:48.151702+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -69,10 +69,11 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
-| externa | bounty | Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) | POTENCIAL | — | — | https://github.com/Financial-Privacy-Foundation/ZcashCoinholderGrantsProgram/issues/68 |
-| externa | bounty | [BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1247 |
+| externa | bounty | [$250] Spend - Default sort is descending | POTENCIAL | — | — | https://github.com/Expensify/App/issues/91935 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | bounty | Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) | NÃO ELEGÍVEL | — | — | https://github.com/Financial-Privacy-Foundation/ZcashCoinholderGrantsProgram/issues/68 |
+| externa | bounty | [BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1247 |
 | externa | bounty | Superteam Earn (superteam.fun) firsthand inventory — the largest real-settlement board in this 31-board census by an order of magnitude (2,057 listings ever, 1,989 winners-announced, $3.01M USDC + $334K USDG + 33 alt-token reward pools awarded, ~34 decided/month still), with a genuine agent-native API (self-serve key, claimCode human-payout bridge, no KYC) that is nevertheless functionally empty for agents: 1.8% of listings ever allowed agent submissions, the agent-eligible feed returns [] while two AGENT_ALLOWED bounties are live, and the agent details endpoint 404s on them | POTENCIAL | — | — | https://github.com/pursekeeper/api/issues/58 |
 | externa | bounty | Preserve RFC 7239 `Forwarded` host authority in sub-mounted ASGI `Request.scope_for` | POTENCIAL | — | — | https://github.com/WholeTroutMedia/oss-verification-sandbox/issues/1 |
 | externa | bounty | [$250] Concierge - Reaction to prompt disappears after user clears cache and restart. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101675 |
@@ -96,11 +97,9 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [BOUNTY] Medium: peer_id_from_multiaddr extracts the first /p2p/<peer_id> instead of trailing target PeerId on p2p-circuit multiaddrs, suppressing co-validator redials and poisoning Kademlia | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1156 |
 | externa | bounty | BOOTSTRAP-001: paid AI work and resource access, then human earnings | NÃO ELEGÍVEL | — | — | https://github.com/scottonchain/microcredit-agent-testbed/issues/17 |
 | externa | bounty | bounty digest 2026-10-27 | POTENCIAL | — | — | https://github.com/airdropia/earn-ops/issues/20 |
-| externa | bounty | [$450] One command to run the full SpaceApp stack from source for contributors | POTENCIAL | — | — | https://github.com/oll4com/spaceapp/issues/65 |
+| externa | bounty | [$450] One command to run the full SpaceApp stack from source for contributors | NÃO ELEGÍVEL | — | — | https://github.com/oll4com/spaceapp/issues/65 |
 | externa | bounty | [BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3 |
 | externa | bounty | [BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2 |
-| externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
-| externa | bounty | Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/540 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -156,10 +155,11 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[$250] Spend - Default sort is descending (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
+- **[BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn (superteam.fun) firsthand inventory — the largest real-settlement board in this 31-board census by an order of magnitude (2,057 listings ever, 1,989 winners-announced, $3.01M USDC + $334K USDG + 33 alt-token reward pools awarded, ~34 decided/month still), with a genuine agent-native API (self-serve key, claimCode human-payout bridge, no KYC) that is nevertheless functionally empty for agents: 1.8% of listings ever allowed agent submissions, the agent-eligible feed returns [] while two AGENT_ALLOWED bounties are live, and the agent details endpoint 404s on them (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Preserve RFC 7239 `Forwarded` host authority in sub-mounted ASGI `Request.scope_for` (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Concierge - Reaction to prompt disappears after user clears cache and restart. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -183,15 +183,13 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[BOUNTY] Medium: peer_id_from_multiaddr extracts the first /p2p/<peer_id> instead of trailing target PeerId on p2p-circuit multiaddrs, suppressing co-validator redials and poisoning Kademlia (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **BOOTSTRAP-001: paid AI work and resource access, then human earnings (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **bounty digest 2026-10-27 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[$450] One command to run the full SpaceApp stack from source for contributors (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[$450] One command to run the full SpaceApp stack from source for contributors (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 18
+Mudanças nesta execução: 16
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
