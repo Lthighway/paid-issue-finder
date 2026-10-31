@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-10-30T22:26:12.144974+00:00
+Verificação: 2026-10-31T05:49:20.030026+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -38,7 +38,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | solana | cobertura | tokens | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | solana | cobertura | tokens2022 | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | stellar | token | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | POTENCIAL | 0.0000000 | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
-| stellar | saldo | XLM | CONFIRMADO | 39.9999900 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
+| stellar | saldo | XLM | CONFIRMADO | 39.9999700 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
 | stellar | historico | Transações XLM | CONFIRMADO | — | — | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/0000000029c5f7e2905584c2cc2eebfd20ad15604c2a6d8ddef6bf2fe24e8eb1e2900482 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/000000006b7d0781acf2dfba3b07350df7f81bb178280d523a9a50a6893b16263cf7f628 |
@@ -69,15 +69,17 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1220 |
+| externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
 | externa | bounty | Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) | POTENCIAL | — | — | https://github.com/P00NSMASHER/github-value-hunt-ledger/issues/863 |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | bounty: Chinese documentation translation | POTENCIAL | — | — | https://github.com/Clawland-AI/clawland-ai.github.io/issues/2 |
 | externa | bounty | [Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy | POTENCIAL | — | — | https://github.com/tenstorrent/tt-metal/issues/62571 |
 | externa | bounty | [BOUNTY] Medium: buildDepositInstruction omits merkle_tree PDA account and uses obsolete DEPOSIT_DISCRIMINATOR, causing 100% on-chain InstructionFallbackNotFound or AccountNotEnoughKeys reverts on SOL deposits (paraloom-wallet) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-wallet/issues/133 |
 | externa | bounty | [BOUNTY] Medium: Missing init_asset_vault, set_asset_deposit_cap, and set_min_token_stake instruction builders, discriminators, and derive_asset_config in bridge::solana | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1258 |
 | externa | bounty | fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS | POTENCIAL | — | — | https://github.com/Uniswap/v4-periphery/issues/624 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [$250] Spend - Default sort is descending | POTENCIAL | — | — | https://github.com/Expensify/App/issues/91935 |
 | externa | bounty | Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) | NÃO ELEGÍVEL | — | — | https://github.com/Financial-Privacy-Foundation/ZcashCoinholderGrantsProgram/issues/68 |
 | externa | bounty | [BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1247 |
@@ -99,11 +101,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [$250] Android/iOS-Offline-Navigation arrows disappear after deleted expense syncs online | POTENCIAL | — | — | https://github.com/Expensify/App/issues/103403 |
 | externa | bounty | Flush buffered window elements when `_quorum_epoch_barrier_7c2b` timer preempts idle pull | POTENCIAL | — | — | https://github.com/WholeTroutMedia/oss-verification-sandbox/issues/2 |
 | externa | bounty | Systematically reduce `@typescript-eslint/no-unsafe-type-assertion` violations | POTENCIAL | — | — | https://github.com/Expensify/App/issues/94739 |
-| externa | bounty | [BOUNTY] Medium: peer_id_from_multiaddr extracts the first /p2p/<peer_id> instead of trailing target PeerId on p2p-circuit multiaddrs, suppressing co-validator redials and poisoning Kademlia | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1156 |
-| externa | bounty | BOOTSTRAP-001: paid AI work and resource access, then human earnings | NÃO ELEGÍVEL | — | — | https://github.com/scottonchain/microcredit-agent-testbed/issues/17 |
-| externa | bounty | bounty digest 2026-10-27 | POTENCIAL | — | — | https://github.com/airdropia/earn-ops/issues/20 |
-| externa | bounty | [$450] One command to run the full SpaceApp stack from source for contributors | NÃO ELEGÍVEL | — | — | https://github.com/oll4com/spaceapp/issues/65 |
-| externa | bounty | [BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -159,15 +156,17 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **bounty: Chinese documentation translation (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY] Medium: buildDepositInstruction omits merkle_tree PDA account and uses obsolete DEPOSIT_DISCRIMINATOR, causing 100% on-chain InstructionFallbackNotFound or AccountNotEnoughKeys reverts on SOL deposits (paraloom-wallet) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY] Medium: Missing init_asset_vault, set_asset_deposit_cap, and set_min_token_stake instruction builders, discriminators, and derive_asset_config in bridge::solana (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **bounty: Chinese documentation translation (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[BOUNTY] Medium: buildDepositInstruction omits merkle_tree PDA account and uses obsolete DEPOSIT_DISCRIMINATOR, causing 100% on-chain InstructionFallbackNotFound or AccountNotEnoughKeys reverts on SOL deposits (paraloom-wallet) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[BOUNTY] Medium: Missing init_asset_vault, set_asset_deposit_cap, and set_min_token_stake instruction builders, discriminators, and derive_asset_config in bridge::solana (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Spend - Default sort is descending (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -189,15 +188,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[$250] Android/iOS-Offline-Navigation arrows disappear after deleted expense syncs online (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Flush buffered window elements when `_quorum_epoch_barrier_7c2b` timer preempts idle pull (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Systematically reduce `@typescript-eslint/no-unsafe-type-assertion` violations (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY] Medium: peer_id_from_multiaddr extracts the first /p2p/<peer_id> instead of trailing target PeerId on p2p-circuit multiaddrs, suppressing co-validator redials and poisoning Kademlia (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **BOOTSTRAP-001: paid AI work and resource access, then human earnings (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **bounty digest 2026-10-27 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[$450] One command to run the full SpaceApp stack from source for contributors (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 20
+Mudanças nesta execução: 17
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
