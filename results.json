@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-01T13:31:05.257068+00:00",
+  "checked_at": "2026-11-01T22:06:11.244263+00:00",
   "wallets": [
     {
       "network": "bitcoin",
@@ -34,11 +34,11 @@
       "source": "https://mempool.space/api/address/bc1qvtuhezyjkvrwgxcsvhrnc2k7r8vzr3mewus6mk",
       "unconfirmed_sats": 0,
       "transactions": 4,
-      "checked_at": "2026-11-01T13:29:06.358107+00:00",
+      "checked_at": "2026-11-01T22:04:55.469173+00:00",
       "evidence": [
         {
           "url": "https://mempool.space/api/address/bc1qvtuhezyjkvrwgxcsvhrnc2k7r8vzr3mewus6mk",
-          "observed_at": "2026-11-01T13:29:06.337527+00:00",
+          "observed_at": "2026-11-01T22:04:55.443640+00:00",
           "sha256": "97b3dc83af30588a827f9d1008f964d4a14ee41bf9d5da9e236ea996e8556223",
           "cached": false
         }
@@ -14950,11 +14950,11 @@
       "count": 4,
       "truncated": false,
       "detail": "Últimas 25 transações; Ordinals/Runes não indexados.",
-      "checked_at": "2026-11-01T13:29:07.361107+00:00",
+      "checked_at": "2026-11-01T22:04:56.191176+00:00",
       "evidence": [
         {
           "url": "https://mempool.space/api/address/bc1qvtuhezyjkvrwgxcsvhrnc2k7r8vzr3mewus6mk/txs",
-          "observed_at": "2026-11-01T13:29:07.349446+00:00",
+          "observed_at": "2026-11-01T22:04:56.179969+00:00",
           "sha256": "a04b46cd55d30466b11e96ed17f2fad67e1cd2900ca75b373b71e62df6658549",
           "cached": false
         }
@@ -14979,13 +14979,13 @@
       "received": null,
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://ethereum-rpc.publicnode.com",
-      "block": "0x1919d5f",
+      "block": "0x191a767",
       "transactions_sent": 0,
-      "checked_at": "2026-11-01T13:29:08.527837+00:00",
+      "checked_at": "2026-11-01T22:04:57.339914+00:00",
       "evidence": [
         {
           "url": "https://ethereum-rpc.publicnode.com",
-          "observed_at": "2026-11-01T13:29:08.526473+00:00",
+          "observed_at": "2026-11-01T22:04:57.338447+00:00",
           "sha256": "b2f1f2440efe85b924be1f873fb1ccd6f3ef9c6bfeef3cfef6bb70ae6ddcb3fc",
           "cached": false
         }
@@ -15015,11 +15015,11 @@
       "truncated": false,
       "possibly_forgotten": null,
       "detail": "Inatividade >=180 dias é indício; não prova esquecimento. Histórico limitado a 3 páginas.",
-      "checked_at": "2026-11-01T13:29:10.060042+00:00",
+      "checked_at": "2026-11-01T22:04:58.021840+00:00",
       "evidence": [
         {
           "url": "https://eth.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions",
-          "observed_at": "2026-11-01T13:29:10.058640+00:00",
+          "observed_at": "2026-11-01T22:04:58.020542+00:00",
           "sha256": "9977e4f930f374aa0a43f4eec210158912002204f9667d4fb40a72b1fb8fc575",
           "cached": false
         }
@@ -15047,11 +15047,11 @@
       "count": 0,
       "truncated": false,
       "detail": "Máximo 3 páginas; truncamento explícito.",
-      "checked_at": "2026-11-01T13:29:10.940346+00:00",
+      "checked_at": "2026-11-01T22:04:58.399406+00:00",
       "evidence": [
         {
           "url": "https://eth.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens",
-          "observed_at": "2026-11-01T13:29:10.938984+00:00",
+          "observed_at": "2026-11-01T22:04:58.397959+00:00",
           "sha256": "9977e4f930f374aa0a43f4eec210158912002204f9667d4fb40a72b1fb8fc575",
           "cached": false
         }
@@ -15078,11 +15078,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=1",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:29:11.316157+00:00",
+      "checked_at": "2026-11-01T22:04:58.645933+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=1",
-          "observed_at": "2026-11-01T13:29:11.314905+00:00",
+          "observed_at": "2026-11-01T22:04:58.644602+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15107,13 +15107,13 @@
       "received": null,
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://mainnet.base.org",
-      "block": "0x32e70e2",
+      "block": "0x32ead54",
       "transactions_sent": 0,
-      "checked_at": "2026-11-01T13:29:12.471982+00:00",
+      "checked_at": "2026-11-01T22:04:59.894747+00:00",
       "evidence": [
         {
           "url": "https://mainnet.base.org",
-          "observed_at": "2026-11-01T13:29:12.470852+00:00",
+          "observed_at": "2026-11-01T22:04:59.893311+00:00",
           "sha256": "b0b17a2167550f78381234d8284565462e60c99813ae88d7dc4f310662d3f65c",
           "cached": false
         }
@@ -15139,7 +15139,7 @@
       "detail": "HTTP 403 em base.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://base.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions",
-      "checked_at": "2026-11-01T13:29:12.832477+00:00",
+      "checked_at": "2026-11-01T22:05:00.181250+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15162,7 +15162,7 @@
       "detail": "HTTP 403 em base.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://base.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens",
-      "checked_at": "2026-11-01T13:29:13.149862+00:00",
+      "checked_at": "2026-11-01T22:05:00.515537+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15186,11 +15186,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=8453",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:29:13.662399+00:00",
+      "checked_at": "2026-11-01T22:05:01.083400+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=8453",
-          "observed_at": "2026-11-01T13:29:13.661107+00:00",
+          "observed_at": "2026-11-01T22:05:01.081956+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15215,13 +15215,13 @@
       "received": null,
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://arb1.arbitrum.io/rpc",
-      "block": "0x1f02f277",
+      "block": "0x1f048f89",
       "transactions_sent": 0,
-      "checked_at": "2026-11-01T13:29:14.950251+00:00",
+      "checked_at": "2026-11-01T22:05:02.355552+00:00",
       "evidence": [
         {
           "url": "https://arb1.arbitrum.io/rpc",
-          "observed_at": "2026-11-01T13:29:14.948955+00:00",
+          "observed_at": "2026-11-01T22:05:02.353875+00:00",
           "sha256": "b2f1f2440efe85b924be1f873fb1ccd6f3ef9c6bfeef3cfef6bb70ae6ddcb3fc",
           "cached": false
         }
@@ -15247,7 +15247,7 @@
       "detail": "HTTP 403 em arbitrum.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://arbitrum.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions",
-      "checked_at": "2026-11-01T13:29:15.309012+00:00",
+      "checked_at": "2026-11-01T22:05:02.660908+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15270,7 +15270,7 @@
       "detail": "HTTP 403 em arbitrum.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://arbitrum.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens",
-      "checked_at": "2026-11-01T13:29:15.585939+00:00",
+      "checked_at": "2026-11-01T22:05:02.970796+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15294,11 +15294,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=42161",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:29:16.118104+00:00",
+      "checked_at": "2026-11-01T22:05:03.525028+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=42161",
-          "observed_at": "2026-11-01T13:29:16.116937+00:00",
+          "observed_at": "2026-11-01T22:05:03.523649+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15323,13 +15323,13 @@
       "received": null,
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://mainnet.optimism.io",
-      "block": "0x979b279",
+      "block": "0x979eeeb",
       "transactions_sent": 0,
-      "checked_at": "2026-11-01T13:29:17.693072+00:00",
+      "checked_at": "2026-11-01T22:05:05.082528+00:00",
       "evidence": [
         {
           "url": "https://mainnet.optimism.io",
-          "observed_at": "2026-11-01T13:29:17.691857+00:00",
+          "observed_at": "2026-11-01T22:05:05.080879+00:00",
           "sha256": "75f1f04336b1c1319a3788bf2201e884fa94acef9d7a7b4257ac9ef64f89659d",
           "cached": false
         }
@@ -15359,11 +15359,11 @@
       "truncated": false,
       "possibly_forgotten": null,
       "detail": "Inatividade >=180 dias é indício; não prova esquecimento. Histórico limitado a 3 páginas.",
-      "checked_at": "2026-11-01T13:29:18.826013+00:00",
+      "checked_at": "2026-11-01T22:05:05.768433+00:00",
       "evidence": [
         {
           "url": "https://optimism.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions",
-          "observed_at": "2026-11-01T13:29:18.824733+00:00",
+          "observed_at": "2026-11-01T22:05:05.766722+00:00",
           "sha256": "9977e4f930f374aa0a43f4eec210158912002204f9667d4fb40a72b1fb8fc575",
           "cached": false
         }
@@ -15391,11 +15391,11 @@
       "count": 0,
       "truncated": false,
       "detail": "Máximo 3 páginas; truncamento explícito.",
-      "checked_at": "2026-11-01T13:29:19.210290+00:00",
+      "checked_at": "2026-11-01T22:05:06.103400+00:00",
       "evidence": [
         {
           "url": "https://optimism.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens",
-          "observed_at": "2026-11-01T13:29:19.209098+00:00",
+          "observed_at": "2026-11-01T22:05:06.101986+00:00",
           "sha256": "9977e4f930f374aa0a43f4eec210158912002204f9667d4fb40a72b1fb8fc575",
           "cached": false
         }
@@ -15422,11 +15422,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=10",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:29:19.455260+00:00",
+      "checked_at": "2026-11-01T22:05:06.356335+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=10",
-          "observed_at": "2026-11-01T13:29:19.453999+00:00",
+          "observed_at": "2026-11-01T22:05:06.354646+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15451,13 +15451,13 @@
       "received": null,
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://polygon-bor-rpc.publicnode.com",
-      "block": "0x5c154ab",
+      "block": "0x5c1a542",
       "transactions_sent": 0,
-      "checked_at": "2026-11-01T13:29:20.721874+00:00",
+      "checked_at": "2026-11-01T22:05:07.619475+00:00",
       "evidence": [
         {
           "url": "https://polygon-bor-rpc.publicnode.com",
-          "observed_at": "2026-11-01T13:29:20.720651+00:00",
+          "observed_at": "2026-11-01T22:05:07.618350+00:00",
           "sha256": "b2f1f2440efe85b924be1f873fb1ccd6f3ef9c6bfeef3cfef6bb70ae6ddcb3fc",
           "cached": false
         }
@@ -15483,7 +15483,7 @@
       "detail": "HTTP 403 em polygon.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions",
-      "checked_at": "2026-11-01T13:29:21.055098+00:00",
+      "checked_at": "2026-11-01T22:05:07.940466+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15506,7 +15506,7 @@
       "detail": "HTTP 403 em polygon.blockscout.com",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens",
-      "checked_at": "2026-11-01T13:29:21.379714+00:00",
+      "checked_at": "2026-11-01T22:05:08.239558+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15530,11 +15530,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=137",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:29:21.928888+00:00",
+      "checked_at": "2026-11-01T22:05:08.799183+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=137",
-          "observed_at": "2026-11-01T13:29:21.927632+00:00",
+          "observed_at": "2026-11-01T22:05:08.797454+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15552,20 +15552,21 @@
       "category": "saldo",
       "network": "bnb",
       "title": "Saldo nativo",
-      "status": "INDISPONÍVEL",
-      "amount": null,
-      "asset": null,
+      "status": "CONFIRMADO",
+      "amount": "0",
+      "asset": "BNB",
       "value_usd": null,
       "received": null,
-      "detail": "Timeout/rede indisponível",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
       "source": "https://bsc-rpc.publicnode.com",
-      "checked_at": "2026-11-01T13:30:01.874301+00:00",
+      "block": "0x7d0d27b",
+      "transactions_sent": 0,
+      "checked_at": "2026-11-01T22:05:10.148828+00:00",
       "evidence": [
         {
           "url": "https://bsc-rpc.publicnode.com",
-          "observed_at": "2026-11-01T13:29:22.481751+00:00",
-          "sha256": "c26c20008ac837ce25fa49baeef6685552b08843306f1814b16bf669fab92e51",
+          "observed_at": "2026-11-01T22:05:10.147699+00:00",
+          "sha256": "b2f1f2440efe85b924be1f873fb1ccd6f3ef9c6bfeef3cfef6bb70ae6ddcb3fc",
           "cached": false
         }
       ],
@@ -15589,7 +15590,7 @@
       "received": null,
       "detail": "Sem indexador gratuito configurado; RPC não enumera todos os tokens",
       "wallet": "0xB70401fC0F2922e10728bD70856C8E68e1CcC27c",
-      "checked_at": "2026-11-01T13:30:01.874416+00:00",
+      "checked_at": "2026-11-01T22:05:10.148880+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15613,11 +15614,11 @@
       "source": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=56",
       "count": 0,
       "detail": "Consulta bem-sucedida; lista vazia não exclui outros programas.",
-      "checked_at": "2026-11-01T13:30:02.139268+00:00",
+      "checked_at": "2026-11-01T22:05:10.523105+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=56",
-          "observed_at": "2026-11-01T13:30:02.137574+00:00",
+          "observed_at": "2026-11-01T22:05:10.521873+00:00",
           "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "cached": false
         }
@@ -15642,13 +15643,13 @@
       "received": null,
       "wallet": "9iEUueypJ57nV31GJ12jaXCVFY5QYvdiMSqo8aCqdcj2",
       "source": "https://api.mainnet-beta.solana.com",
-      "slot": 464109390,
-      "checked_at": "2026-11-01T13:30:02.475148+00:00",
+      "slot": 464253548,
+      "checked_at": "2026-11-01T22:05:10.841342+00:00",
       "evidence": [
         {
           "url": "https://api.mainnet-beta.solana.com",
-          "observed_at": "2026-11-01T13:30:02.473778+00:00",
-          "sha256": "89f59f755fc1f7ddf56d1d0da8fe5b2624040455abbd62886c95308ca6f8f35d",
+          "observed_at": "2026-11-01T22:05:10.839908+00:00",
+          "sha256": "a167609787c11cc3a295b58e48c2e5f3f58d93298135b42915b21f5ae18cc680",
           "cached": false
         }
       ],
@@ -15694,11 +15695,11 @@
       ],
       "count": 2,
       "truncated": false,
-      "checked_at": "2026-11-01T13:30:04.206078+00:00",
+      "checked_at": "2026-11-01T22:05:16.848451+00:00",
       "evidence": [
         {
           "url": "https://api.mainnet-beta.solana.com",
-          "observed_at": "2026-11-01T13:30:04.204440+00:00",
+          "observed_at": "2026-11-01T22:05:16.846791+00:00",
           "sha256": "ff97f03f0fd7b5a95ded6723c14f381638a60268ad5eb8daf91798f55f487915",
           "cached": false
         }
@@ -15724,12 +15725,12 @@
       "wallet": "9iEUueypJ57nV31GJ12jaXCVFY5QYvdiMSqo8aCqdcj2",
       "source": "https://api.mainnet-beta.solana.com",
       "count": 0,
-      "checked_at": "2026-11-01T13:30:04.438731+00:00",
+      "checked_at": "2026-11-01T22:05:16.990691+00:00",
       "evidence": [
         {
           "url": "https://api.mainnet-beta.solana.com",
-          "observed_at": "2026-11-01T13:30:04.437440+00:00",
-          "sha256": "496b64948d34d9bc467073f7798c14944c97cde8e33a4cafee4db8034abe3fe5",
+          "observed_at": "2026-11-01T22:05:16.989152+00:00",
+          "sha256": "19ed0353f0c233772f536d1083ddb1688ebf0e73006ddb378310934277e479dc",
           "cached": false
         }
       ],
@@ -15754,12 +15755,12 @@
       "wallet": "9iEUueypJ57nV31GJ12jaXCVFY5QYvdiMSqo8aCqdcj2",
       "source": "https://api.mainnet-beta.solana.com",
       "count": 0,
-      "checked_at": "2026-11-01T13:30:04.780103+00:00",
+      "checked_at": "2026-11-01T22:05:17.387575+00:00",
       "evidence": [
         {
           "url": "https://api.mainnet-beta.solana.com",
-          "observed_at": "2026-11-01T13:30:04.778702+00:00",
-          "sha256": "ff2af07df092b22d5b098fd4cb1a8940c8910c48a022f6965279f140d8d2726e",
+          "observed_at": "2026-11-01T22:05:17.386220+00:00",
+          "sha256": "740675512e9e80a21d8f7881d584ecbcb4e2ab23423284c17e070d0f737ae075",
           "cached": false
         }
       ],
@@ -15786,12 +15787,12 @@
       "balance_verified": true,
       "liquidity": "OFERTAS XLM PRESENTES",
       "detail": "Saldo total; reserva mínima e passivos não descontados. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:05.275389+00:00",
+      "checked_at": "2026-11-01T22:05:17.866110+00:00",
       "evidence": [
         {
           "url": "https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU",
-          "observed_at": "2026-11-01T13:30:05.273847+00:00",
-          "sha256": "4f02f4f4b124160cc95ce1effdf38a7b98e0ede079ed68b19aaa34d4dd3e33b1",
+          "observed_at": "2026-11-01T22:05:17.864433+00:00",
+          "sha256": "eacc7b2147efeab14a8e8d8245cd02bed48d9f8a7a83f076a1111d8d0fecdfc6",
           "cached": false
         }
       ],
@@ -15799,7 +15800,7 @@
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=USDC&selling_asset_issuer=GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:06.408130+00:00"
+        "checked_at": "2026-11-01T22:05:19.258860+00:00"
       },
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -15824,12 +15825,12 @@
       "balance_verified": true,
       "liquidity": "NATIVO",
       "detail": "Saldo total; reserva mínima e passivos não descontados.",
-      "checked_at": "2026-11-01T13:30:05.275462+00:00",
+      "checked_at": "2026-11-01T22:05:17.866190+00:00",
       "evidence": [
         {
           "url": "https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU",
-          "observed_at": "2026-11-01T13:30:05.273847+00:00",
-          "sha256": "4f02f4f4b124160cc95ce1effdf38a7b98e0ede079ed68b19aaa34d4dd3e33b1",
+          "observed_at": "2026-11-01T22:05:17.864433+00:00",
+          "sha256": "eacc7b2147efeab14a8e8d8245cd02bed48d9f8a7a83f076a1111d8d0fecdfc6",
           "cached": false
         }
       ],
@@ -15856,6 +15857,71 @@
       "count": 100,
       "truncated": true,
       "history": [
+        {
+          "hash": "bf479c5ef3d67e7ba6a68868175426ceb6335961779019eff9d9d76feebcd59f",
+          "created_at": "2026-11-01T21:54:04Z",
+          "successful": true
+        },
+        {
+          "hash": "d51787ba1bf9abb9ed5c2b7d13e2cdeb8fff7cbb631df7d5322daae1080342b3",
+          "created_at": "2026-11-01T21:53:24Z",
+          "successful": true
+        },
+        {
+          "hash": "72330bb6548676cf0e09d739d8d28717f56230c0520f173640ce0d71b8a232bd",
+          "created_at": "2026-11-01T21:53:04Z",
+          "successful": true
+        },
+        {
+          "hash": "cb486b3c117c47d0aabb8d575db3a86f8d347b14bed7bac3f672bb7adbcaae22",
+          "created_at": "2026-11-01T21:51:54Z",
+          "successful": true
+        },
+        {
+          "hash": "cca63b2ab61cac850e802a4cc9f82c5d0b7efed573ae0442ed924f09b2666798",
+          "created_at": "2026-11-01T21:51:29Z",
+          "successful": true
+        },
+        {
+          "hash": "e1a112b73ab978b744343439f1bc4cc6bdf4277179ffe6c361df4b4efa62dee6",
+          "created_at": "2026-11-01T21:45:04Z",
+          "successful": true
+        },
+        {
+          "hash": "1be43b65ca8b0ec20b63e40e72741f26d4c59befd50772feb1a8a4023b6e7a34",
+          "created_at": "2026-11-01T21:42:59Z",
+          "successful": true
+        },
+        {
+          "hash": "0e5c5625143895c3807c8dbb07e40e6ba000f88a1a1edcd9f8a72314572f2dcd",
+          "created_at": "2026-11-01T20:38:04Z",
+          "successful": true
+        },
+        {
+          "hash": "b027e05553c8561d22e63a45dfce0eceefe561c17d6a38ea4045428012dd603e",
+          "created_at": "2026-11-01T20:36:49Z",
+          "successful": true
+        },
+        {
+          "hash": "7a19723086df35dbdd87aee6734775b2910f901b82cff7c3b19f672915fb4bbd",
+          "created_at": "2026-11-01T20:36:09Z",
+          "successful": true
+        },
+        {
+          "hash": "283be3fb8a6cc406925cca40a6dd07311d90d5849f7f424f8c82c9ca385af6ee",
+          "created_at": "2026-11-01T20:34:04Z",
+          "successful": true
+        },
+        {
+          "hash": "ae00f01160e30f47c1309d185c2e629857696cf9071b6f515e5da1ada30211f4",
+          "created_at": "2026-11-01T20:13:04Z",
+          "successful": true
+        },
+        {
+          "hash": "734c661eb75808a710746e75ee4986b4ce41a948b31b521c5c4776bff1f78445",
+          "created_at": "2026-11-01T20:11:29Z",
+          "successful": true
+        },
         {
           "hash": "50403de151e5c1cd2e02862fcfbaa72ad57cb253b138b2200eff83cd4c83cb2d",
           "created_at": "2026-11-01T12:55:04Z",
@@ -16290,79 +16356,14 @@
           "hash": "b044a8fde8a157ded6f63fc1b5e5e1341d8f97205aa17417e519ba2c236c3a5d",
           "created_at": "2026-10-29T20:55:03Z",
           "successful": true
-        },
-        {
-          "hash": "63a37068bf8234e9bbe2b2cc5297b810239ee40dc0db1833e8c779e75ce4587d",
-          "created_at": "2026-10-29T20:47:03Z",
-          "successful": true
-        },
-        {
-          "hash": "8f031e243116e43246b61e73664af38983231fefa4246c6f44e8041f2af6f250",
-          "created_at": "2026-10-29T20:45:43Z",
-          "successful": true
-        },
-        {
-          "hash": "079f42facca3a480fb845e7182e30b57aa9f18d36f5d228fb478b7f0ebd2a138",
-          "created_at": "2026-10-29T19:08:03Z",
-          "successful": true
-        },
-        {
-          "hash": "68bf03f09122059a5f13c37a98e83be7817ba9407ec3856dcb8365240503752e",
-          "created_at": "2026-10-29T19:06:18Z",
-          "successful": true
-        },
-        {
-          "hash": "7b651026152d5bdf934fed1c762f4374ec50b59dcef7afca71d93fffeff92b1d",
-          "created_at": "2026-10-29T19:03:08Z",
-          "successful": true
-        },
-        {
-          "hash": "0e585ceabbab5aab693741e5606c31726fca895b52943fc550ef0f9cfcca2961",
-          "created_at": "2026-10-29T19:02:23Z",
-          "successful": true
-        },
-        {
-          "hash": "3851f6e05f60e0686dca070b715bd1ed9885ee73d7d1cccab964f2140204bb0c",
-          "created_at": "2026-10-29T17:14:03Z",
-          "successful": true
-        },
-        {
-          "hash": "8daf26b20f5545f057385ba7279177360393ee192f55c4409d97cba923cde178",
-          "created_at": "2026-10-29T17:12:13Z",
-          "successful": true
-        },
-        {
-          "hash": "3a6c6b9e02f55c4d133c5e7e3a3a9498ed19668f36d0bd80ec563e73b1e9037c",
-          "created_at": "2026-10-29T15:15:03Z",
-          "successful": true
-        },
-        {
-          "hash": "4364f4bab6f01fbbf7d3ee68fbc9e72ca822b698fc97a30ec87ab97942379f45",
-          "created_at": "2026-10-29T15:13:03Z",
-          "successful": true
-        },
-        {
-          "hash": "497aa67f7cc117401a6935ac3dad2d49c41aa87b19641a6ffdb24e6c5eb39560",
-          "created_at": "2026-10-29T14:45:13Z",
-          "successful": true
-        },
-        {
-          "hash": "51bd24ce6ce56c792750032d33afc9025019fcbec57de95bcb20fd14f58d0ec5",
-          "created_at": "2026-10-29T14:43:18Z",
-          "successful": true
-        },
-        {
-          "hash": "b6caeb57bc247432e834f6fad69a4a40b53fb505792c6f9ccde373502f099506",
-          "created_at": "2026-10-29T05:28:03Z",
-          "successful": true
         }
       ],
-      "checked_at": "2026-11-01T13:30:05.821594+00:00",
+      "checked_at": "2026-11-01T22:05:18.612007+00:00",
       "evidence": [
         {
           "url": "https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100",
-          "observed_at": "2026-11-01T13:30:05.815273+00:00",
-          "sha256": "92ad62823b02e7041dce865fd4140a2bd365707b3f0ac20233e817614ffe15bf",
+          "observed_at": "2026-11-01T22:05:18.605865+00:00",
+          "sha256": "b07c4d049c6526bdafb766944890cd259072bf6a11592828e1c19684fc6e3e4c",
           "cached": false
         }
       ],
@@ -16392,13 +16393,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057442+00:00",
+      "checked_at": "2026-11-01T22:05:18.951746+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 12,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum12&selling_asset_code=XLMWRAPPED&selling_asset_issuer=GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:06.737816+00:00"
+        "checked_at": "2026-11-01T22:05:19.586814+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16430,13 +16431,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057522+00:00",
+      "checked_at": "2026-11-01T22:05:18.951798+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 12,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum12&selling_asset_code=XLMWRAPPED&selling_asset_issuer=GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:06.737816+00:00"
+        "checked_at": "2026-11-01T22:05:19.586814+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16468,13 +16469,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057546+00:00",
+      "checked_at": "2026-11-01T22:05:18.951824+00:00",
       "evidence": [],
       "market_check": {
         "status": "SEM OFERTAS DE COMPRA XLM",
         "bid_levels": 0,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum12&selling_asset_code=NSDQ100&selling_asset_issuer=GCBAHWR3BDRPRLFDDQRBC45JFPTQQDQXOIUN3QR74SUZH7IDMK3ETORO&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:07.055968+00:00"
+        "checked_at": "2026-11-01T22:05:19.958652+00:00"
       },
       "liquidity": "SEM OFERTAS DE COMPRA XLM",
       "payout_assessment": {
@@ -16503,13 +16504,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057562+00:00",
+      "checked_at": "2026-11-01T22:05:18.951860+00:00",
       "evidence": [],
       "market_check": {
         "status": "SEM OFERTAS DE COMPRA XLM",
         "bid_levels": 0,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum12&selling_asset_code=Kaspa&selling_asset_issuer=GA4YJUQWNEX26AC3HKSB3VKTBX2FZ3UB4ATITF27D4E2ADEGP5NXQZYY&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:07.460209+00:00"
+        "checked_at": "2026-11-01T22:05:20.294226+00:00"
       },
       "liquidity": "SEM OFERTAS DE COMPRA XLM",
       "risk_flags": [
@@ -16541,13 +16542,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057577+00:00",
+      "checked_at": "2026-11-01T22:05:18.951899+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=BTC&selling_asset_issuer=GBVOL67TMUQBGL4TZYNMY3ZQ5WGQYFPFD5VJRWXR72VA33VFNL225PL5&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:07.743641+00:00"
+        "checked_at": "2026-11-01T22:05:20.640549+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16579,13 +16580,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057601+00:00",
+      "checked_at": "2026-11-01T22:05:18.951935+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 18,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum12&selling_asset_code=TRUMPSOL&selling_asset_issuer=GDUD2RZDT2ZU45EAAA2WLBYNNU7RB2E3BKMWHEWYWWIRJTIRZPH67EHU&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:08.096939+00:00"
+        "checked_at": "2026-11-01T22:05:21.007683+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16617,13 +16618,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057630+00:00",
+      "checked_at": "2026-11-01T22:05:18.951961+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=XRP&selling_asset_issuer=GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:08.462024+00:00"
+        "checked_at": "2026-11-01T22:05:21.337237+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16655,13 +16656,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057657+00:00",
+      "checked_at": "2026-11-01T22:05:18.951986+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=XRP&selling_asset_issuer=GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:08.462024+00:00"
+        "checked_at": "2026-11-01T22:05:21.337237+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16693,13 +16694,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057681+00:00",
+      "checked_at": "2026-11-01T22:05:18.952013+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=XRP&selling_asset_issuer=GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:08.462024+00:00"
+        "checked_at": "2026-11-01T22:05:21.337237+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16731,13 +16732,13 @@
       "eligibility_verified": true,
       "deadline": null,
       "detail": "Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.",
-      "checked_at": "2026-11-01T13:30:06.057706+00:00",
+      "checked_at": "2026-11-01T22:05:18.952030+00:00",
       "evidence": [],
       "market_check": {
         "status": "OFERTAS XLM PRESENTES",
         "bid_levels": 20,
         "source": "https://horizon.stellar.org/order_book?selling_asset_type=credit_alphanum4&selling_asset_code=XRP&selling_asset_issuer=GBXRPL45NPHCVMFFAYZVUVFFVKSIZ362ZXFP7I2ETNQ3QKZMFLPRDTD5&buying_asset_type=native&limit=20",
-        "checked_at": "2026-11-01T13:30:08.462024+00:00"
+        "checked_at": "2026-11-01T22:05:21.337237+00:00"
       },
       "liquidity": "OFERTAS XLM PRESENTES",
       "risk_flags": [
@@ -16765,11 +16766,11 @@
       "source": "https://horizon.stellar.org/claimable_balances?claimant=GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU&limit=200",
       "count": 10,
       "truncated": false,
-      "checked_at": "2026-11-01T13:30:06.057731+00:00",
+      "checked_at": "2026-11-01T22:05:18.952044+00:00",
       "evidence": [
         {
           "url": "https://horizon.stellar.org/claimable_balances?claimant=GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU&limit=200",
-          "observed_at": "2026-11-01T13:30:06.055399+00:00",
+          "observed_at": "2026-11-01T22:05:18.949774+00:00",
           "sha256": "11cedadeb5292a389b555642a4b52b72c23200638ec5fb4cd5be1f764a7aa196",
           "cached": false
         }
@@ -16797,12 +16798,12 @@
       "deadline": null,
       "activity_end": "2026-11-06T00:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875625+00:00",
+      "checked_at": "2026-11-01T22:05:21.620538+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16829,12 +16830,12 @@
       "deadline": null,
       "activity_end": "2026-11-05T19:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875707+00:00",
+      "checked_at": "2026-11-01T22:05:21.620599+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16861,12 +16862,12 @@
       "deadline": null,
       "activity_end": "2026-11-06T00:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875733+00:00",
+      "checked_at": "2026-11-01T22:05:21.620627+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16893,12 +16894,12 @@
       "deadline": null,
       "activity_end": "2026-11-05T19:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875761+00:00",
+      "checked_at": "2026-11-01T22:05:21.620684+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16925,12 +16926,12 @@
       "deadline": null,
       "activity_end": "2027-01-08T16:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875788+00:00",
+      "checked_at": "2026-11-01T22:05:21.620731+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16957,12 +16958,12 @@
       "deadline": null,
       "activity_end": "2027-01-08T16:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875832+00:00",
+      "checked_at": "2026-11-01T22:05:21.620772+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -16989,12 +16990,12 @@
       "deadline": null,
       "activity_end": "2026-11-02T18:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875856+00:00",
+      "checked_at": "2026-11-01T22:05:21.620811+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17021,12 +17022,12 @@
       "deadline": null,
       "activity_end": "2026-11-05T19:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875900+00:00",
+      "checked_at": "2026-11-01T22:05:21.620848+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17053,12 +17054,12 @@
       "deadline": null,
       "activity_end": "2026-11-03T13:10:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875936+00:00",
+      "checked_at": "2026-11-01T22:05:21.620888+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17085,12 +17086,12 @@
       "deadline": null,
       "activity_end": "2026-11-05T19:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.875975+00:00",
+      "checked_at": "2026-11-01T22:05:21.620928+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17117,12 +17118,12 @@
       "deadline": null,
       "activity_end": "2026-11-12T23:59:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.876012+00:00",
+      "checked_at": "2026-11-01T22:05:21.620965+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17149,12 +17150,12 @@
       "deadline": null,
       "activity_end": "2026-11-03T13:10:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.876052+00:00",
+      "checked_at": "2026-11-01T22:05:21.621006+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17181,12 +17182,12 @@
       "deadline": null,
       "activity_end": "2026-11-06T00:00:00+00:00",
       "detail": "Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.",
-      "checked_at": "2026-11-01T13:30:08.876089+00:00",
+      "checked_at": "2026-11-01T22:05:21.621045+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17211,12 +17212,12 @@
       "source": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
       "count": 20,
       "truncated": true,
-      "checked_at": "2026-11-01T13:30:08.876121+00:00",
+      "checked_at": "2026-11-01T22:05:21.621073+00:00",
       "evidence": [
         {
           "url": "https://api.merkl.xyz/v4/opportunities?items=20&page=0",
-          "observed_at": "2026-11-01T13:30:08.871255+00:00",
-          "sha256": "bc5cd1a817cd87ccb68a0db4b2775af9ec1268e1809dbb9c8c48c59108d1251d",
+          "observed_at": "2026-11-01T22:05:21.615949+00:00",
+          "sha256": "2c208245e0730847d15496ff7922b8606161fa31f65e8b2c67b8b4d5e2bac3f9",
           "cached": false
         }
       ],
@@ -17243,11 +17244,11 @@
       "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
       "deadline": null,
       "detail": "Endereço ausente da lista oficial desta distribuição.",
-      "checked_at": "2026-11-01T13:30:09.193165+00:00",
+      "checked_at": "2026-11-01T22:05:21.936559+00:00",
       "evidence": [
         {
           "url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json",
-          "observed_at": "2026-11-01T13:30:09.189747+00:00",
+          "observed_at": "2026-11-01T22:05:21.933295+00:00",
           "sha256": "5bb62792ef8f2c1fa4830791801646606486113eb424fa8ea08ba85d93aa3e45",
           "cached": false
         }
@@ -17275,11 +17276,11 @@
       "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
       "deadline": null,
       "detail": "Endereço ausente da lista oficial desta distribuição.",
-      "checked_at": "2026-11-01T13:30:09.493145+00:00",
+      "checked_at": "2026-11-01T22:05:22.301522+00:00",
       "evidence": [
         {
           "url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json",
-          "observed_at": "2026-11-01T13:30:09.491906+00:00",
+          "observed_at": "2026-11-01T22:05:22.299650+00:00",
           "sha256": "c75b4ea783967cd20248a384049742751e53941d70c235b369539fe19c72df8e",
           "cached": false
         }
@@ -17307,11 +17308,11 @@
       "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
       "deadline": null,
       "detail": "Endereço ausente da lista oficial desta distribuição.",
-      "checked_at": "2026-11-01T13:30:09.839199+00:00",
+      "checked_at": "2026-11-01T22:05:22.605357+00:00",
       "evidence": [
         {
           "url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json",
-          "observed_at": "2026-11-01T13:30:09.837746+00:00",
+          "observed_at": "2026-11-01T22:05:22.603936+00:00",
           "sha256": "519d85aa15c57dd2aeaffb48ec25dc69d732e3ea3830288b899ac32b1630302e",
           "cached": false
         }
@@ -17339,11 +17340,11 @@
       "official_url": "https://github.com/bgd-labs/rescue-mission-phase-1",
       "deadline": null,
       "detail": "Endereço ausente da lista oficial desta distribuição.",
-      "checked_at": "2026-11-01T13:30:10.173520+00:00",
+      "checked_at": "2026-11-01T22:05:22.943682+00:00",
       "evidence": [
         {
           "url": "https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json",
-          "observed_at": "2026-11-01T13:30:10.172033+00:00",
+          "observed_at": "2026-11-01T22:05:22.942206+00:00",
           "sha256": "997735e66a53dee2e06ec602dfcee9953fc91408332b69ec0b69d63c6df4680e",
           "cached": false
         }
@@ -17353,6 +17354,250 @@
         "automatic_payout_enabled": false,
         "zero_cost_verified": false,
         "blocker": "Sem comprovação de todas as taxas e reservas pagas por terceiro; claim automático desativado.",
+        "income_received": null
+      }
+    },
+    {
+      "id": "github:clankernation/openagents:41",
+      "category": "bounty",
+      "network": "externa",
+      "title": "[ Bounty $7k ] [ API ] Add health check endpoint with component status",
+      "status": "POTENCIAL",
+      "amount": null,
+      "asset": null,
+      "value_usd": 7400.0,
+      "received": null,
+      "source": "https://github.com/ClankerNation/OpenAgents/issues/41",
+      "platform": "GitHub",
+      "deadline": null,
+      "competition": "MEDIUM",
+      "complexity": "NÃO DETERMINADA",
+      "payer_reputation": {
+        "stars": 14,
+        "payment_history_verified": false
+      },
+      "completion_probability": null,
+      "payment_probability": null,
+      "analysis": {
+        "value": 7400.0,
+        "confidence": "high",
+        "risk": 0,
+        "risk_reasons": [],
+        "quality": 40,
+        "quality_reasons": [
+          "clear requirements/acceptance",
+          "useful issue label",
+          "detailed issue description"
+        ],
+        "history": 7,
+        "maintainer": 15,
+        "opportunity": 135.64,
+        "verdict": "GO",
+        "competition": "MEDIUM",
+        "competition_reasons": [
+          "active discussion; inspect comments before starting"
+        ],
+        "competition_evidence": [],
+        "reward_checks": {
+          "payment_terms_language": false,
+          "eligibility_language": false,
+          "deadline_language": false,
+          "payment_confirmed": false
+        }
+      },
+      "detail": "Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.",
+      "announced_value": 7400.0,
+      "announced_currency": "USD",
+      "checked_at": "2026-11-01T22:05:31.547010+00:00",
+      "evidence": [],
+      "payout_assessment": {
+        "owner_spending_limit": "0",
+        "automatic_payout_enabled": false,
+        "zero_cost_verified": false,
+        "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
+        "income_received": null
+      }
+    },
+    {
+      "id": "github:0xsneaks/ai-coms:13",
+      "category": "bounty",
+      "network": "externa",
+      "title": "AI COMS health: board needs attention",
+      "status": "POTENCIAL",
+      "amount": null,
+      "asset": null,
+      "value_usd": 30.0,
+      "received": null,
+      "source": "https://github.com/0xSneaks/ai-coms/issues/13",
+      "platform": "GitHub",
+      "deadline": null,
+      "competition": "LOW",
+      "complexity": "NÃO DETERMINADA",
+      "payer_reputation": {
+        "stars": 0,
+        "payment_history_verified": false
+      },
+      "completion_probability": null,
+      "payment_probability": null,
+      "analysis": {
+        "value": 30.0,
+        "confidence": "medium",
+        "risk": 10,
+        "risk_reasons": [
+          "very low repository activity"
+        ],
+        "quality": 10,
+        "quality_reasons": [
+          "detailed issue description"
+        ],
+        "history": 9,
+        "maintainer": 15,
+        "opportunity": 47.05,
+        "verdict": "REVIEW",
+        "competition": "LOW",
+        "competition_reasons": [],
+        "competition_evidence": [],
+        "reward_checks": {
+          "payment_terms_language": false,
+          "eligibility_language": true,
+          "deadline_language": false,
+          "payment_confirmed": false
+        }
+      },
+      "detail": "Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.",
+      "announced_value": 30.0,
+      "announced_currency": "USD",
+      "checked_at": "2026-11-01T22:05:42.657401+00:00",
+      "evidence": [],
+      "payout_assessment": {
+        "owner_spending_limit": "0",
+        "automatic_payout_enabled": false,
+        "zero_cost_verified": false,
+        "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
+        "income_received": null
+      }
+    },
+    {
+      "id": "github:illbnm/homelab-stack:11",
+      "category": "bounty",
+      "network": "externa",
+      "title": "[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例",
+      "status": "POTENCIAL",
+      "amount": null,
+      "asset": null,
+      "value_usd": 130.0,
+      "received": null,
+      "source": "https://github.com/illbnm/homelab-stack/issues/11",
+      "platform": "GitHub",
+      "deadline": null,
+      "competition": "HIGH",
+      "complexity": "NÃO DETERMINADA",
+      "payer_reputation": {
+        "stars": 13,
+        "payment_history_verified": false
+      },
+      "completion_probability": null,
+      "payment_probability": null,
+      "analysis": {
+        "value": 130.0,
+        "confidence": "high",
+        "risk": 0,
+        "risk_reasons": [],
+        "quality": 20,
+        "quality_reasons": [
+          "useful issue label",
+          "detailed issue description"
+        ],
+        "history": 7,
+        "maintainer": 15,
+        "opportunity": 61.43000000000001,
+        "verdict": "REVIEW",
+        "competition": "HIGH",
+        "competition_reasons": [
+          "1 comment(s) contain a solution/payout signal"
+        ],
+        "competition_evidence": [
+          {
+            "kind": "solution/payout comment signal",
+            "url": "https://github.com/illbnm/homelab-stack/issues/11#issuecomment-4114690164"
+          }
+        ],
+        "reward_checks": {
+          "payment_terms_language": false,
+          "eligibility_language": false,
+          "deadline_language": false,
+          "payment_confirmed": false
+        }
+      },
+      "detail": "Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.",
+      "announced_value": 130.0,
+      "announced_currency": "USD",
+      "checked_at": "2026-11-01T22:05:46.314591+00:00",
+      "evidence": [],
+      "payout_assessment": {
+        "owner_spending_limit": "0",
+        "automatic_payout_enabled": false,
+        "zero_cost_verified": false,
+        "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
+        "income_received": null
+      }
+    },
+    {
+      "id": "github:auscaster/frantic-board:571",
+      "category": "bounty",
+      "network": "externa",
+      "title": "support: agent-6c78ab - payout pending for accepted bounty #142",
+      "status": "POTENCIAL",
+      "amount": null,
+      "asset": null,
+      "value_usd": 3.0,
+      "received": null,
+      "source": "https://github.com/auscaster/frantic-board/issues/571",
+      "platform": "GitHub",
+      "deadline": null,
+      "competition": "LOW",
+      "complexity": "NÃO DETERMINADA",
+      "payer_reputation": {
+        "stars": 816,
+        "payment_history_verified": false
+      },
+      "completion_probability": null,
+      "payment_probability": null,
+      "analysis": {
+        "value": 3.0,
+        "confidence": "medium",
+        "risk": 5,
+        "risk_reasons": [
+          "no discussion"
+        ],
+        "quality": 10,
+        "quality_reasons": [
+          "detailed issue description"
+        ],
+        "history": 5,
+        "maintainer": 10,
+        "opportunity": 49.64,
+        "verdict": "REVIEW",
+        "competition": "LOW",
+        "competition_reasons": [],
+        "competition_evidence": [],
+        "reward_checks": {
+          "payment_terms_language": false,
+          "eligibility_language": false,
+          "deadline_language": false,
+          "payment_confirmed": false
+        }
+      },
+      "detail": "Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.",
+      "announced_value": 3.0,
+      "announced_currency": "USD",
+      "checked_at": "2026-11-01T22:05:50.715824+00:00",
+      "evidence": [],
+      "payout_assessment": {
+        "owner_spending_limit": "0",
+        "automatic_payout_enabled": false,
+        "zero_cost_verified": false,
+        "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       }
     },
@@ -17370,12 +17615,12 @@
       "count": 12,
       "truncated": true,
       "detail": "Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.",
-      "checked_at": "2026-11-01T13:30:47.847006+00:00",
+      "checked_at": "2026-11-01T22:05:54.807637+00:00",
       "evidence": [
         {
           "url": "https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12",
-          "observed_at": "2026-11-01T13:30:11.197890+00:00",
-          "sha256": "26a01c55dfe167254997379dde205698e3003609ca05ab97dcfb86d20d6e0f60",
+          "observed_at": "2026-11-01T22:05:23.884097+00:00",
+          "sha256": "6b29841d176150e2c4b6c7675f042709dd1f6dcbc84ebd5acf152f5b7f64fa3e",
           "cached": false
         }
       ],
@@ -17419,7 +17664,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 31.269999999999996,
+        "opportunity": 31.260000000000005,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -17441,7 +17686,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:48.198353+00:00",
+      "checked_at": "2026-11-01T22:05:55.463617+00:00",
       "evidence": []
     },
     {
@@ -17498,7 +17743,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:48.863738+00:00",
+      "checked_at": "2026-11-01T22:05:56.085721+00:00",
       "evidence": []
     },
     {
@@ -17558,7 +17803,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:49.578700+00:00",
+      "checked_at": "2026-11-01T22:05:56.794587+00:00",
       "evidence": []
     },
     {
@@ -17615,7 +17860,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:50.308920+00:00",
+      "checked_at": "2026-11-01T22:05:57.604093+00:00",
       "evidence": []
     },
     {
@@ -17674,7 +17919,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:51.033708+00:00",
+      "checked_at": "2026-11-01T22:05:58.244027+00:00",
       "evidence": []
     },
     {
@@ -17733,7 +17978,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:51.712670+00:00",
+      "checked_at": "2026-11-01T22:05:58.568965+00:00",
       "evidence": []
     },
     {
@@ -17770,7 +18015,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 115.84,
+        "opportunity": 116.03999999999999,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -17792,7 +18037,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:52.070666+00:00",
+      "checked_at": "2026-11-01T22:05:58.977918+00:00",
       "evidence": []
     },
     {
@@ -17853,7 +18098,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:52.439182+00:00",
+      "checked_at": "2026-11-01T22:05:59.612836+00:00",
       "evidence": []
     },
     {
@@ -17912,7 +18157,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:52.767469+00:00",
+      "checked_at": "2026-11-01T22:05:59.987188+00:00",
       "evidence": []
     },
     {
@@ -17947,7 +18192,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 35.1,
+        "opportunity": 35.25,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -17969,7 +18214,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:53.468601+00:00",
+      "checked_at": "2026-11-01T22:06:00.683080+00:00",
       "evidence": []
     },
     {
@@ -18028,66 +18273,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:54.201777+00:00",
-      "evidence": []
-    },
-    {
-      "id": "github:0xsneaks/ai-coms:13",
-      "category": "bounty",
-      "network": "externa",
-      "title": "AI COMS health: board needs attention",
-      "status": "POTENCIAL",
-      "amount": null,
-      "asset": null,
-      "value_usd": 30.0,
-      "received": null,
-      "source": "https://github.com/0xSneaks/ai-coms/issues/13",
-      "platform": "GitHub",
-      "deadline": null,
-      "competition": "UNKNOWN",
-      "complexity": "NÃO DETERMINADA",
-      "payer_reputation": {
-        "stars": 0,
-        "payment_history_verified": false
-      },
-      "completion_probability": null,
-      "payment_probability": null,
-      "analysis": {
-        "value": 30.0,
-        "confidence": "medium",
-        "risk": 10,
-        "risk_reasons": [
-          "very low repository activity"
-        ],
-        "quality": 10,
-        "quality_reasons": [
-          "detailed issue description"
-        ],
-        "history": 0,
-        "maintainer": 5,
-        "opportunity": 23.05,
-        "verdict": "REVIEW",
-        "competition": "UNKNOWN",
-        "competition_reasons": [],
-        "competition_evidence": [],
-        "reward_checks": {
-          "payment_terms_language": false,
-          "eligibility_language": true,
-          "deadline_language": false,
-          "payment_confirmed": false
-        }
-      },
-      "detail": "Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.",
-      "announced_value": 30.0,
-      "announced_currency": "USD",
-      "payout_assessment": {
-        "owner_spending_limit": "0",
-        "automatic_payout_enabled": false,
-        "zero_cost_verified": false,
-        "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
-        "income_received": null
-      },
-      "checked_at": "2026-11-01T13:30:54.909868+00:00",
+      "checked_at": "2026-11-01T22:06:01.374329+00:00",
       "evidence": []
     },
     {
@@ -18147,7 +18333,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:55.623305+00:00",
+      "checked_at": "2026-11-01T22:06:02.077584+00:00",
       "evidence": []
     },
     {
@@ -18206,7 +18392,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:56.344749+00:00",
+      "checked_at": "2026-11-01T22:06:02.799976+00:00",
       "evidence": []
     },
     {
@@ -18266,7 +18452,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:57.097636+00:00",
+      "checked_at": "2026-11-01T22:06:03.487424+00:00",
       "evidence": []
     },
     {
@@ -18303,7 +18489,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 27.1,
+        "opportunity": 27.200000000000003,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -18325,7 +18511,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:57.790889+00:00",
+      "checked_at": "2026-11-01T22:06:04.174468+00:00",
       "evidence": []
     },
     {
@@ -18360,7 +18546,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 31.9,
+        "opportunity": 32.05,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -18382,7 +18568,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:58.127261+00:00",
+      "checked_at": "2026-11-01T22:06:04.509353+00:00",
       "evidence": []
     },
     {
@@ -18439,7 +18625,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:58.842405+00:00",
+      "checked_at": "2026-11-01T22:06:05.232075+00:00",
       "evidence": []
     },
     {
@@ -18499,7 +18685,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:59.535101+00:00",
+      "checked_at": "2026-11-01T22:06:05.943327+00:00",
       "evidence": []
     },
     {
@@ -18559,7 +18745,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:30:59.901660+00:00",
+      "checked_at": "2026-11-01T22:06:06.304752+00:00",
       "evidence": []
     },
     {
@@ -18594,7 +18780,7 @@
         ],
         "history": 0,
         "maintainer": 5,
-        "opportunity": 63.5,
+        "opportunity": 63.650000000000006,
         "verdict": "REVIEW",
         "competition": "UNKNOWN",
         "competition_reasons": [],
@@ -18616,7 +18802,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:00.244039+00:00",
+      "checked_at": "2026-11-01T22:06:06.602810+00:00",
       "evidence": []
     },
     {
@@ -18675,7 +18861,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:00.975471+00:00",
+      "checked_at": "2026-11-01T22:06:07.357383+00:00",
       "evidence": []
     },
     {
@@ -18736,7 +18922,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:01.690405+00:00",
+      "checked_at": "2026-11-01T22:06:08.013344+00:00",
       "evidence": []
     },
     {
@@ -18796,7 +18982,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:01.989169+00:00",
+      "checked_at": "2026-11-01T22:06:08.350220+00:00",
       "evidence": []
     },
     {
@@ -18858,7 +19044,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:02.725030+00:00",
+      "checked_at": "2026-11-01T22:06:09.086878+00:00",
       "evidence": []
     },
     {
@@ -18916,7 +19102,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:03.408419+00:00",
+      "checked_at": "2026-11-01T22:06:09.425164+00:00",
       "evidence": []
     },
     {
@@ -18977,7 +19163,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:03.749162+00:00",
+      "checked_at": "2026-11-01T22:06:09.745655+00:00",
       "evidence": []
     },
     {
@@ -19035,7 +19221,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:04.524863+00:00",
+      "checked_at": "2026-11-01T22:06:10.589176+00:00",
       "evidence": []
     },
     {
@@ -19094,7 +19280,7 @@
         "blocker": "Exige trabalho aceito e pagamento do patrocinador; não há crédito liberado.",
         "income_received": null
       },
-      "checked_at": "2026-11-01T13:31:05.256728+00:00",
+      "checked_at": "2026-11-01T22:06:11.243947+00:00",
       "evidence": []
     },
     {
@@ -19109,7 +19295,7 @@
       "received": null,
       "detail": "Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.",
       "source": "https://superteam.fun/api/agents/listings/live?take=20",
-      "checked_at": "2026-11-01T13:31:05.256940+00:00",
+      "checked_at": "2026-11-01T22:06:11.244136+00:00",
       "evidence": [],
       "payout_assessment": {
         "owner_spending_limit": "0",
@@ -19126,6 +19312,11 @@
   "automatic_financial_execution": false,
   "changes": 17,
   "history": [
+    {
+      "at": "2026-11-01T22:06:11.244263+00:00",
+      "items": 95,
+      "errors": 8
+    },
     {
       "at": "2026-11-01T13:31:05.257068+00:00",
       "items": 92,

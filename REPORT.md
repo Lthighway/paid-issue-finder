@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-01T13:31:05.257068+00:00
+Verificação: 2026-11-01T22:06:11.244263+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -30,7 +30,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | polygon | historico | Consulta historico | INDISPONÍVEL | — | — | https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions |
 | polygon | token | Consulta token | INDISPONÍVEL | — | — | https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens |
 | polygon | cobertura | Merkl: consulta por endereço | CONFIRMADO | — | — | https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=137 |
-| bnb | saldo | Saldo nativo | INDISPONÍVEL | — | — | https://bsc-rpc.publicnode.com |
+| bnb | saldo | Saldo nativo | CONFIRMADO | 0 | BNB | https://bsc-rpc.publicnode.com |
 | bnb | cobertura | Tokens e histórico indexado | INDISPONÍVEL | — | — | — |
 | bnb | cobertura | Merkl: consulta por endereço | CONFIRMADO | — | — | https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=56 |
 | solana | saldo | Saldo SOL | CONFIRMADO | 0 | SOL | https://api.mainnet-beta.solana.com |
@@ -69,6 +69,10 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [ Bounty $7k ] [ API ] Add health check endpoint with component status | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/41 |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | bounty | [BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/11 |
+| externa | bounty | support: agent-6c78ab - payout pending for accepted bounty #142 | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/571 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/2714 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
@@ -81,7 +85,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [BOUNTY] Write a BoTTube Integration Guide — 10 RTC | POTENCIAL | — | — | https://github.com/Scottcjn/rustchain-bounties/issues/450 |
 | externa | bounty | [BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1220 |
 | externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) | POTENCIAL | — | — | https://github.com/P00NSMASHER/github-value-hunt-ledger/issues/863 |
 | externa | bounty | bounty: Chinese documentation translation | POTENCIAL | — | — | https://github.com/Clawland-AI/clawland-ai.github.io/issues/2 |
 | externa | bounty | [Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy | POTENCIAL | — | — | https://github.com/tenstorrent/tt-metal/issues/62571 |
@@ -123,7 +126,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Consulta historico (polygon)**: HTTP 403 em polygon.blockscout.com
 - **Consulta token (polygon)**: HTTP 403 em polygon.blockscout.com
 - **Merkl: consulta por endereço (polygon)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
-- **Saldo nativo (bnb)**: Timeout/rede indisponível
 - **Tokens e histórico indexado (bnb)**: Sem indexador gratuito configurado; RPC não enumera todos os tokens
 - **Merkl: consulta por endereço (bnb)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
 - **USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN (stellar)**: Saldo total; reserva mínima e passivos não descontados. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
@@ -155,6 +157,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
+- **[ Bounty $7k ] [ API ] Add health check endpoint with component status (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **support: agent-6c78ab - payout pending for accepted bounty #142 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
 - **Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -167,7 +173,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[BOUNTY] Write a BoTTube Integration Guide — 10 RTC (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **bounty: Chinese documentation translation (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
