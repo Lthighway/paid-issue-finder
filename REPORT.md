@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-01T06:12:32.777902+00:00
+Verificação: 2026-11-01T13:31:05.257068+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -30,7 +30,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | polygon | historico | Consulta historico | INDISPONÍVEL | — | — | https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/transactions |
 | polygon | token | Consulta token | INDISPONÍVEL | — | — | https://polygon.blockscout.com/api/v2/addresses/0xB70401fC0F2922e10728bD70856C8E68e1CcC27c/tokens |
 | polygon | cobertura | Merkl: consulta por endereço | CONFIRMADO | — | — | https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=137 |
-| bnb | saldo | Saldo nativo | CONFIRMADO | 0 | BNB | https://bsc-rpc.publicnode.com |
+| bnb | saldo | Saldo nativo | INDISPONÍVEL | — | — | https://bsc-rpc.publicnode.com |
 | bnb | cobertura | Tokens e histórico indexado | INDISPONÍVEL | — | — | — |
 | bnb | cobertura | Merkl: consulta por endereço | CONFIRMADO | — | — | https://api.merkl.xyz/v4/users/0xb70401fc0f2922e10728bd70856c8e68e1ccc27c/rewards?chainId=56 |
 | solana | saldo | Saldo SOL | CONFIRMADO | 0 | SOL | https://api.mainnet-beta.solana.com |
@@ -38,7 +38,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | solana | cobertura | tokens | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | solana | cobertura | tokens2022 | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | stellar | token | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | POTENCIAL | 0.0000000 | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
-| stellar | saldo | XLM | CONFIRMADO | 39.9999500 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
+| stellar | saldo | XLM | CONFIRMADO | 39.9999900 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
 | stellar | historico | Transações XLM | CONFIRMADO | — | — | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/0000000029c5f7e2905584c2cc2eebfd20ad15604c2a6d8ddef6bf2fe24e8eb1e2900482 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/000000006b7d0781acf2dfba3b07350df7f81bb178280d523a9a50a6893b16263cf7f628 |
@@ -69,11 +69,11 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/2714 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
 | externa | bounty | [BOUNTY] 🔴 Red Team: x402 Payment Protocol Exploits (100 RTC) | POTENCIAL | — | — | https://github.com/Scottcjn/rustchain-bounties/issues/66 |
 | externa | bounty | Support: NVIDIA GeForce RTX 5060 Laptop GPU 8 GB (Blackwell) + $50 bounty request | POTENCIAL | — | — | https://github.com/sybil-solutions/local-ai-registry/issues/370 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [TEST BOUNTY] Fix typo in README | POTENCIAL | — | — | https://github.com/jomaaabbe78-spec/bookningsapp/issues/1 |
 | externa | bounty | [ Bounty $7k ] [ SDK ] Fix retry.ts doesn't support conditional retry based on error type | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/137 |
 | externa | bounty | [ Bounty $9k ] [ Solidity ] Fix zero-fee flash loans and add pool drainage protection — high priority | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/98 |
@@ -99,9 +99,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | New in-scope 2026-10-29: 3 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/192 |
 | externa | bounty | Adding first-seen/last-seen to dataset with new flags | POTENCIAL | — | — | https://github.com/codingo/dooked/issues/1 |
 | externa | bounty | Curve Finance Integration and Stablecoin Management $900 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/81 |
-| externa | bounty | Hyperliquid Integration and Perpetual Trading $900 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/82 |
-| externa | bounty | NFT Marketplace Data Aggregation $750 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/87 |
-| externa | bounty | DeFi Analytics Integration $750 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/88 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -126,6 +123,7 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Consulta historico (polygon)**: HTTP 403 em polygon.blockscout.com
 - **Consulta token (polygon)**: HTTP 403 em polygon.blockscout.com
 - **Merkl: consulta por endereço (polygon)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
+- **Saldo nativo (bnb)**: Timeout/rede indisponível
 - **Tokens e histórico indexado (bnb)**: Sem indexador gratuito configurado; RPC não enumera todos os tokens
 - **Merkl: consulta por endereço (bnb)**: Consulta bem-sucedida; lista vazia não exclui outros programas.
 - **USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN (stellar)**: Saldo total; reserva mínima e passivos não descontados. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
@@ -157,11 +155,11 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY] 🔴 Red Team: x402 Payment Protocol Exploits (100 RTC) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Support: NVIDIA GeForce RTX 5060 Laptop GPU 8 GB (Blackwell) + $50 bounty request (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[BOUNTY] 🔴 Red Team: x402 Payment Protocol Exploits (100 RTC) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Support: NVIDIA GeForce RTX 5060 Laptop GPU 8 GB (Blackwell) + $50 bounty request (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[TEST BOUNTY] Fix typo in README (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[ Bounty $7k ] [ SDK ] Fix retry.ts doesn't support conditional retry based on error type (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[ Bounty $9k ] [ Solidity ] Fix zero-fee flash loans and add pool drainage protection — high priority (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -187,13 +185,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **New in-scope 2026-10-29: 3 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Adding first-seen/last-seen to dataset with new flags (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Curve Finance Integration and Stablecoin Management $900 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Hyperliquid Integration and Perpetual Trading $900 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **NFT Marketplace Data Aggregation $750 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **DeFi Analytics Integration $750 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 19
+Mudanças nesta execução: 17
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
