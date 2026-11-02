@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-02T06:12:35.619303+00:00
+Verificação: 2026-11-02T16:01:35.287126+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -61,17 +61,19 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Deposit into Zama Flowdesk High Yield USDT | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Deposit into Zama RockawayX Confidential RWA USDC | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [Hosted two-author sandbox] Validate supported form values | POTENCIAL | — | — | https://github.com/deepakA18/gitpay-demo-http/issues/11 |
+| externa | bounty | [Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy | POTENCIAL | — | — | https://github.com/tenstorrent/tt-metal/issues/62571 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration | POTENCIAL | — | — | https://github.com/cxlinux-ai/cx-core/issues/425 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [ Bounty $7k ] [ API ] Add health check endpoint with component status | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/41 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/11 |
@@ -88,7 +90,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
 | externa | bounty | Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) | POTENCIAL | — | — | https://github.com/P00NSMASHER/github-value-hunt-ledger/issues/863 |
 | externa | bounty | bounty: Chinese documentation translation | POTENCIAL | — | — | https://github.com/Clawland-AI/clawland-ai.github.io/issues/2 |
-| externa | bounty | [Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy | POTENCIAL | — | — | https://github.com/tenstorrent/tt-metal/issues/62571 |
 | externa | bounty | [BOUNTY] Medium: buildDepositInstruction omits merkle_tree PDA account and uses obsolete DEPOSIT_DISCRIMINATOR, causing 100% on-chain InstructionFallbackNotFound or AccountNotEnoughKeys reverts on SOL deposits (paraloom-wallet) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-wallet/issues/133 |
 | externa | bounty | [BOUNTY] Medium: Missing init_asset_vault, set_asset_deposit_cap, and set_min_token_stake instruction builders, discriminators, and derive_asset_config in bridge::solana | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1258 |
 | externa | bounty | fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS | POTENCIAL | — | — | https://github.com/Uniswap/v4-periphery/issues/624 |
@@ -99,7 +100,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | Preserve RFC 7239 `Forwarded` host authority in sub-mounted ASGI `Request.scope_for` | POTENCIAL | — | — | https://github.com/WholeTroutMedia/oss-verification-sandbox/issues/1 |
 | externa | bounty | [$250] Concierge - Reaction to prompt disappears after user clears cache and restart. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101675 |
 | externa | bounty | Syscoin-Ethereum Bridge Bounty Tier 2: The Blockchain Professional [up to 15k SYS ( X) approximately $1000 ] | POTENCIAL | — | — | https://github.com/syscoin/syscoin-gitcoin/issues/2 |
-| externa | bounty | [BOUNTY $280] Observability — Prometheus + Grafana + Loki + Alerting | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/10 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -148,16 +148,18 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Lend RLUSD on Aave Horizon (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Deposit into Zama Flowdesk High Yield USDT (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Deposit into Zama RockawayX Confidential RWA USDC (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[Hosted two-author sandbox] Validate supported form values (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[ Bounty $7k ] [ API ] Add health check endpoint with component status (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -174,7 +176,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Golden Goose candidate 001: B2B settlement eligibility preflight (WATCH) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **bounty: Chinese documentation translation (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Medium: buildDepositInstruction omits merkle_tree PDA account and uses obsolete DEPOSIT_DISCRIMINATOR, causing 100% on-chain InstructionFallbackNotFound or AccountNotEnoughKeys reverts on SOL deposits (paraloom-wallet) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Medium: Missing init_asset_vault, set_asset_deposit_cap, and set_min_token_stake instruction builders, discriminators, and derive_asset_config in bridge::solana (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -185,11 +186,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Preserve RFC 7239 `Forwarded` host authority in sub-mounted ASGI `Request.scope_for` (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Concierge - Reaction to prompt disappears after user clears cache and restart. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Syscoin-Ethereum Bridge Bounty Tier 2: The Blockchain Professional [up to 15k SYS ( X) approximately $1000 ] (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY $280] Observability — Prometheus + Grafana + Loki + Alerting (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 17
+Mudanças nesta execução: 26
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
