@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-01T22:06:11.244263+00:00
+Verificação: 2026-11-02T06:12:35.619303+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -69,13 +69,14 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration | POTENCIAL | — | — | https://github.com/cxlinux-ai/cx-core/issues/425 |
+| externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [ Bounty $7k ] [ API ] Add health check endpoint with component status | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/41 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/11 |
 | externa | bounty | support: agent-6c78ab - payout pending for accepted bounty #142 | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/571 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/2714 |
-| externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | POTENCIAL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
 | externa | bounty | [BOUNTY] 🔴 Red Team: x402 Payment Protocol Exploits (100 RTC) | POTENCIAL | — | — | https://github.com/Scottcjn/rustchain-bounties/issues/66 |
 | externa | bounty | Support: NVIDIA GeForce RTX 5060 Laptop GPU 8 GB (Blackwell) + $50 bounty request | POTENCIAL | — | — | https://github.com/sybil-solutions/local-ai-registry/issues/370 |
 | externa | bounty | [TEST BOUNTY] Fix typo in README | POTENCIAL | — | — | https://github.com/jomaaabbe78-spec/bookningsapp/issues/1 |
@@ -99,9 +100,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [$250] Concierge - Reaction to prompt disappears after user clears cache and restart. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101675 |
 | externa | bounty | Syscoin-Ethereum Bridge Bounty Tier 2: The Blockchain Professional [up to 15k SYS ( X) approximately $1000 ] | POTENCIAL | — | — | https://github.com/syscoin/syscoin-gitcoin/issues/2 |
 | externa | bounty | [BOUNTY $280] Observability — Prometheus + Grafana + Loki + Alerting | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/10 |
-| externa | bounty | New in-scope 2026-10-29: 3 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/192 |
-| externa | bounty | Adding first-seen/last-seen to dataset with new flags | POTENCIAL | — | — | https://github.com/codingo/dooked/issues/1 |
-| externa | bounty | Curve Finance Integration and Stablecoin Management $900 | POTENCIAL | — | — | https://github.com/Spectral-Finance/lux/issues/81 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -157,13 +155,14 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[ Bounty $7k ] [ API ] Add health check endpoint with component status (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **support: agent-6c78ab - payout pending for accepted bounty #142 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[ Bounty $7k ] [ API ] Add health check endpoint with component status (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **support: agent-6c78ab - payout pending for accepted bounty #142 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] 🔴 Red Team: x402 Payment Protocol Exploits (100 RTC) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Support: NVIDIA GeForce RTX 5060 Laptop GPU 8 GB (Blackwell) + $50 bounty request (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[TEST BOUNTY] Fix typo in README (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -187,9 +186,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[$250] Concierge - Reaction to prompt disappears after user clears cache and restart. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Syscoin-Ethereum Bridge Bounty Tier 2: The Blockchain Professional [up to 15k SYS ( X) approximately $1000 ] (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $280] Observability — Prometheus + Grafana + Loki + Alerting (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **New in-scope 2026-10-29: 3 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Adding first-seen/last-seen to dataset with new flags (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Curve Finance Integration and Stablecoin Management $900 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
