@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-03T14:21:55.352076+00:00
+Verificação: 2026-11-03T23:27:34.980981+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -38,7 +38,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | solana | cobertura | tokens | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | solana | cobertura | tokens2022 | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | stellar | token | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | POTENCIAL | 0.0000000 | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
-| stellar | saldo | XLM | CONFIRMADO | 39.9999900 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
+| stellar | saldo | XLM | CONFIRMADO | 39.9999800 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
 | stellar | historico | Transações XLM | CONFIRMADO | — | — | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/0000000029c5f7e2905584c2cc2eebfd20ad15604c2a6d8ddef6bf2fe24e8eb1e2900482 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/000000006b7d0781acf2dfba3b07350df7f81bb178280d523a9a50a6893b16263cf7f628 |
@@ -53,28 +53,31 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | stellar | cobertura | Claimable balances consultados | CONFIRMADO | — | — | https://horizon.stellar.org/claimable_balances?claimant=GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU&limit=200 |
 | base | campanha | Deposit USDe as collateral on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply USDC on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply RLUSD to the Aave V4 RLUSD Yield Spoke | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| arbitrum | campanha | Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply RLUSD to the Aave V4 Sentora Hub | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [$250] [Exploratory] Wallet - Error appear after transfer to the Business bank account | POTENCIAL | — | — | https://github.com/Expensify/App/issues/92371 |
+| externa | bounty | [Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility | POTENCIAL | — | — | https://github.com/kOs-tile/kavi-capability-compiler/issues/106 |
+| externa | bounty | Malachi has no funding and uses none of the free programs open source projects qualify for | POTENCIAL | — | — | https://github.com/malachi-hq/malachi/issues/303 |
+| externa | bounty | [$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101234 |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | New in-scope 2026-11-03: 4 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/211 |
 | externa | bounty | bounty digest 2026-11-03 | POTENCIAL | — | — | https://github.com/airdropia/earn-ops/issues/37 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [BOUNTY $300] SSO — Authentik 统一身份认证 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/9 |
-| externa | bounty | [Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility | POTENCIAL | — | — | https://github.com/kOs-tile/kavi-capability-compiler/issues/106 |
 | externa | bounty | [Hosted two-author sandbox] Validate supported form values | NÃO ELEGÍVEL | — | — | https://github.com/deepakA18/gitpay-demo-http/issues/11 |
 | externa | bounty | [Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy | NÃO ELEGÍVEL | — | — | https://github.com/tenstorrent/tt-metal/issues/62571 |
 | externa | bounty | [ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration | POTENCIAL | — | — | https://github.com/cxlinux-ai/cx-core/issues/425 |
@@ -99,8 +102,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS | POTENCIAL | — | — | https://github.com/Uniswap/v4-periphery/issues/624 |
 | externa | bounty | [$250] Spend - Default sort is descending | POTENCIAL | — | — | https://github.com/Expensify/App/issues/91935 |
 | externa | bounty | Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) | NÃO ELEGÍVEL | — | — | https://github.com/Financial-Privacy-Foundation/ZcashCoinholderGrantsProgram/issues/68 |
-| externa | bounty | [BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1247 |
-| externa | bounty | Superteam Earn (superteam.fun) firsthand inventory — the largest real-settlement board in this 31-board census by an order of magnitude (2,057 listings ever, 1,989 winners-announced, $3.01M USDC + $334K USDG + 33 alt-token reward pools awarded, ~34 decided/month still), with a genuine agent-native API (self-serve key, claimCode human-payout bridge, no KYC) that is nevertheless functionally empty for agents: 1.8% of listings ever allowed agent submissions, the agent-eligible feed returns [] while two AGENT_ALLOWED bounties are live, and the agent details endpoint 404s on them | POTENCIAL | — | — | https://github.com/pursekeeper/api/issues/58 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -141,27 +142,30 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
 - **Deposit USDe as collateral on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply USDC on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Lend USD1 on Dolomite (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend RLUSD on Aave Horizon (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USD1 on Dolomite (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply RLUSD to the Aave V4 RLUSD Yield Spoke (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply RLUSD to the Aave V4 Sentora Hub (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **New in-scope 2026-11-03: 4 program(s) added targets (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **bounty digest 2026-11-03 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[$250] [Exploratory] Wallet - Error appear after transfer to the Business bank account (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Malachi has no funding and uses none of the free programs open source projects qualify for (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
-- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **New in-scope 2026-11-03: 4 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **bounty digest 2026-11-03 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $300] SSO — Authentik 统一身份认证 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Hosted two-author sandbox] Validate supported form values (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[Bounty $750] Improve Qwen3-TTS Code Predictor Accuracy (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -186,12 +190,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **fix(router): prevent sequential TAKE_PORTION compounding basis points error causing CurrencyNotSettled DoS (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Spend - Default sort is descending (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Retroactive Grant Application - Zebra High-Severity Mempool DoS Disclosure (GHSA-7jp4-mq53-4cvq) (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **[BOUNTY] Medium: transact_ingress submit_handler admits oversized proofs, fee-overflow amounts, and zero recipients, causing consensus DoS and on-chain settlement aborts (paraloom-core) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Superteam Earn (superteam.fun) firsthand inventory — the largest real-settlement board in this 31-board census by an order of magnitude (2,057 listings ever, 1,989 winners-announced, $3.01M USDC + $334K USDG + 33 alt-token reward pools awarded, ~34 decided/month still), with a genuine agent-native API (self-serve key, claimCode human-payout bridge, no KYC) that is nevertheless functionally empty for agents: 1.8% of listings ever allowed agent submissions, the agent-eligible feed returns [] while two AGENT_ALLOWED bounties are live, and the agent details endpoint 404s on them (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 21
+Mudanças nesta execução: 18
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
