@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-06T06:53:16.321583+00:00
+Verificação: 2026-11-06T19:28:09.771236+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -54,25 +54,26 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | base | campanha | Deposit USDe as collateral on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply USDC on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | arbitrum | campanha | Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply RLUSD to the Aave V4 Sentora Hub | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Deposit USDe as collateral on USDe/RLUSD 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Lend USDe on Aave V4 | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Deposit into Zama Flowdesk High Yield USDT | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [ Triage ] Review all open PRs and provide constructive feedback | POTENCIAL | — | — | https://github.com/UnsafeLabs/Bounty-Hunters/issues/270 |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | bounty | Zcash Privacy Developers Residency - December 2026 | POTENCIAL | — | — | https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/531 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff | POTENCIAL | — | — | https://github.com/WholeTroutMedia/agent-conformance-quarantine/issues/1 |
 | externa | bounty | [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption | POTENCIAL | — | — | https://github.com/WholeTroutMedia/agent-conformance-quarantine/issues/2 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | New in-scope 2026-11-05: 4 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/220 |
 | externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
 | externa | bounty | Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/574 |
@@ -99,8 +100,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [ Bounty $7k ] [ SDK ] Fix retry.ts doesn't support conditional retry based on error type | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/137 |
 | externa | bounty | [ Bounty $9k ] [ Solidity ] Fix zero-fee flash loans and add pool drainage protection — high priority | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/98 |
 | externa | bounty | New in-scope 2026-10-31: 2 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/201 |
-| externa | bounty | [BOUNTY] Write a BoTTube Integration Guide — 10 RTC | POTENCIAL | — | — | https://github.com/Scottcjn/rustchain-bounties/issues/450 |
-| externa | bounty | [BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions | POTENCIAL | — | — | https://github.com/paraloom-labs/paraloom-core/issues/1220 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -142,24 +141,25 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Deposit USDe as collateral on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply USDC on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend USD1 on Dolomite (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend RLUSD on Aave Horizon (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Gauntlet USDG Premium V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply RLUSD to the Aave V4 Sentora Hub (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Deposit USDe as collateral on USDe/RLUSD 91.5% (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Lend USDe on Aave V4 (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Deposit into Zama Flowdesk High Yield USDT (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **[ Triage ] Review all open PRs and provide constructive feedback (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Zcash Privacy Developers Residency - December 2026 (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
-- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-11-05: 4 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -186,12 +186,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[ Bounty $7k ] [ SDK ] Fix retry.ts doesn't support conditional retry based on error type (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[ Bounty $9k ] [ Solidity ] Fix zero-fee flash loans and add pool drainage protection — high priority (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-10-31: 2 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY] Write a BoTTube Integration Guide — 10 RTC (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY] Medium: Missing slash_validator and update_reputation instruction builders, discriminators, and derive_slashed_funds_vault in bridge::solana::instructions (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 20
+Mudanças nesta execução: 16
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
