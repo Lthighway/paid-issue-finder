@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-07T21:55:16.943463+00:00
+Verificação: 2026-11-08T06:07:19.774295+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -38,7 +38,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | solana | cobertura | tokens | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | solana | cobertura | tokens2022 | CONFIRMADO | — | — | https://api.mainnet-beta.solana.com |
 | stellar | token | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | POTENCIAL | 0.0000000 | USDC:GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
-| stellar | saldo | XLM | CONFIRMADO | 39.9999800 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
+| stellar | saldo | XLM | CONFIRMADO | 39.9999900 | XLM | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU |
 | stellar | historico | Transações XLM | CONFIRMADO | — | — | https://horizon.stellar.org/accounts/GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU/transactions?order=desc&limit=100 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/0000000029c5f7e2905584c2cc2eebfd20ad15604c2a6d8ddef6bf2fe24e8eb1e2900482 |
 | stellar | recompensa | Claimable balance | POTENCIAL | 20.0000000 | XLMWRAPPED:GAUCPLSPBJKOSN7WZK6SDD2BYPQMC3YSWMLX4XXY7S4JPQFLJXEINDUS | https://horizon.stellar.org/claimable_balances/000000006b7d0781acf2dfba3b07350df7f81bb178280d523a9a50a6893b16263cf7f628 |
@@ -68,11 +68,12 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/4145 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected | POTENCIAL | — | — | https://github.com/Expensify/App/issues/37447 |
 | externa | bounty | 💎 [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption | POTENCIAL | — | — | https://github.com/IES-BoilerRoom/Furnace/issues/2 |
 | externa | bounty | 💎 [Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff | POTENCIAL | — | — | https://github.com/IES-BoilerRoom/Furnace/issues/1 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | New in-scope 2026-11-07: 5 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/228 |
 | externa | bounty | [BOUNTY] Write a BoTTube Integration Guide — 10 RTC | POTENCIAL | — | — | https://github.com/Scottcjn/rustchain-bounties/issues/450 |
 | externa | bounty | [Canary-Trap-06] Implement batch checkpoint verifier (Self-Labeled Decoy Bounty) | POTENCIAL | — | — | https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/6 |
@@ -98,9 +99,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration | POTENCIAL | — | — | https://github.com/cxlinux-ai/cx-core/issues/425 |
 | externa | bounty | 扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 | NÃO ELEGÍVEL | — | — | https://github.com/FuZoe/PD-Hunter/issues/18 |
 | externa | bounty | [ Bounty $7k ] [ API ] Add health check endpoint with component status | POTENCIAL | — | — | https://github.com/ClankerNation/OpenAgents/issues/41 |
-| externa | bounty | [BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/11 |
-| externa | bounty | support: agent-6c78ab - payout pending for accepted bounty #142 | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/571 |
-| externa | bounty | Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/2714 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -155,11 +153,12 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
+- **[soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **💎 [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **💎 [Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **[Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **💎 [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **💎 [Escrowed $450 USDC] 24-Vector Conformance Suite: Streaming MCP SSE Chunk Boundary Reassembly with Backpressure Backoff (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-11-07: 5 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY] Write a BoTTube Integration Guide — 10 RTC (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Canary-Trap-06] Implement batch checkpoint verifier (Self-Labeled Decoy Bounty) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -185,13 +184,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[ARCHITECTURE] Replace Ollama with llama.cpp native C++ integration (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **扩充赏金组织列表：当前 21 个组织中仅 2 个有活跃赏金 (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
 - **[ Bounty $7k ] [ API ] Add health check endpoint with component status (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[BOUNTY $130] Database Layer — PostgreSQL + Redis + MariaDB 共享实例 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **support: agent-6c78ab - payout pending for accepted bounty #142 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Soundness: constant shift count exceeding typed integer bit width passes check, failing go build (HYB-E1002) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 22
+Mudanças nesta execução: 16
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
