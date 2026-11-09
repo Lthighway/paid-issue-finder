@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-09T06:39:32.835774+00:00
+Verificação: 2026-11-09T22:26:32.212564+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -68,6 +68,8 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | [$250] Gesture - Safari on iPhone flickers previous screen on swipe-back gesture | POTENCIAL | — | — | https://github.com/Expensify/App/issues/75905 |
+| externa | bounty | BoostX: Roadmap Completion & Ecosystem Scaling | POTENCIAL | — | — | https://github.com/stacksgov/sip31-interim-grants/issues/25 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [Follow-up] [Bounty #743] Validate /api/users payload before persistence | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13938 |
@@ -152,6 +154,8 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
+- **[$250] Gesture - Safari on iPhone flickers previous screen on swipe-back gesture (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **BoostX: Roadmap Completion & Ecosystem Scaling (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
 - **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Follow-up] [Bounty #743] Validate /api/users payload before persistence (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -186,6 +190,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 
 ## Operação
 
-Mudanças nesta execução: 17
+Mudanças nesta execução: 15
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
