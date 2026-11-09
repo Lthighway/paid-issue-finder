@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-08T22:11:08.956941+00:00
+Verificação: 2026-11-09T06:39:32.835774+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -68,9 +68,9 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [Follow-up] [Bounty #743] Validate /api/users payload before persistence | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13938 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [Bounty: $50] slugify() leaves double and trailing hyphens | POTENCIAL | — | — | https://github.com/maaltarifi97-maker/aioa-playground/issues/1 |
 | externa | bounty | [Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) | POTENCIAL | — | — | https://github.com/paraspell/xcm-tools/issues/2461 |
 | externa | bounty | support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/575 |
@@ -98,7 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101234 |
 | externa | bounty | New in-scope 2026-11-03: 4 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/211 |
 | externa | bounty | bounty digest 2026-11-03 | INDISPONÍVEL | — | — | https://github.com/airdropia/earn-ops/issues/37 |
-| externa | bounty | [BOUNTY $300] SSO — Authentik 统一身份认证 | POTENCIAL | — | — | https://github.com/illbnm/homelab-stack/issues/9 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -153,9 +152,9 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **[Follow-up] [Bounty #743] Validate /api/users payload before persistence (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[Follow-up] [Bounty #743] Validate /api/users payload before persistence (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $50] slugify() leaves double and trailing hyphens (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -183,11 +182,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **New in-scope 2026-11-03: 4 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **bounty digest 2026-11-03 (externa)**: HTTP 404 em api.github.com
-- **[BOUNTY $300] SSO — Authentik 统一身份认证 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 16
+Mudanças nesta execução: 17
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
