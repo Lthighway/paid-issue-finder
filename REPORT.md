@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-09T22:26:32.212564+00:00
+Verificação: 2026-11-10T07:24:27.803535+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -68,10 +68,10 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [$250] Gesture - Safari on iPhone flickers previous screen on swipe-back gesture | POTENCIAL | — | — | https://github.com/Expensify/App/issues/75905 |
 | externa | bounty | BoostX: Roadmap Completion & Ecosystem Scaling | POTENCIAL | — | — | https://github.com/stacksgov/sip31-interim-grants/issues/25 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
-| externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | [Follow-up] [Bounty #743] Validate /api/users payload before persistence | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13938 |
 | externa | bounty | [Bounty: $50] slugify() leaves double and trailing hyphens | POTENCIAL | — | — | https://github.com/maaltarifi97-maker/aioa-playground/issues/1 |
 | externa | bounty | [Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) | POTENCIAL | — | — | https://github.com/paraspell/xcm-tools/issues/2461 |
@@ -98,8 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility | POTENCIAL | — | — | https://github.com/kOs-tile/kavi-capability-compiler/issues/106 |
 | externa | bounty | Malachi has no funding and uses none of the free programs open source projects qualify for | POTENCIAL | — | — | https://github.com/malachi-hq/malachi/issues/303 |
 | externa | bounty | [$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change | POTENCIAL | — | — | https://github.com/Expensify/App/issues/101234 |
-| externa | bounty | New in-scope 2026-11-03: 4 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/211 |
-| externa | bounty | bounty digest 2026-11-03 | INDISPONÍVEL | — | — | https://github.com/airdropia/earn-ops/issues/37 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -154,10 +152,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **[$250] Gesture - Safari on iPhone flickers previous screen on swipe-back gesture (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **BoostX: Roadmap Completion & Ecosystem Scaling (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
-- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **[$250] Gesture - Safari on iPhone flickers previous screen on swipe-back gesture (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **BoostX: Roadmap Completion & Ecosystem Scaling (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Follow-up] [Bounty #743] Validate /api/users payload before persistence (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $50] slugify() leaves double and trailing hyphens (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -184,8 +182,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[Research Sprint] OpenAI agent-safety evidence, bounty eligibility and OSS credibility (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Malachi has no funding and uses none of the free programs open source projects qualify for (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Marking a chat as unread doesn't stick — client immediately re-reads it, and other clients never see the change (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **New in-scope 2026-11-03: 4 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **bounty digest 2026-11-03 (externa)**: HTTP 404 em api.github.com
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
