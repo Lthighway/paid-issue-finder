@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-13T06:50:35.360408+00:00
+Verificação: 2026-11-13T19:47:29.132509+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -53,25 +53,25 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | stellar | cobertura | Claimable balances consultados | CONFIRMADO | — | — | https://horizon.stellar.org/claimable_balances?claimant=GBOVZNBRN3GZJTVFEDFPZMASDGQJFPL4VNFCQNVSFOUX25MG2B2FJIWU&limit=200 |
 | ethereum | campanha | Lend USDe on Aave (looping required) | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Deposit USDe as collateral on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Paypal USD Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Stake into the Curve PYcrvUSD gauge | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Provide liquidity to Curve PYUSD-crvUSD | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | base | campanha | Supply USDC on USDe/USDC 91.5% | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend USD1 on Dolomite | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply RLUSD to the Aave V4 Sentora Hub | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Supply RLUSD to the Aave V4 RLUSD Yield Spoke | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | campanha | Lend RLUSD on Aave Horizon | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
-| ethereum | campanha | Stake pyUSD/crvUSD in Stake DAO Gauge | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| ethereum | campanha | Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
+| arbitrum | campanha | Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum | POTENCIAL | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | multirrede | cobertura | Catálogo Merkl | CONFIRMADO | — | — | https://api.merkl.xyz/v4/opportunities?items=20&page=0 |
 | ethereum | recuperacao | Aave Rescue Phase 1 — AAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/aaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | Integration with OS accessibility APIs | POTENCIAL | — | — | https://github.com/dictation-toolbox/Caster/issues/814 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | Grant Application - Zcash 中文入门包 / Zcash Chinese Onboarding Pack | POTENCIAL | — | — | https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/498 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [$250] Expense - Split preview loads infinitely and opens not here page after reset app | POTENCIAL | — | — | https://github.com/Expensify/App/issues/98787 |
 | externa | bounty | [$250] Spend - Default sort is descending | POTENCIAL | — | — | https://github.com/Expensify/App/issues/91935 |
 | externa | bounty | Nov 13 · PayPal AI Hackathon — closes Nov 13, 01:30 IST | POTENCIAL | — | — | https://github.com/JannetEkka/DSProjects/issues/43 |
@@ -99,7 +99,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | New in-scope 2026-11-05: 4 program(s) added targets | POTENCIAL | — | — | https://github.com/abdulsalam-create/bounty-watch/issues/220 |
 | externa | bounty | [BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history | POTENCIAL | — | — | https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1 |
 | externa | bounty | Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/574 |
-| externa | bounty | Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five) | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/277 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -140,24 +139,24 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Claimable balance (stellar)**: Direito técnico de reivindicação; origem e liquidez de ativos não nativos não verificadas. Nenhuma transação executada. Token de emissor terceiro. Livro XLM não prova resgate, legitimidade, profundidade suficiente ou execução; nenhuma cotação foi convertida em dinheiro recebido.
 - **Lend USDe on Aave (looping required) (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Deposit USDe as collateral on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Sentora RLUSD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Paypal USD Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply to Steakhouse High Yield USDC Edition V2 vault on Morpho from Coinbase (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Stake into the Curve PYcrvUSD gauge (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Provide liquidity to Curve PYUSD-crvUSD (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply USDC on USDe/USDC 91.5% (base)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend USD1 on Dolomite (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply RLUSD to the Aave V4 Sentora Hub (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Supply RLUSD to the Aave V4 RLUSD Yield Spoke (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Lend RLUSD on Aave Horizon (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
-- **Stake pyUSD/crvUSD in Stake DAO Gauge (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Sentora PRIME Main V2 vault on Morpho on Ethereum (ethereum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
+- **Supply to Steakhouse USDG Pro V2 vault on Morpho on Arbitrum (arbitrum)**: Programa público, sem elegibilidade pessoal demonstrada. activity_end encerra accrual, não necessariamente claims. APR/TVL não são recompensa pessoal.
 - **Aave Rescue Phase 1 — AAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Grant Application - Zcash 中文入门包 / Zcash Chinese Onboarding Pack (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Integration with OS accessibility APIs (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Grant Application - Zcash 中文入门包 / Zcash Chinese Onboarding Pack (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Expense - Split preview loads infinitely and opens not here page after reset app (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Spend - Default sort is descending (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Nov 13 · PayPal AI Hackathon — closes Nov 13, 01:30 IST (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -185,11 +184,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **New in-scope 2026-11-05: 4 program(s) added targets (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **Frantic bounty #97: Your first bounty is on the house ($10 back when it clears, first five) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 17
+Mudanças nesta execução: 13
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
