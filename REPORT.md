@@ -51,13 +51,13 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Competition evidence: [linked open pull request](https://github.com/aLexzzz430/Cognitive-OS/pull/6); [linked open pull request](https://github.com/aLexzzz430/Cognitive-OS/pull/7); [linked open pull request](https://github.com/aLexzzz430/Cognitive-OS/pull/8); [linked open pull request](https://github.com/aLexzzz430/Cognitive-OS/pull/9); [linked open pull request](https://github.com/aLexzzz430/Cognitive-OS/pull/10)
 | 2 | US$10000.00 | 98.9 | 0 | 10 | 15 | HIGH | 15 | **REVIEW** |
 - **US$10000.00** · Opportunity 98.9 · Risk 0 · **REVIEW** · medium — [Trauma-Station/Trauma-Station#5225: [BOUNTY] huge important bounty bounty bounty](https://github.com/Trauma-Station/Trauma-Station/issues/5225)
-  - Reward: monetary value detected in original issue | Repository: 56 stars, 360 forks | Quality: detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 56 stars, 361 forks | Quality: detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [solution/payout comment signal](https://github.com/Trauma-Station/Trauma-Station/issues/5225#issuecomment-6558697538)
-| 3 | US$2000.00 | 82.3 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$2000.00** · Opportunity 82.3 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#65437: [Bounty $2,000] Restore OpenVLA execution and action correctness](https://github.com/tenstorrent/tt-metal/issues/65437)
+| 3 | US$2000.00 | 82.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$2000.00** · Opportunity 82.7 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#65437: [Bounty $2,000] Restore OpenVLA execution and action correctness](https://github.com/tenstorrent/tt-metal/issues/65437)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4313
-  - Reward: monetary value detected in original issue | Repository: 127 stars, 51 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 131 stars, 57 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65478); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65566); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65601); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65605)
 | 4 | US$900.00 | 77.8 | 10 | 40 | 7 | HIGH | 15 | **REVIEW** |
@@ -72,16 +72,16 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Reward: monetary value detected in original issue | Repository: 0 stars, 15 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/theselfish/SlopStation13/pull/41); [solution/payout comment signal](https://github.com/theselfish/SlopStation13/issues/40#issuecomment-6850762964)
-| 6 | US$750.00 | 70.3 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$750.00** · Opportunity 70.3 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64575: [Bounty $750] Fix sharded softmax on offset core grids](https://github.com/tenstorrent/tt-metal/issues/64575)
+| 6 | US$750.00 | 70.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$750.00** · Opportunity 70.7 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64575: [Bounty $750] Fix sharded softmax on offset core grids](https://github.com/tenstorrent/tt-metal/issues/64575)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4225
-  - Reward: monetary value detected in original issue | Repository: 127 stars, 51 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 131 stars, 57 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (2 linked open pull request(s); 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/64659); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/64668)
-| 7 | US$750.00 | 70.3 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$750.00** · Opportunity 70.3 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64647: [Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues](https://github.com/tenstorrent/tt-metal/issues/64647)
+| 7 | US$750.00 | 70.7 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$750.00** · Opportunity 70.7 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64647: [Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues](https://github.com/tenstorrent/tt-metal/issues/64647)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4243
-  - Reward: monetary value detected in original issue | Repository: 127 stars, 51 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 131 stars, 57 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/64653)
 | 8 | US$1450.00 | 68.2 | 10 | 20 | 5 | LOW | 10 | **GO** |
@@ -124,42 +124,42 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (6 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/68); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/61); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/67); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/66); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/60)
-| 15 | US$1200.00 | 61.0 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
+| 15 | US$150.00 | 61.2 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$150.00** · Opportunity 61.2 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#20: Bounty $150: capture adapter for Front](https://github.com/overturn-ai/overturn/issues/20)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4358
+  - Reward: monetary value detected in original issue | Repository: 1 stars, 37 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (8 linked open pull request(s))
+  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
+  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/26); [linked open pull request](https://github.com/blacksheep81/overturn/pull/1); [linked open pull request](https://github.com/overturn-ai/overturn/pull/28); [linked open pull request](https://github.com/overturn-ai/overturn/pull/30); [linked open pull request](https://github.com/overturn-ai/overturn/pull/33)
+| 16 | US$1200.00 | 61.0 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
 - **US$1200.00** · Opportunity 61.0 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#48: [Bounty $1,200] security(validator): reject float and bool sequence inputs in compute_checkpoint_boundary](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/48)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4246
   - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (3 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/57); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/62); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/65)
-| 16 | US$1150.00 | 60.3 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
+| 17 | US$100.00 | 60.5 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$100.00** · Opportunity 60.5 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#22: Bounty $100: capture adapter for Gorgias](https://github.com/overturn-ai/overturn/issues/22)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4356
+  - Reward: monetary value detected in original issue | Repository: 1 stars, 37 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (8 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
+  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/23); [linked open pull request](https://github.com/overturn-ai/overturn/pull/27); [linked open pull request](https://github.com/overturn-ai/overturn/pull/31); [linked open pull request](https://github.com/overturn-ai/overturn/pull/34); [linked open pull request](https://github.com/overturn-ai/overturn/pull/40)
+| 18 | US$1150.00 | 60.3 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
 - **US$1150.00** · Opportunity 60.3 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#71: [Bounty $1,150] perf(automation): share static canvas seed and batch nonce across worker profiles in src/automation_session_guard.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/71)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4272
   - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (6 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/68); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/61); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/67); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/66); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/60)
-| 17 | US$150.00 | 60.1 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$150.00** · Opportunity 60.1 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#20: Bounty $150: capture adapter for Front](https://github.com/overturn-ai/overturn/issues/20)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4358
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 30 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (8 linked open pull request(s))
+| 19 | US$100.00 | 60.1 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$100.00** · Opportunity 60.1 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#21: Bounty $100: capture adapter for Intercom](https://github.com/overturn-ai/overturn/issues/21)
+  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4357
+  - Reward: monetary value detected in original issue | Repository: 1 stars, 37 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (10 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/26); [linked open pull request](https://github.com/blacksheep81/overturn/pull/1); [linked open pull request](https://github.com/overturn-ai/overturn/pull/28); [linked open pull request](https://github.com/overturn-ai/overturn/pull/30); [linked open pull request](https://github.com/overturn-ai/overturn/pull/33)
-| 18 | US$100.00 | 59.8 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$100.00** · Opportunity 59.8 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#22: Bounty $100: capture adapter for Gorgias](https://github.com/overturn-ai/overturn/issues/22)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4356
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 30 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (8 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/23); [linked open pull request](https://github.com/overturn-ai/overturn/pull/27); [linked open pull request](https://github.com/overturn-ai/overturn/pull/31); [linked open pull request](https://github.com/overturn-ai/overturn/pull/34); [linked open pull request](https://github.com/overturn-ai/overturn/pull/40)
-| 19 | US$1300.00 | 59.8 | 10 | 20 | 5 | HIGH | 15 | **REVIEW** |
+  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/24); [linked open pull request](https://github.com/overturn-ai/overturn/pull/29); [linked open pull request](https://github.com/overturn-ai/overturn/pull/32); [linked open pull request](https://github.com/overturn-ai/overturn/pull/35); [linked open pull request](https://github.com/overturn-ai/overturn/pull/36)
+| 20 | US$1300.00 | 59.8 | 10 | 20 | 5 | HIGH | 15 | **REVIEW** |
 - **US$1300.00** · Opportunity 59.8 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#87: [Bounty $1,300] fix(security): detect cross-PR scope contamination between #69 and #70 in src/quant_execution_guard.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/87)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4287
   - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (2 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/95); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/104)
-| 20 | US$100.00 | 59.3 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$100.00** · Opportunity 59.3 · Risk 10 · **REVIEW** · high — [overturn-ai/overturn#21: Bounty $100: capture adapter for Intercom](https://github.com/overturn-ai/overturn/issues/21)
-  - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4357
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 30 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (10 linked open pull request(s))
-  - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/overturn-ai/overturn/pull/24); [linked open pull request](https://github.com/overturn-ai/overturn/pull/29); [linked open pull request](https://github.com/overturn-ai/overturn/pull/32); [linked open pull request](https://github.com/overturn-ai/overturn/pull/35); [linked open pull request](https://github.com/overturn-ai/overturn/pull/36)
 | 21 | US$1050.00 | 59.2 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
 - **US$1050.00** · Opportunity 59.2 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#72: [Bounty $1,050] fix(affiliate): override attribution click_id on zero-second game tick cooldown in src/automation_session_guard.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/72)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4270
@@ -172,10 +172,10 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (2 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/59); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/61)
-| 23 | US$100.00 | 58.0 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$100.00** · Opportunity 58.0 · Risk 10 · **REVIEW** · high — [Fractal-Neurons/pacta#24: [$25 USDC Bounty] Live Chain-Feed Drift Catch (53 Indexed Protocols) or 4th Unindexed (>=$15M TVL) Control-Plane Mismatch](https://github.com/Fractal-Neurons/pacta/issues/24)
+| 23 | US$100.00 | 58.2 | 10 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$100.00** · Opportunity 58.2 · Risk 10 · **REVIEW** · high — [Fractal-Neurons/pacta#24: [$25 USDC Bounty] Live Chain-Feed Drift Catch (53 Indexed Protocols) or 4th Unindexed (>=$15M TVL) Control-Plane Mismatch](https://github.com/Fractal-Neurons/pacta/issues/24)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4346
-  - Reward: monetary value detected in original issue | Repository: 2 stars, 21 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (4 linked open pull request(s))
+  - Reward: monetary value detected in original issue | Repository: 2 stars, 25 forks | Quality: useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (4 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/Fractal-Neurons/pacta/pull/32); [linked open pull request](https://github.com/Fractal-Neurons/pacta/pull/30); [linked open pull request](https://github.com/Fractal-Neurons/pacta/pull/38); [linked open pull request](https://github.com/Fractal-Neurons/pacta/pull/47)
 | 24 | US$1100.00 | 57.8 | 10 | 20 | 5 | HIGH | 15 | **REVIEW** |
@@ -273,14 +273,14 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Reward: monetary value detected in original issue | Repository: 1 stars, 30 forks | Quality: useful issue label | Risk: very low repository activity | Competition: HIGH (9 linked open pull request(s); 2 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/2); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/3); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/15); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/23); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/27)
-| 40 | US$1000.00 | 37.7 | 10 | 0 | 0 | LOW | 15 | **REVIEW** |
-- **US$1000.00** · Opportunity 37.7 · Risk 10 · **REVIEW** · medium — [eleectrum/eleectrum.github.io#1: $1000 Bounty](https://github.com/eleectrum/eleectrum.github.io/issues/1)
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 0 forks | Quality: no explicit quality signal | Risk: very low repository activity | Competition: LOW
+| 40 | US$1000.00 | 32.8 | 10 | 0 | 0 | MEDIUM | 15 | **REVIEW** |
+- **US$1000.00** · Opportunity 32.8 · Risk 10 · **REVIEW** · medium — [eleectrum/eleectrum.github.io#1: $1000 Bounty](https://github.com/eleectrum/eleectrum.github.io/issues/1)
+  - Reward: monetary value detected in original issue | Repository: 0 stars, 0 forks | Quality: no explicit quality signal | Risk: very low repository activity | Competition: MEDIUM (active discussion; inspect comments before starting)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
 
 ---
 
-**Report generated:** 2026-11-16 21:59 UTC
+**Report generated:** 2026-11-17 20:50 UTC
 
 ### Help shape Paid Issue Finder
 
