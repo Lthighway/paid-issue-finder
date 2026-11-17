@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-16T22:09:14.487478+00:00
+Verificação: 2026-11-17T07:59:48.326405+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -68,8 +68,8 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
-| externa | bounty | Integration with OS accessibility APIs | POTENCIAL | — | — | https://github.com/dictation-toolbox/Caster/issues/814 |
 | externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
+| externa | bounty | Integration with OS accessibility APIs | POTENCIAL | — | — | https://github.com/dictation-toolbox/Caster/issues/814 |
 | externa | bounty | Bounty $100: capture adapter for Gorgias | POTENCIAL | — | — | https://github.com/overturn-ai/overturn/issues/22 |
 | externa | bounty | Business development gate: zero-cost paid work screening (Nov 16) | POTENCIAL | — | — | https://github.com/AndyVentureLab/ci-rescue-demo/issues/2 |
 | externa | bounty | Open collaboration invitation: signed-record verification for A2A, MCP, x402 & agent pools | POTENCIAL | — | — | https://github.com/undone0603/authichain-unified/issues/2263 |
@@ -93,7 +93,7 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [Follow-up] [Bounty #743] Validate /api/users payload before persistence | POTENCIAL | — | — | https://github.com/SecureBananaLabs/bug-bounty/issues/13938 |
 | externa | bounty | [Bounty: $50] slugify() leaves double and trailing hyphens | POTENCIAL | — | — | https://github.com/maaltarifi97-maker/aioa-playground/issues/1 |
 | externa | bounty | [Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) | POTENCIAL | — | — | https://github.com/paraspell/xcm-tools/issues/2461 |
-| externa | bounty | support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/575 |
+| externa | bounty | support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 | INDISPONÍVEL | — | — | https://github.com/auscaster/frantic-board/issues/575 |
 | externa | bounty | [$250] Pressing Delete while selecting text inside a composer duplicates the content instead of clearing it. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/103875 |
 | externa | bounty | [soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/4145 |
 | externa | bounty | [Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected | NÃO ELEGÍVEL | — | — | https://github.com/Expensify/App/issues/37447 |
@@ -152,8 +152,8 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **Integration with OS accessibility APIs (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **Integration with OS accessibility APIs (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Bounty $100: capture adapter for Gorgias (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Business development gate: zero-cost paid work screening (Nov 16) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Open collaboration invitation: signed-record verification for A2A, MCP, x402 & agent pools (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -177,7 +177,7 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[Follow-up] [Bounty #743] Validate /api/users payload before persistence (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bounty: $50] slugify() leaves double and trailing hyphens (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Bug bounty] DuplicateAssetError guard bypass in findEthMatch allows ambiguous symbol to silently resolve to the first ERC20 contract (wrong-asset transfer to Ethereum) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 (externa)**: HTTP 410 em api.github.com
 - **[$250] Pressing Delete while selecting text inside a composer duplicates the content instead of clearing it. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
@@ -186,6 +186,6 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 
 ## Operação
 
-Mudanças nesta execução: 22
+Mudanças nesta execução: 15
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
