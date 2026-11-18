@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-18T04:27:48.418886+00:00
+Verificação: 2026-11-18T04:28:46.700406+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -98,8 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 | INDISPONÍVEL | — | — | https://github.com/auscaster/frantic-board/issues/575 |
 | externa | bounty | [$250] Pressing Delete while selecting text inside a composer duplicates the content instead of clearing it. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/103875 |
 | externa | bounty | [soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) | POTENCIAL | — | — | https://github.com/limitlessprojects/Go-Hybrid/issues/4145 |
-| externa | bounty | [Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected | NÃO ELEGÍVEL | — | — | https://github.com/Expensify/App/issues/37447 |
-| externa | bounty | 💎 [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption | POTENCIAL | — | — | https://github.com/IES-BoilerRoom/Furnace/issues/2 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -184,12 +182,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **support: agent-feee4a — machine verification inconclusive on delivered claims #128 and #129 (externa)**: HTTP 410 em api.github.com
 - **[$250] Pressing Delete while selecting text inside a composer duplicates the content instead of clearing it. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[soundness] hy-check(buildable): curated os package functions bypass call arity validation and package types/variables/constants are accepted as call targets (HYB-E1002, Row 13) (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **[Due for payment 2026-10-22] [$750] Selecting and  copy / pasting multiple messages doesn't work as expected (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **💎 [Escrowed $600 USDC] 24-Vector Conformance Suite: PagedAttention KV-Cache Block Desync on Prefix-Aware Chunked Preemption (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 15
+Mudanças nesta execução: 0
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
