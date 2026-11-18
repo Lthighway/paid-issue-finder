@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+python -m treasure_hunter.maintenance treasure-state/monitor.sqlite
 cd treasure-state
 git config user.name 'github-actions[bot]'
 git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
