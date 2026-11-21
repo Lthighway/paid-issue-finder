@@ -281,7 +281,7 @@ def report_footer(generated_at=None):
         "",
         "### Support the free report",
         "",
-        "If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).",
+        "If this independent tool saves you time, you can [support its development](https://omnia-store.pages.dev/support/#tsedaka).",
         "Contributions are voluntary, and no service, feature, reward or financial return is promised.",
         "",
         "### More free developer tools",
