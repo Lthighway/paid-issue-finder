@@ -288,6 +288,8 @@ def report_footer(generated_at=None):
         "",
         "- [OMNIA JSON Lab — private JSON formatter](https://omnia-store.pages.dev/tools/json-lab/)",
         "- [OMNIA Data Lab — private CSV cleaner](https://omnia-store.pages.dev/tools/data-lab/)",
+        "- [OMNIA Data Bridge — private CSV ↔ JSON converter](https://omnia-store.pages.dev/tools/csv-json/)",
+        "- [OMNIA Log Sanitizer — hide common secrets before posting logs](https://omnia-store.pages.dev/tools/log-sanitizer/)",
         "",
         "These free tools process input locally in the browser and do not require a paid subscription.",
     ]
