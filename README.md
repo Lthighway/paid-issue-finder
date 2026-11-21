@@ -64,6 +64,8 @@ We are validating demand before investing in paid hosting or launching subscript
 
 If Paid Issue Finder saves you time, optional contributions can support its maintenance.
 
+- [Support OMNIA — PayPal, Bitcoin, Ethereum or Solana](https://omnia-store.pages.dev/support/#tsedaka) (direct voluntary support).
+- **PayPal:** `leonardolimabravo@hotmail.com` (use PayPal's official Send feature; confirm recipient).
 - [GitHub Sponsors](https://github.com/sponsors/Lthighway) (availability and payout eligibility depend on GitHub).
 - **Bitcoin (BTC, Bitcoin mainnet):** `bc1qmm5h33v6adu9mqeaf9axzvquhjcwfxg0ej2tnh`
 - **Ethereum (ETH, Ethereum mainnet):** `0xD8BAA5eb62874c8bE21336877d8cce1D95BcD39C`
@@ -75,7 +77,7 @@ reply, feature, or financial return is promised.
 
 ## More free OMNIA tools
 
-For private, browser-only file and developer work, see [OMNIA Store](https://omnia-store.pages.dev/): the [Image Lab](https://omnia-store.pages.dev/tools/image-lab/) compresses photos without uploading them, the [Data Lab](https://omnia-store.pages.dev/tools/data-lab/) cleans CSV exports, the [JSON Lab](https://omnia-store.pages.dev/tools/json-lab/) formats structured data, and [Quote Studio](https://omnia-store.pages.dev/tools/quote-studio/) creates printable estimates. The [Contrast Checker](https://omnia-store.pages.dev/tools/contrast-checker/) helps developers assess text legibility against WCAG requirements, while the [Volunteer Planner](https://omnia-store.pages.dev/tools/volunteer-planner/), [Impact Budget](https://omnia-store.pages.dev/tools/impact-budget/) and [Civic Letter](https://omnia-store.pages.dev/tools/civic-letter/) support community groups and public-interest work. These utilities are free; voluntary support is optional. For direct humanitarian giving separate from OMNIA, see the [Tsedaká resource directory](https://omnia-store.pages.dev/support/).
+For private, browser-only file and developer work, see [OMNIA Store](https://omnia-store.pages.dev/): the [Image Lab](https://omnia-store.pages.dev/tools/image-lab/) compresses photos without uploading them, the [Data Lab](https://omnia-store.pages.dev/tools/data-lab/) cleans CSV exports, the [JSON Lab](https://omnia-store.pages.dev/tools/json-lab/) formats structured data, and [Quote Studio](https://omnia-store.pages.dev/tools/quote-studio/) creates printable estimates. The [Contrast Checker](https://omnia-store.pages.dev/tools/contrast-checker/) helps developers assess text legibility against WCAG requirements, while the [Volunteer Planner](https://omnia-store.pages.dev/tools/volunteer-planner/), [Impact Budget](https://omnia-store.pages.dev/tools/impact-budget/) and [Civic Letter](https://omnia-store.pages.dev/tools/civic-letter/) support community groups and public-interest work. These utilities are free; voluntary support is optional. For direct voluntary support of OMNIA's independent software and research, see [Tsedaká / Mutual Aid](https://omnia-store.pages.dev/support/#tsedaka).
 
 ## License
 
