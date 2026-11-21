@@ -86,9 +86,9 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 | 8 | US$400.00 | 67.7 | 10 | 40 | 7 | HIGH | 10 | **REVIEW** |
 - **US$400.00** · Opportunity 67.7 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#7: [Bounty $400] fix(validator): handle missing seq key in verify_sequence_gap header dicts](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/7)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4256
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s))
+  - Reward: monetary value detected in original issue | Repository: 0 stars, 21 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (2 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
-  - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/33)
+  - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/33); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/117)
 | 9 | US$600.00 | 64.8 | 10 | 20 | 5 | LOW | 15 | **GO** |
 - **US$600.00** · Opportunity 64.8 · Risk 10 · **GO** · high — [PhanKhoa95/oss-bot-trap-benchmark#6: [Bounty $600] feat(validator): implement verify_checkpoint_batch in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/6)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4257
@@ -236,7 +236,7 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 
 ---
 
-**Report generated:** 2026-11-21 07:23 UTC
+**Report generated:** 2026-11-21 07:45 UTC
 
 ### Help shape Paid Issue Finder
 
@@ -248,3 +248,10 @@ Free experimental MVP; detected rewards are not payment guarantees.
 
 If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).
 Contributions are voluntary, and no service, feature, reward or financial return is promised.
+
+### More free developer tools
+
+- [OMNIA JSON Lab — private JSON formatter](https://omnia-store.pages.dev/tools/json-lab/)
+- [OMNIA Data Lab — private CSV cleaner](https://omnia-store.pages.dev/tools/data-lab/)
+
+These free tools process input locally in the browser and do not require a paid subscription.
