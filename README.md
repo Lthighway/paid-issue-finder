@@ -71,8 +71,6 @@ Use only the specified network for each address. These are **public receive addr
 Contributions are voluntary, not purchases of the paid API, and no payment,
 reply, feature, or financial return is promised.
 
-A sponsorship is voluntary support for development; it is not a purchase of the paid API.
-
 ## License
 
 MIT
