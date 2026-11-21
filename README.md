@@ -60,9 +60,16 @@ We are validating demand before investing in paid hosting or launching subscript
 
 ## 💜 Support the project
 
-If Paid Issue Finder saves you time, consider supporting its development through **GitHub Sponsors**:
+If Paid Issue Finder saves you time, optional contributions can support its maintenance.
 
-- [Sponsor Leonardo / Paid Issue Finder](https://github.com/sponsors/Lthighway)
+- [GitHub Sponsors](https://github.com/sponsors/Lthighway) (availability and payout eligibility depend on GitHub).
+- **Bitcoin (BTC, Bitcoin mainnet):** `bc1qmm5h33v6adu9mqeaf9axzvquhjcwfxg0ej2tnh`
+- **Ethereum (ETH, Ethereum mainnet):** `0xD8BAA5eb62874c8bE21336877d8cce1D95BcD39C`
+- **Solana (SOL, Solana mainnet):** `5kmhYC66WgiNNVoEPMWGgQqTnu5hXiWuJxzFhDSWMD2u`
+
+Use only the specified network for each address. These are **public receive addresses only**.
+Contributions are voluntary, not purchases of the paid API, and no payment,
+reply, feature, or financial return is promised.
 
 A sponsorship is voluntary support for development; it is not a purchase of the paid API.
 
