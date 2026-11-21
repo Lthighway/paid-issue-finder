@@ -42,3 +42,34 @@ Apoiar o projeto é um gesto voluntário de confiança no trabalho disponibiliza
 não uma compra nem um investimento. Obrigado por considerar essa possibilidade.
 
 *Unum Sumus.*
+
+
+---
+
+## English — Support free tools and independent software research
+
+Paid Issue Finder is a free, experimental open-source tool. It helps discover
+GitHub issues that *appear* to offer compensation, but cannot guarantee that
+bounties are authentic or paid.
+
+If the project has helped you, you can support its maintenance, future free
+tools and independent software research in the OMNIA ecosystem, including
+experimental work connected to Academia Singularidade.
+
+**Voluntary contributions only.** This is not a registered charity,
+a paid subscription, a purchase, an investment or a promise of financial
+returns, benefits, features, responses or future development.
+
+You can find the published **BTC, ETH and SOL receiving addresses** in the
+[repository README](README.md#-support-the-project). Choose the exact
+network indicated for each address. Never send seed phrases, credentials,
+private keys or identification documents.
+
+A [GitHub Sponsors](https://github.com/sponsors/Lthighway) option is linked
+only if the account is enabled and payout-eligible; a link alone does not
+prove that onboarding is complete.
+
+You can also help by reporting bugs, contributing tests or documentation,
+or sharing the tool with people who would actually benefit from it.
+No contributions, balances or payments will be claimed without verifiable
+evidence.
