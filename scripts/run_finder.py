@@ -278,6 +278,11 @@ def report_footer(generated_at=None):
         "[share product feedback](https://github.com/Lthighway/paid-issue-finder/issues/new?template=product_feedback.yml).",
         "",
         "Free experimental MVP; detected rewards are not payment guarantees.",
+        "",
+        "### Support the free report",
+        "",
+        "If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).",
+        "Contributions are voluntary, and no service, feature, reward or financial return is promised.",
     ]
 
 
