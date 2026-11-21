@@ -283,6 +283,13 @@ def report_footer(generated_at=None):
         "",
         "If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).",
         "Contributions are voluntary, and no service, feature, reward or financial return is promised.",
+        "",
+        "### More free developer tools",
+        "",
+        "- [OMNIA JSON Lab — private JSON formatter](https://omnia-store.pages.dev/tools/json-lab/)",
+        "- [OMNIA Data Lab — private CSV cleaner](https://omnia-store.pages.dev/tools/data-lab/)",
+        "",
+        "These free tools process input locally in the browser and do not require a paid subscription.",
     ]
 
 
