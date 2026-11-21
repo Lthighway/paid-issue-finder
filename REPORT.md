@@ -236,10 +236,15 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 
 ---
 
-**Report generated:** 2026-11-21 06:51 UTC
+**Report generated:** 2026-11-21 07:23 UTC
 
 ### Help shape Paid Issue Finder
 
 Did this report save you time? Tell us what was useful, what was wrong, and which filters or alerts would be worth using: [share product feedback](https://github.com/Lthighway/paid-issue-finder/issues/new?template=product_feedback.yml).
 
 Free experimental MVP; detected rewards are not payment guarantees.
+
+### Support the free report
+
+If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).
+Contributions are voluntary, and no service, feature, reward or financial return is promised.
