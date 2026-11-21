@@ -11,8 +11,8 @@ Filters: bounty US$0–US$100000, opportunity >= 0
 | Metric | Count |
 |:---|---:|
 | GitHub search results received | 100 |
-| Duplicate results removed | 0 |
-| Candidates rejected during source verification | 53 |
+| Duplicate results removed | 1 |
+| Candidates rejected during source verification | 52 |
 | Canonicalized candidates analyzed | 47 |
 | Repository metadata lookup failures | 0 |
 | Candidates without detected monetary amount | 14 |
@@ -174,7 +174,7 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Competition evidence: [solution/payout comment signal](https://github.com/WholeTroutMedia/agent-conformance-quarantine/issues/2#issuecomment-6925818178)
 | 23 | US$25.00 | 52.5 | 5 | 10 | 15 | LOW | 10 | **GO** |
 - **US$25.00** · Opportunity 52.5 · Risk 5 · **GO** · medium — [bad-antics/lateralus-lang#202: [bounty] stdlib.suffix_array tutorial](https://github.com/bad-antics/lateralus-lang/issues/202)
-  - Reward: monetary value detected in original issue | Repository: 11 stars, 67 forks | Quality: detailed issue description | Risk: no discussion | Competition: LOW
+  - Reward: monetary value detected in original issue | Repository: 11 stars, 68 forks | Quality: detailed issue description | Risk: no discussion | Competition: LOW
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
 | 24 | US$350.00 | 52.2 | 10 | 20 | 7 | HIGH | 15 | **REVIEW** |
 - **US$350.00** · Opportunity 52.2 · Risk 10 · **REVIEW** · high — [PhanKhoa95/oss-bot-trap-benchmark#3: [Bounty $350] perf(validator): add empty-slice fast path to verify_sequence_gap in src/ledger_validator.py](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/issues/3)
@@ -236,7 +236,7 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 
 ---
 
-**Report generated:** 2026-11-21 06:48 UTC
+**Report generated:** 2026-11-21 06:51 UTC
 
 ### Help shape Paid Issue Finder
 
