@@ -27,6 +27,8 @@ The workflow uses the repository's GitHub token and does not require a personal 
 
 ## Detection and verification
 
+For a practical checklist before taking on work, see [How to verify a paid GitHub issue](docs/BOUNTY_VERIFICATION.md).
+
 The finder detects monetary amounts such as \`$500\`, \`US$500\`, \`500 USD\`, and \`500 dollars\`, then evaluates labels, issue detail, repository activity, history, and suspicious wording.
 
 When a candidate is a mirrored bounty post, the workflow fetches the original GitHub issue and uses the original issue as the source of truth. A mirror is skipped if its original cannot be fetched or is no longer open.
