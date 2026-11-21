@@ -73,6 +73,10 @@ Use only the specified network for each address. These are **public receive addr
 Contributions are voluntary, not purchases of the paid API, and no payment,
 reply, feature, or financial return is promised.
 
+## More free OMNIA tools
+
+For private, browser-only file and developer work, see [OMNIA Store](https://omnia-store.pages.dev/): the [Image Lab](https://omnia-store.pages.dev/tools/image-lab/) compresses photos without uploading them, the [Data Lab](https://omnia-store.pages.dev/tools/data-lab/) cleans CSV exports, the [JSON Lab](https://omnia-store.pages.dev/tools/json-lab/) formats structured data, and [Quote Studio](https://omnia-store.pages.dev/tools/quote-studio/) creates printable estimates. These utilities are free; voluntary support is optional.
+
 ## License
 
 MIT
