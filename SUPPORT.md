@@ -16,10 +16,15 @@ registrada, e contribuições não são anunciadas como dedutíveis de impostos.
 
 ## Como apoiar
 
-Os endereços públicos de recebimento em Bitcoin, Ethereum e Solana estão na
-[seção de apoio do README](README.md#-support-the-project).
+Contribuições voluntárias de **Tsedaká/apoio direto à OMNIA** podem ser feitas
+por PayPal, Bitcoin, Ethereum e Solana em:
+**https://omnia-store.pages.dev/support/#tsedaka**.
 
-A transferência precisa ocorrer **na mesma rede identificada no README**.
+O destinatário é o operador da iniciativa OMNIA e suas pesquisas independentes.
+Não arrecadamos em nome de organizações humanitárias, não afirmamos ser uma ONG
+e não emitimos recibos de doação dedutíveis de impostos.
+
+Transferências cripto devem ocorrer **na mesma rede identificada na página**.
 Não envie tokens para redes incompatíveis. Nunca envie chaves privadas,
 seed phrases, senhas ou documentos de identificação.
 
@@ -60,9 +65,11 @@ experimental work connected to Academia Singularidade.
 a paid subscription, a purchase, an investment or a promise of financial
 returns, benefits, features, responses or future development.
 
-You can find the published **BTC, ETH and SOL receiving addresses** in the
-[repository README](README.md#-support-the-project). Choose the exact
-network indicated for each address. Never send seed phrases, credentials,
+The published **PayPal, BTC, ETH and SOL receiving details** can be found on
+the [OMNIA mutual-aid support page](https://omnia-store.pages.dev/support/#tsedaka).
+This is direct voluntary support for our independent software and research,
+not fundraising on behalf of unrelated charities. Choose the exact network
+indicated for each address. Never send seed phrases, credentials,
 private keys or identification documents.
 
 A [GitHub Sponsors](https://github.com/sponsors/Lthighway) option is linked
