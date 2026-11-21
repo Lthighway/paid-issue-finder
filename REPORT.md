@@ -236,7 +236,7 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 
 ---
 
-**Report generated:** 2026-11-21 08:01 UTC
+**Report generated:** 2026-11-21 08:56 UTC
 
 ### Help shape Paid Issue Finder
 
@@ -246,7 +246,7 @@ Free experimental MVP; detected rewards are not payment guarantees.
 
 ### Support the free report
 
-If this independent tool saves you time, you can [support its development](https://github.com/Lthighway/paid-issue-finder/blob/main/SUPPORT.md).
+If this independent tool saves you time, you can [support its development](https://omnia-store.pages.dev/support/#tsedaka).
 Contributions are voluntary, and no service, feature, reward or financial return is promised.
 
 ### More free developer tools
