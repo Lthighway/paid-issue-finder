@@ -12,10 +12,10 @@ Filters: bounty US$0–US$100000, opportunity >= 0
 |:---|---:|
 | GitHub search results received | 100 |
 | Duplicate results removed | 1 |
-| Candidates rejected during source verification | 52 |
-| Canonicalized candidates analyzed | 47 |
+| Candidates rejected during source verification | 53 |
+| Canonicalized candidates analyzed | 46 |
 | Repository metadata lookup failures | 0 |
-| Candidates without detected monetary amount | 15 |
+| Candidates without detected monetary amount | 14 |
 | Candidates outside bounty range | 0 |
 | Candidates below minimum score | 0 |
 | Candidates ranked before report cap | 32 |
@@ -45,13 +45,13 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 |---:|---:|---:|---:|---:|---:|:---:|---:|:---|
 | 1 | US$10000.00 | 98.9 | 0 | 10 | 15 | HIGH | 15 | **REVIEW** |
 - **US$10000.00** · Opportunity 98.9 · Risk 0 · **REVIEW** · medium — [Trauma-Station/Trauma-Station#5225: [BOUNTY] huge important bounty bounty bounty](https://github.com/Trauma-Station/Trauma-Station/issues/5225)
-  - Reward: monetary value detected in original issue | Repository: 57 stars, 362 forks | Quality: detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 58 stars, 362 forks | Quality: detailed issue description | Risk: no major risk signal | Competition: HIGH (1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [solution/payout comment signal](https://github.com/Trauma-Station/Trauma-Station/issues/5225#issuecomment-6558697538)
-| 2 | US$2000.00 | 84.9 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$2000.00** · Opportunity 84.9 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#65437: [Bounty $2,000] Restore OpenVLA execution and action correctness](https://github.com/tenstorrent/tt-metal/issues/65437)
+| 2 | US$2000.00 | 85.0 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$2000.00** · Opportunity 85.0 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#65437: [Bounty $2,000] Restore OpenVLA execution and action correctness](https://github.com/tenstorrent/tt-metal/issues/65437)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4313
-  - Reward: monetary value detected in original issue | Repository: 144 stars, 877 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 145 stars, 879 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (4 linked open pull request(s); 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65478); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65566); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65601); [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/65605)
 | 3 | US$900.00 | 77.9 | 10 | 40 | 7 | HIGH | 15 | **REVIEW** |
@@ -60,21 +60,21 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Reward: monetary value detected in original issue | Repository: 0 stars, 22 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (2 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/66); [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/98)
-| 4 | US$420.00 | 74.7 | 10 | 40 | 9 | HIGH | 15 | **REVIEW** |
-- **US$420.00** · Opportunity 74.7 · Risk 10 · **REVIEW** · high — [theselfish/SlopStation13#40: [BOUNTY][$420][ADD] P. Diddy Lube](https://github.com/theselfish/SlopStation13/issues/40)
+| 4 | US$420.00 | 74.6 | 10 | 40 | 9 | HIGH | 15 | **REVIEW** |
+- **US$420.00** · Opportunity 74.6 · Risk 10 · **REVIEW** · high — [theselfish/SlopStation13#40: [BOUNTY][$420][ADD] P. Diddy Lube](https://github.com/theselfish/SlopStation13/issues/40)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4309
-  - Reward: monetary value detected in original issue | Repository: 0 stars, 15 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 0 stars, 14 forks | Quality: clear requirements/acceptance, useful issue label, detailed issue description | Risk: very low repository activity | Competition: HIGH (1 linked open pull request(s); 1 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/theselfish/SlopStation13/pull/41); [solution/payout comment signal](https://github.com/theselfish/SlopStation13/issues/40#issuecomment-7050472552)
-| 5 | US$750.00 | 72.9 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$750.00** · Opportunity 72.9 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64575: [Bounty $750] Fix sharded softmax on offset core grids](https://github.com/tenstorrent/tt-metal/issues/64575)
+| 5 | US$750.00 | 73.0 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$750.00** · Opportunity 73.0 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64575: [Bounty $750] Fix sharded softmax on offset core grids](https://github.com/tenstorrent/tt-metal/issues/64575)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4225
-  - Reward: monetary value detected in original issue | Repository: 144 stars, 877 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (active discussion; inspect comments before starting; 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 145 stars, 879 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (active discussion; inspect comments before starting; 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
-| 6 | US$750.00 | 72.9 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
-- **US$750.00** · Opportunity 72.9 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64647: [Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues](https://github.com/tenstorrent/tt-metal/issues/64647)
+| 6 | US$750.00 | 73.0 | 0 | 20 | 15 | HIGH | 15 | **REVIEW** |
+- **US$750.00** · Opportunity 73.0 · Risk 0 · **REVIEW** · high — [tenstorrent/tt-metal#64647: [Bounty $750] Fix remaining sharded scale_mask_softmax mask handling issues](https://github.com/tenstorrent/tt-metal/issues/64647)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4243
-  - Reward: monetary value detected in original issue | Repository: 144 stars, 877 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 contributor(s) already assigned)
+  - Reward: monetary value detected in original issue | Repository: 145 stars, 879 forks | Quality: useful issue label, detailed issue description | Risk: no major risk signal | Competition: HIGH (1 linked open pull request(s); 1 contributor(s) already assigned)
   - Terms checklist (text signals only): payment/selection terms mentioned; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/tenstorrent/tt-metal/pull/64653)
 | 7 | US$1600.00 | 71.9 | 10 | 20 | 7 | MEDIUM | 15 | **GO** |
@@ -213,13 +213,13 @@ GO is a screening result only; confirm the original issue, competition, eligibil
   - Competition evidence: [linked open pull request](https://github.com/PhanKhoa95/oss-bot-trap-benchmark/pull/43)
 | 30 | US$25.00 | 42.1 | 5 | 10 | 15 | HIGH | 10 | **REVIEW** |
 - **US$25.00** · Opportunity 42.1 · Risk 5 · **REVIEW** · medium — [bad-antics/lateralus-lang#202: [bounty] stdlib.suffix_array tutorial](https://github.com/bad-antics/lateralus-lang/issues/202)
-  - Reward: monetary value detected in original issue | Repository: 12 stars, 100 forks | Quality: detailed issue description | Risk: no discussion | Competition: HIGH (2 linked open pull request(s))
+  - Reward: monetary value detected in original issue | Repository: 12 stars, 107 forks | Quality: detailed issue description | Risk: no discussion | Competition: HIGH (2 linked open pull request(s))
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/bad-antics/lateralus-lang/pull/312); [linked open pull request](https://github.com/bad-antics/lateralus-lang/pull/480)
 | 31 | US$100.00 | 41.9 | 10 | 10 | 7 | HIGH | 15 | **REVIEW** |
 - **US$100.00** · Opportunity 41.9 · Risk 10 · **REVIEW** · high — [blake-guthrie/GLASS#1: USDC-quoted pairs not having the correct marketcap displayed in tools](https://github.com/blake-guthrie/GLASS/issues/1)
   - Discovery mirror: https://github.com/zhangjiayang6835-cyber/bounty-plaza/issues/4109
-  - Reward: monetary value detected in original issue | Repository: 1 stars, 27 forks | Quality: useful issue label | Risk: very low repository activity | Competition: HIGH (10 linked open pull request(s); 2 comment(s) contain a solution/payout signal)
+  - Reward: monetary value detected in original issue | Repository: 1 stars, 27 forks | Quality: useful issue label | Risk: very low repository activity | Competition: HIGH (9 linked open pull request(s); 2 comment(s) contain a solution/payout signal)
   - Terms checklist (text signals only): payment/selection terms not detected; eligibility not detected; deadline not detected; payment actually confirmed: NO
   - Competition evidence: [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/2); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/3); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/15); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/23); [linked open pull request](https://github.com/blake-guthrie/GLASS/pull/27)
 | 32 | US$1000.00 | 32.8 | 10 | 0 | 0 | MEDIUM | 15 | **REVIEW** |
@@ -229,7 +229,7 @@ GO is a screening result only; confirm the original issue, competition, eligibil
 
 ---
 
-**Report generated:** 2026-11-24 22:19 UTC
+**Report generated:** 2026-11-25 21:36 UTC
 
 ### Help shape Paid Issue Finder
 
