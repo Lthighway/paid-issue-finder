@@ -1,6 +1,6 @@
 # OMNIA Treasure Hunter
 
-Verificação: 2026-11-25T21:46:02.217963+00:00
+Verificação: 2026-11-26T08:26:19.057391+00:00
 
 Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não somamos moedas diferentes.
 
@@ -67,10 +67,11 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | ethereum | recuperacao | Aave Rescue Phase 1 — stkAAVE | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/stkAaveRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — USDT | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/usdtRescueMerkleTree.json |
 | ethereum | recuperacao | Aave Rescue Phase 1 — UNI | NÃO ELEGÍVEL | — | — | https://raw.githubusercontent.com/bgd-labs/rescue-mission-phase-1/2c15e1b1fbcf72aa3834e63f2efcd71f4f91a28f/js-scripts/maps/uniRescueMerkleTree.json |
+| externa | bounty | Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/574 |
+| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | AI COMS health: board needs attention | POTENCIAL | — | — | https://github.com/0xSneaks/ai-coms/issues/13 |
 | externa | bounty | Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email | POTENCIAL | — | — | https://github.com/auscaster/frantic-board/issues/540 |
 | externa | bounty | Chinese documentation bounty: remaining scope, AI assistance and CNY payout | POTENCIAL | — | — | https://github.com/Clawland-AI/picclaw/issues/36 |
-| externa | cobertura | Pesquisa GitHub/Algora | CONFIRMADO | — | — | https://api.github.com/search/issues?q=is%3Aissue+is%3Aopen+bounty&sort=updated&per_page=12 |
 | externa | bounty | [RFC] InferRSI benchmark 指标协议 v1：指标口径、任务分层与报告格式（含文献调研全文） | POTENCIAL | — | — | https://github.com/InferMatrixLab/InferRSI/issues/665 |
 | externa | bounty | Mission 12 — Mining & Power — Season II | POTENCIAL | — | — | https://github.com/telegraphprotocol/bounties/issues/200 |
 | externa | bounty | [$250] Expense Coding Reverts to Default After Credit Card Transaction Import and Merge | POTENCIAL | — | — | https://github.com/Expensify/App/issues/87390 |
@@ -97,8 +98,6 @@ Saldo ≠ valor anunciado ≠ recompensa elegível ≠ dinheiro recebido. Não s
 | externa | bounty | [$250] Expense - Split preview loads infinitely and opens not here page after reset app | POTENCIAL | — | — | https://github.com/Expensify/App/issues/98787 |
 | externa | bounty | [$250] Spend - Default sort is descending | POTENCIAL | — | — | https://github.com/Expensify/App/issues/91935 |
 | externa | bounty | Nov 13 · PayPal AI Hackathon — closes Nov 13, 01:30 IST | POTENCIAL | — | — | https://github.com/JannetEkka/DSProjects/issues/43 |
-| externa | bounty | 🪙 Bounty: Improve project documentation | NÃO ELEGÍVEL | — | — | https://github.com/the3kingleo-cmyk/ruth/issues/5 |
-| externa | bounty | [$250] Android - Spend - "Apply" button is overlapped by keyboard in exposed filter. | POTENCIAL | — | — | https://github.com/Expensify/App/issues/105145 |
 | solana | cobertura | Superteam Earn — agentes | INDISPONÍVEL | — | — | https://superteam.fun/api/agents/listings/live?take=20 |
 
 ## Recebimento sem gastos
@@ -152,10 +151,11 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **Aave Rescue Phase 1 — stkAAVE (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — USDT (ethereum)**: Endereço ausente da lista oficial desta distribuição.
 - **Aave Rescue Phase 1 — UNI (ethereum)**: Endereço ausente da lista oficial desta distribuição.
-- **AI COMS health: board needs attention (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
-- **Chinese documentation bounty: remaining scope, AI assistance and CNY payout (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
+- **Frantic bounty #145: Install NitroMTA and send one real email to proof@nitromta.com (externa)**: Valor extraído do texto, sujeito a contexto. Probabilidades sem base calibrada: não estimáveis. Issue aberta não garante vaga nem pagamento.
 - **Pesquisa GitHub/Algora (externa)**: Algora detectada em issues públicas; não cobre catálogo completo ou API autenticada. Máximo 12 candidatos por execução.
+- **AI COMS health: board needs attention (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Frantic bounty #141: Let your agent onboard itself through the Nitrosend MCP server and send one email (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
+- **Chinese documentation bounty: remaining scope, AI assistance and CNY payout (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[RFC] InferRSI benchmark 指标协议 v1：指标口径、任务分层与报告格式（含文献调研全文） (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Mission 12 — Mining & Power — Season II (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Expense Coding Reverts to Default After Credit Card Transaction Import and Merge (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
@@ -182,12 +182,10 @@ Limite de desembolso do proprietário: zero. Execução financeira automática: 
 - **[$250] Expense - Split preview loads infinitely and opens not here page after reset app (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **[$250] Spend - Default sort is descending (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Nov 13 · PayPal AI Hackathon — closes Nov 13, 01:30 IST (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
-- **🪙 Bounty: Improve project documentation (externa)**: Issue encerrada na fonte original; não demonstra pagamento ao proprietário.
-- **[$250] Android - Spend - "Apply" button is overlapped by keyboard in exposed filter. (externa)**: Issue continua aberta; valor reavaliado. Concorrência não reavaliada fora da janela de descoberta.
 - **Superteam Earn — agentes (solana)**: Falta SUPERTEAM_API_KEY nos Actions Secrets; cadastro e vínculo humano não realizados.
 
 ## Operação
 
-Mudanças nesta execução: 20
+Mudanças nesta execução: 16
 Histórico: SQLite e branch treasure-data. Fontes com erro não equivalem a saldo zero.
 Notificações exigem Secrets. Nenhuma assinatura, transferência ou aprovação é executada.
